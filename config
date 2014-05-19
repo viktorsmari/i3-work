@@ -40,11 +40,10 @@ bindsym $mod+g move workspace to output left
 exec /usr/bin/setxkbmap -option "caps:escape"
 
 #monitor Dual setup:
-bindsym $mod+m exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP-1 --mode 1600x1200 --pos 0x0 --rotate normal --output HDMI-1 --off --output VGA-1 --mode 1600x1200 --pos 1600x0 --rotate normal
 
 #execute
-exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP-1 --mode 1600x1200 --pos 0x0 --rotate normal --output HDMI-1 --off --output VGA-1 --mode 1600x1200 --pos 1600x0 --rotate normal
-
+exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output VGA-1 --mode 1600x1200 --pos 1920x0 --rotate normal
+bindsym $mod+m exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output VGA-1 --mode 1600x1200 --pos 1920x0 --rotate normal
 
 assign [class="i3-sensible-terminal"] 1:Term
 assign [class="Chromium"] 2:Chrome
