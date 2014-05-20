@@ -56,7 +56,7 @@ assign [class="Chromium"] 2:Chrome
 assign [class="Remmina"] 3:Remmina
 assign [class="Firefox"] 4:Firefox
 assign [class="Pidgin"] 5:Pidgin
-assign [class="sublime-text"] 7:Sublime
+assign [class="sublime-text"] 6:Sublime
 assign [class="spotify"] 8:Spotify
 assign [class="VirtualBox"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
@@ -157,8 +157,8 @@ bindsym $mod+2 workspace 2:Chrome
 bindsym $mod+3 workspace 3:Remmina
 bindsym $mod+4 workspace 4:Firefox
 bindsym $mod+5 workspace 5:Pidgin
-bindsym $mod+6 workspace 6:
-bindsym $mod+7 workspace 7:Sublime
+bindsym $mod+6 workspace 6:Sublime
+bindsym $mod+7 workspace 7:
 bindsym $mod+8 workspace 8:Spotify
 bindsym $mod+9 workspace 9:VirtualBox
 bindsym $mod+0 workspace 10:Gimp
@@ -169,8 +169,8 @@ bindsym $mod+Shift+2 move container to workspace 2:Chrome
 bindsym $mod+Shift+3 move container to workspace 3:Remmina
 bindsym $mod+Shift+4 move container to workspace 4:Firefox
 bindsym $mod+Shift+5 move container to workspace 5:Pidgin
-bindsym $mod+Shift+6 move container to workspace 6:
-bindsym $mod+Shift+7 move container to workspace 7:Sublime
+bindsym $mod+Shift+6 move container to workspace 6:Sublime
+bindsym $mod+Shift+7 move container to workspace 7:
 bindsym $mod+Shift+8 move container to workspace 8:Spotify
 bindsym $mod+Shift+9 move container to workspace 9:VirtualBox
 bindsym $mod+Shift+0 move container to workspace 10:Gimp
