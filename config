@@ -15,6 +15,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 
+# wallpaper solid color:
+exec --no-startup-id xsetroot -solid "#333333"
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -31,7 +34,7 @@ bindsym XF86Sleep exec i3lock -i /home/viktor/.i3/big.png, exec sudo pm-suspend
 bindsym XF86PowerOff exec sudo shutdown -h now
  
 # Key bindings
-bindsym $mod+o exec --no-startup-id setxkbmap us
+bindsym $mod+o exec --no-startup-id setxkbmap us,exec /usr/bin/setxkbmap -option "caps:escape"
 bindsym $mod+i exec --no-startup-id setxkbmap is
 bindsym $mod+p exec i3lock -i /home/viktor/.i3/big.png -c 212121
 bindsym $mod+g move workspace to output left
@@ -45,12 +48,14 @@ exec /usr/bin/setxkbmap -option "caps:escape"
 exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output VGA-1 --mode 1600x1200 --pos 1920x0 --rotate normal
 bindsym $mod+m exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output VGA-1 --mode 1600x1200 --pos 1920x0 --rotate normal
 
+#make program start floated
+for_window [class="Pidgin"] floating enable, border normal
+
 assign [class="i3-sensible-terminal"] 1:Term
 assign [class="Chromium"] 2:Chrome
 assign [class="Remmina"] 3:Remmina
-assign [class="Thunderbird"] 4:Thunder
-assign [class="Firefox"] 5:Firefox
-assign [class="Pidgin"] 6:Pidgin
+assign [class="Firefox"] 4:Firefox
+assign [class="Pidgin"] 5:Pidgin
 assign [class="sublime-text"] 7:Sublime
 assign [class="spotify"] 8:Spotify
 assign [class="VirtualBox"] 9:VirtualBox
@@ -150,9 +155,9 @@ bindsym $mod+a focus parent
 bindsym $mod+1 workspace 1:Term
 bindsym $mod+2 workspace 2:Chrome
 bindsym $mod+3 workspace 3:Remmina
-bindsym $mod+4 workspace 4:Thunder
-bindsym $mod+5 workspace 5:Firefox
-bindsym $mod+6 workspace 6:Pidgin
+bindsym $mod+4 workspace 4:Firefox
+bindsym $mod+5 workspace 5:Pidgin
+bindsym $mod+6 workspace 6:
 bindsym $mod+7 workspace 7:Sublime
 bindsym $mod+8 workspace 8:Spotify
 bindsym $mod+9 workspace 9:VirtualBox
@@ -162,9 +167,9 @@ bindsym $mod+0 workspace 10:Gimp
 bindsym $mod+Shift+1 move container to workspace 1:Term
 bindsym $mod+Shift+2 move container to workspace 2:Chrome
 bindsym $mod+Shift+3 move container to workspace 3:Remmina
-bindsym $mod+Shift+4 move container to workspace 4:Thunder
-bindsym $mod+Shift+5 move container to workspace 5:Firefox
-bindsym $mod+Shift+6 move container to workspace 6:Pidgin
+bindsym $mod+Shift+4 move container to workspace 4:Firefox
+bindsym $mod+Shift+5 move container to workspace 5:Pidgin
+bindsym $mod+Shift+6 move container to workspace 6:
 bindsym $mod+Shift+7 move container to workspace 7:Sublime
 bindsym $mod+Shift+8 move container to workspace 8:Spotify
 bindsym $mod+Shift+9 move container to workspace 9:VirtualBox
