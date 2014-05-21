@@ -1,4 +1,5 @@
 # This file is public on github
+
 alias mum="echo 123"
 alias edit='vi ~/.oh-my-sh/custom/viktor.zsh'
 alias pi='ping mbl.is'
