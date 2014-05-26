@@ -40,6 +40,7 @@ bindsym $mod+p exec i3lock -i /home/viktor/.i3/big.png -c 212121
 bindsym $mod+g move workspace to output left
 
 # make caps lock work as escape key
+exec --no-startup-id setxkbmap us
 exec /usr/bin/setxkbmap -option "caps:escape"
 
 #monitor Dual setup:
@@ -50,6 +51,7 @@ bindsym $mod+m exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP
 
 #make program start floated
 for_window [class="Pidgin"] floating enable, border normal
+for_window [class="Nautilus"] floating enable, border normal
 
 assign [class="i3-sensible-terminal"] 1:Term
 assign [class="Chromium"] 2:Chrome
@@ -62,15 +64,13 @@ assign [class="VirtualBox"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
 
 exec i3-sensible-terminal
+exec chromium-browser
 exec gnome-sound-applet
 exec nm-applet
-exec davmail
-exec chromium-browser
-exec --no-startup-id setxkbmap us
 exec remmina
-exec thunderbird
 exec parcellite
 exec sublime-text
+exec firefox
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
