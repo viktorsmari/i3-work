@@ -24,6 +24,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+shift+Return exec i3-sensible-terminal -Q -T floatme
+for_window [title="^floatme$"] floating enable
 
 # ======================= speaker stuff =================================
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 2 +10%
