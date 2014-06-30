@@ -1,5 +1,9 @@
 # This file is public on github
 
+#ruby
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+alias open=xdg-open
 alias xclip='xclip -selection c'
 alias mum="echo 123"
 alias edit='vi ~/.i3/viktor.zsh'
@@ -9,7 +13,7 @@ alias fugl='nohup ~/.i3/pidginscript.sh &'
 alias volup='pactl set-sink-volume 1 +10%'
 alias vold='pactl set-sink-volume 1 10%'
 alias avahifix='sudo service avahi-daemon stop'
-
+alias tunnel='echo ssh -L 8080:localhost:8443 user@host'
 # Pidgin requires this to work:
 NSS_SSL_CBC_RANDOM_IV=0
 
@@ -21,3 +25,7 @@ alias NY="timedatectl set-timezone America/New_York"
 alias AMS="timedatectl set-timezone Europe/Amsterdam"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
 alias LON="timedatectl set-timezone Europe/London"
+
+# ruby env
+export PATH="$HOME/.rbenv/bin:$PATH"
+
