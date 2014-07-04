@@ -3,9 +3,9 @@
 #ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
+alias weather=" nohup /opt/extras.ubuntu.com/my-weather-indicator/bin/my-weather-indicator &"
 alias open=xdg-open
 alias xclip='xclip -selection c'
-alias mum="echo 123"
 alias edit='vi ~/.i3/viktor.zsh'
 alias fresh='vi ~/.i3/freshInstall.txt'
 alias pi='ping mbl.is'
@@ -14,9 +14,9 @@ alias volup='pactl set-sink-volume 1 +10%'
 alias vold='pactl set-sink-volume 1 10%'
 alias avahifix='sudo service avahi-daemon stop'
 alias tunnel='echo ssh -L 8080:localhost:8443 user@host'
+
 # Pidgin requires this to work:
 NSS_SSL_CBC_RANDOM_IV=0
-
 
 # Switch timezones
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"

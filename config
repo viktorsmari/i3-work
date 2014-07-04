@@ -58,8 +58,8 @@ bindsym $mod+m exec xrandr --output LVDS-1 --off --output DP-2 --off --output DP
 for_window [class="Pidgin"] floating enable, border normal
 for_window [class="Nautilus"] floating enable, border normal
 
-assign [class="i3-sensible-terminal"] 1:Term
-assign [class="Chromium"] 2:Chrome
+assign [class="Chromium"] 1:Chrome
+assign [class="i3-sensible-terminal"] 2:Term
 assign [class="Remmina"] 3:Remmina
 assign [class="Firefox"] 4:Firefox
 assign [class="Pidgin"] 5:Pidgin
@@ -157,8 +157,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1:Term
-bindsym $mod+2 workspace 2:Chrome
+bindsym $mod+1 workspace 1:Chrome
+bindsym $mod+2 workspace 2:Term
 bindsym $mod+3 workspace 3:Remmina
 bindsym $mod+4 workspace 4:Firefox
 bindsym $mod+5 workspace 5:Pidgin
@@ -169,8 +169,8 @@ bindsym $mod+9 workspace 9:VirtualBox
 bindsym $mod+0 workspace 10:Gimp
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:Term
-bindsym $mod+Shift+2 move container to workspace 2:Chrome
+bindsym $mod+Shift+1 move container to workspace 1:Chrome
+bindsym $mod+Shift+2 move container to workspace 2:Term
 bindsym $mod+Shift+3 move container to workspace 3:Remmina
 bindsym $mod+Shift+4 move container to workspace 4:Firefox
 bindsym $mod+Shift+5 move container to workspace 5:Pidgin
