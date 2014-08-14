@@ -1,5 +1,0 @@
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-
-chsh -s /bin/zsh 
-
-echo 'Maybe a restart to finish...'
