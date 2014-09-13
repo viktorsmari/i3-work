@@ -40,8 +40,8 @@ bindsym XF86PowerOff exec notify-send PowerButton
 setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,is
 
 # Switch keyboard mapping
-bindsym $mod+o exec setxkbmap us,exec setxkbmap -query|grep "layout" |cut -b 13-14|xargs notify-send -t 300
-bindsym $mod+i exec setxkbmap is,exec setxkbmap -query|awk '/layout/{print $2}' |xargs notify-send -t 300
+bindsym $mod+o exec setxkbmap us
+bindsym $mod+i exec setxkbmap is
 
 # make caps lock work as escape key
 exec --no-startup-id setxkbmap us
