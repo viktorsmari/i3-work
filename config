@@ -70,12 +70,10 @@ assign [class="spotify"] 6:Spotify
 assign [class="VirtualBox"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
 
-exec i3-sensible-terminal
-exec chromium-browser --allow-running-insecure-content
+exec chromium-browser 
 exec gnome-sound-applet
 exec nm-applet
 exec parcellite
-exec sublime-text
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
