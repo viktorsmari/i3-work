@@ -1,3 +1,0 @@
-sudo apt-get install parcellite pwgen ipcalc curl nmap vim zsh git git-core arandr g++ automake make chromium-browser tree scrot bc traceroute htop whois xclip remmina gnome-icon-theme-full thunar
-echo "pointer = 1 2 3 5 4 7 6 8 9 10 11 12" > ~/.Xmodmap
-git config --global core.editor "vim"

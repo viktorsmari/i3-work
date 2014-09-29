@@ -26,17 +26,15 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+shift+Return exec i3-sensible-terminal -Q -T floatme
 for_window [title="^floatme$"] floating enable
 
-# Some other speakers
-#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 2 +10%
-#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 2 -10%
 # ======================= viktor stuff =================================
-#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-#bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +10%
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -10%
+#not working
+bindsym XF86AudioMute exec amixer pactl -- set-sink-volume 1 +10%
 
+bindsym XF86Sleep exec i3lock -i /home/viktor/.i3/big.png -c 212121, exec sudo pm-suspend
 #Power button - not working?
-#bindsym XF86Sleep exec i3lock -i /home/viktor/.i3/big.png -c 212121, exec sudo pm-suspend
-#bindsym XF86PowerOff exec notify-send -t 1000 PowerButton 
+bindsym XF86PowerOff exec notify-send -t 1000 PowerButton 
 
 # Keyboard and language
 # Use Alt + Shift to switch US / IS 
