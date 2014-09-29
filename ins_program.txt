@@ -1,1 +1,0 @@
-apt-get install nmap vim zsh git git-core arandr curl g++ make chromium-browser thunar
