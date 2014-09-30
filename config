@@ -29,8 +29,7 @@ for_window [title="^floatme$"] floating enable
 # ======================= viktor stuff =================================
 bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5%
 bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5%
-#not working
-bindsym XF86AudioMute exec amixer pactl -- set-sink-volume 1 +10%
+bindsym XF86AudioMute exec pactl -- set-sink-mute 1 toggle
 
 bindsym XF86Sleep exec i3lock -i /home/viktor/.i3/big.png -c 212121, exec sudo pm-suspend
 #Power button - not working?
@@ -57,6 +56,7 @@ exec xrandr --output HDMI2 --mode 1920x1080 --pos 0x0 --rotate normal --output H
 #make program start floated
 for_window [class="Pidgin"] floating enable, border normal
 for_window [class="Nautilus"] floating enable, border normal
+for_window [class="gnome-calculator"] floating enable, border normal
 
 assign [class="Chromium"] 1:Chrome
 assign [class="i3-sensible-terminal"] 2:Term
@@ -66,6 +66,7 @@ assign [class="Thunar"] 5:Thunar
 assign [class="filezilla"] 6:FileZilla
 assign [class="VirtualBox"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
+assign [class="Nautilus"] 10:Gimp
 
 exec chromium-browser 
 exec gnome-sound-applet
