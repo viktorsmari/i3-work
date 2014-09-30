@@ -27,8 +27,8 @@ bindsym $mod+shift+Return exec i3-sensible-terminal -Q -T floatme
 for_window [title="^floatme$"] floating enable
 
 # ======================= viktor stuff =================================
-bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +10%
-bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -10%
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5%
 #not working
 bindsym XF86AudioMute exec amixer pactl -- set-sink-volume 1 +10%
 
@@ -38,7 +38,7 @@ bindsym XF86PowerOff exec notify-send -t 1000 PowerButton
 
 # Keyboard and language
 # Use Alt + Shift to switch US / IS 
-setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,is
+#setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,is
 
 # Switch keyboard mapping
 bindsym $mod+o exec setxkbmap us
@@ -60,10 +60,10 @@ for_window [class="Nautilus"] floating enable, border normal
 
 assign [class="Chromium"] 1:Chrome
 assign [class="i3-sensible-terminal"] 2:Term
-assign [class="Thunar"] 3:Thunar
+assign [class="sublime-text"] 3:Sublime
 assign [class="Firefox"] 4:Firefox
-assign [class="sublime-text"] 5:Sublime
-assign [class="spotify"] 6:Spotify
+assign [class="Thunar"] 5:Thunar
+assign [class="filezilla"] 6:FileZilla
 assign [class="VirtualBox"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
 
@@ -154,10 +154,10 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1:Chrome
 bindsym $mod+2 workspace 2:Term
-bindsym $mod+3 workspace 3:Thunar
+bindsym $mod+3 workspace 3:Sublime
 bindsym $mod+4 workspace 4:Firefox
-bindsym $mod+5 workspace 5:Sublime
-bindsym $mod+6 workspace 6:Spotify
+bindsym $mod+5 workspace 5:Thunar
+bindsym $mod+6 workspace 6:FileZilla
 bindsym $mod+7 workspace 7:
 bindsym $mod+8 workspace 8:
 bindsym $mod+9 workspace 9:VirtualBox
@@ -166,10 +166,10 @@ bindsym $mod+0 workspace 10:Gimp
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:Chrome
 bindsym $mod+Shift+2 move container to workspace 2:Term
-bindsym $mod+Shift+3 move container to workspace 3:Thunar
+bindsym $mod+Shift+3 move container to workspace 3:Sublime
 bindsym $mod+Shift+4 move container to workspace 4:Firefox
-bindsym $mod+Shift+5 move container to workspace 5:Sublime
-bindsym $mod+Shift+6 move container to workspace 6:Spotify
+bindsym $mod+Shift+5 move container to workspace 5:Thunar
+bindsym $mod+Shift+6 move container to workspace 6:FileZilla
 bindsym $mod+Shift+7 move container to workspace 7:
 bindsym $mod+Shift+8 move container to workspace 8:
 bindsym $mod+Shift+9 move container to workspace 9:VirtualBox
