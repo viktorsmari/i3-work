@@ -6,6 +6,8 @@
 # ruby env
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+alias getprocid='xprop | grep WM_CLASS'
+alias www='cd /var/www/html/'
 alias weather=" nohup /opt/extras.ubuntu.com/my-weather-indicator/bin/my-weather-indicator &"
 alias open=xdg-open
 alias xclip='xclip -selection c'
