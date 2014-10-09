@@ -35,6 +35,7 @@ bindsym XF86AudioMute exec pactl -- set-sink-mute 1 toggle
 bindsym XF86KbdBrightnessUp exec notify-send -t 1000 kb-up
 bindsym XF86KbdBrightnessDown exec notify-send -t 1000 kb-dwn
 
+# Not working:
 bindsym XF86MonBrightnessUp exec notify-send -t 1000 BrUp
 bindsym XF86MonBrightnessDown exec notify-send -t 1000 BrDown
 
@@ -66,7 +67,7 @@ for_window [class="Pidgin"] floating enable, border normal
 for_window [class="Nautilus"] floating enable, border normal
 for_window [class="gnome-calculator"] floating enable, border normal
 
-assign [class="Chromium"] 1:Chrome
+#assign [class="Chromium"] 1:Chrome
 assign [class="i3-sensible-terminal"] 2:Term
 assign [class="sublime-text"] 3:Sublime
 assign [class="Firefox"] 4:Firefox
