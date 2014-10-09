@@ -6,6 +6,7 @@
 # ruby env
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+alias prog='echo gpick, xev, xmodmap -pke'
 alias getprocid='xprop | grep WM_CLASS'
 alias www='cd /var/www/html/'
 alias weather=" nohup /opt/extras.ubuntu.com/my-weather-indicator/bin/my-weather-indicator &"
@@ -18,8 +19,9 @@ alias vold='pactl set-sink-volume 1 10%'
 alias avahifix='sudo service avahi-daemon stop'
 alias tunnel='echo ssh -L 8080:localhost:8443 user@host'
 
-# Pidgin requires this to work:
-NSS_SSL_CBC_RANDOM_IV=0
+alias ll='ls -lhp --group-directories-first'
+alias l=ll
+alias la='ls -lAhp --group-directories-first'
 
 # Switch timezones
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
