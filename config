@@ -77,10 +77,6 @@ assign [class="VirtualBox"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
 assign [class="Nautilus"] 10:Gimp
 
-exec chromium-browser 
-exec gnome-sound-applet
-exec nm-applet
-exec parcellite
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -220,5 +216,12 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-       status_command i3status
+    status_command i3status
+	tray_output primary
 }
+
+# End with opening up programs
+exec chromium-browser 
+exec gnome-sound-applet
+exec nm-applet
+exec parcellite
