@@ -59,7 +59,7 @@ bindsym $mod+p exec i3lock -i /home/viktor/.i3/big.png -c 212121
 bindsym $mod+g move workspace to output left
 
 #monitor Dual setup:
-exec xrandr --output HDMI2 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI1 --off --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output eDP1 --mode 1920x1080 --pos 3840x0 --rotate normal --output VIRTUAL1 --off
+exec xrandr --output HDMI2 --mode 1920x1080 --primary --pos 0x0 --rotate normal --output HDMI1 --off --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output eDP1 --mode 1920x1080 --pos 3840x0 --rotate normal --output VIRTUAL1 --off
 
 #make program start floated
 for_window [class="Pidgin"] floating enable, border normal
