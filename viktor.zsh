@@ -2,6 +2,7 @@
 
 #config
 #xset r rate 250
+alias i="vi ~/.i3/config"
 alias conf="cat ~/.i3/viktor.zsh | grep alias"
 alias edit='vi ~/.i3/viktor.zsh'
 alias prog='echo gpick, xev, xmodmap -pke'
