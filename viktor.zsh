@@ -1,7 +1,9 @@
 # This file is public on github
 
+#plugins=(torrent)
+ZSH_THEME="philips"
+PROMPT='%B%F{red}%n@%m%f%F{yellow}[%D{%L:%M:%S}]%f:%F{blue}${${(%):-%~}}%f$ %b'
 #config
-#xset r rate 250
 alias i="vi ~/.i3/config"
 alias conf="cat ~/.i3/viktor.zsh | grep alias"
 alias edit='vi ~/.i3/viktor.zsh'
