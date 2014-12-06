@@ -1,3 +1,4 @@
+# Lenovo specific settings
 # ======================= Speaker lenovo ========================
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute

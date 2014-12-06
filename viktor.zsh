@@ -1,4 +1,5 @@
 # This file is public on github
+echo $HOSTNAME
 
 #plugins=(torrent)
 ZSH_THEME="philips"

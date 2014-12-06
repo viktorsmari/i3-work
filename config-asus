@@ -1,3 +1,4 @@
+# ASUS settings
 # ======================= Speaker asus =========================
 bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5%
 bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5%
