@@ -1,0 +1,18 @@
+# ======================= Speaker lenovo ========================
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# ================== Brightness =================================
+
+# ================== Power button - not working? ================
+bindsym XF86Sleep exec i3lock -i /home/viktor/.i3/big.png -c 212121, exec sudo pm-suspend
+bindsym XF86PowerOff exec notify-send -t 1000 PowerButton, exec sudo shutdown -h now
+
+#==================== Playback buttons ==========================
+bindsym XF86AudioPlay exec notify-send -t 1000 Play
+bindsym XF86AudioStop exec notify-send -t 1000 Stop
+bindsym XF86AudioPrev exec notify-send -t 1000 Prev
+bindsym XF86AudioNext exec notify-send -t 1000 Next
+bindsym XF86Launch1 exec notify-send -t 1000 RescueButton
+
