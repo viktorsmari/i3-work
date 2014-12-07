@@ -165,4 +165,4 @@ nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 imap <c-s> <Esc><c-s>
 
-map <F2> :w<enter>:!gcc *.c -g; ./a.out<enter>
+map <F2> :w<enter>:!gcc % -g; ./a.out<enter>
