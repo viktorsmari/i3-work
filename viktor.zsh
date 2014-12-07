@@ -1,12 +1,9 @@
 # This file is public on github
-echo $HOSTNAME
 
 #plugins=(torrent)
-ZSH_THEME="philips"
-PROMPT='%B%F{red}%n@%m%f%F{yellow}[%D{%L:%M:%S}]%f:%F{blue}${${(%):-%~}}%f$ %b'
+#ZSH_THEME=""
 #config
 alias i="vi ~/.i3/config.base"
-alias conf="cat ~/.i3/viktor.zsh | grep alias"
 alias edit='vi ~/.i3/viktor.zsh'
 alias prog='echo gpick, xev, xmodmap -pke'
 alias getprocid='xprop | grep WM_CLASS'

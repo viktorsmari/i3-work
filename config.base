@@ -5,12 +5,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 set $mod Mod4
 
 # ========  Keyboard and language ============
-exec --no-startup-id setxkbmap us
 # make caps lock work as escape key
-exec /usr/bin/setxkbmap -option "caps:escape"
-
-# Use Alt + Shift to switch US / IS 
-exec setxkbmap -option grp:switch,grp:alt_shift_toggle,grp_led:scroll us,is
+# Use Alt + Shift to switch US / IS and use led scroll
+#exec /usr/bin/setxkbmap -option "caps:escape", grp:switch,grp:alt_shift_toggle,grp_led:scroll us,is
 
 # Keyboard repeat rate
 exec xset r rate 240
