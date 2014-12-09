@@ -1,13 +1,13 @@
 # This file is public on github
+# ZSH config is in ~/.zshrc
 
-#plugins=(torrent)
-#ZSH_THEME=""
+stty stop undef
+
 #config
 alias i="vi ~/.i3/config.base"
 alias edit='vi ~/.i3/viktor.zsh'
 alias prog='echo gpick, xev, xmodmap -pke'
 alias getprocid='xprop | grep WM_CLASS'
-stty stop undef
 
 #handy
 alias www='cd /var/www/html/'

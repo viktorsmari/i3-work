@@ -24,8 +24,9 @@ for_window [title="^floatme$"] floating enable
 
 # Make these program start floated
 for_window [class="Pidgin"] floating enable, border normal
-#for_window [class="Nautilus"] floating enable, border normal
 for_window [class="gnome-calculator"] floating enable, border normal
+#unfloat
+for_window [class="Nautilus"] floating disable, border normal
 
 #assign [class="Chromium"] 1:Chrome
 assign [class="i3-sensible-terminal"] 2:Term
@@ -110,7 +111,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1:Chrome
