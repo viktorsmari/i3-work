@@ -166,3 +166,11 @@ imap <c-s> <Esc>:w<CR>a
 imap <c-s> <Esc><c-s>
 
 map <F2> :w<enter>:!gcc % -g; ./a.out<enter>
+
+"tab
+
+nnoremap <C-t> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+inoremap <C-t> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+

@@ -3,6 +3,8 @@
 
 stty stop undef
 
+alias v="vim"
+alias vi="vim"
 #config
 alias i="vi ~/.i3/config.base"
 alias edit='vi ~/.i3/viktor.zsh'
@@ -20,7 +22,7 @@ alias pi='ping 8.8.8.8'
 alias volup='pactl set-sink-volume 1 +10%'
 alias vold='pactl set-sink-volume 1 10%'
 
-#adv
+#adva
 alias avahifix='sudo service avahi-daemon stop'
 alias tunnel='echo ssh -L 8080:localhost:8443 user@host'
 
