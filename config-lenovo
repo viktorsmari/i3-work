@@ -1,8 +1,14 @@
 # Lenovo specific settings
+bindsym $mod+o exec setxkbmap us
+bindsym $mod+i exec setxkbmap is
+
 # ======================= Speaker lenovo ========================
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym $mod+F10 exec pactl -- set-sink-mute 0 toggle
+bindsym $mod+F11 exec pactl -- set-sink-volume 0 -5% 
+bindsym $mod+F12 exec pactl -- set-sink-volume 0 +5%
 
 # ================== Brightness =================================
 
