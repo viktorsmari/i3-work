@@ -2,6 +2,7 @@
 # ZSH config is in ~/.zshrc
 
 stty stop undef
+xset r rate 255
 
 alias v="vim"
 alias vi="vim"
@@ -34,5 +35,4 @@ alias la='ls -lAhp --group-directories-first'
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias AMS="timedatectl set-timezone Europe/Amsterdam"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
-
 
