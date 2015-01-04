@@ -6,6 +6,10 @@ xset r rate 255
 
 alias v="vim"
 alias vi="vim"
+
+#commands
+alias commands="echo xmodmap -pke, xev, showkey"
+
 #config
 alias i="vi ~/.i3/config.base"
 alias edit='vi ~/.i3/viktor.zsh'
