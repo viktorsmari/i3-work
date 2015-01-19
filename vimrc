@@ -189,9 +189,12 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
-"save
-nmap <c-s> :w<CR>
+"Quit with Q
+nmap Q :q<CR>
+
+"Save with ctrl s
 imap <c-s> <Esc>:w<CR>a
+nmap <c-s> :w<CR>
 
 "run
 map <F2> :w<enter>:!gcc % -g; ./a.out<enter>
