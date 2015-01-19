@@ -13,6 +13,7 @@ exec xset r rate 240
 
 bindsym $mod+p exec i3lock -i /home/viktor/.i3/big.png -c 212121
 bindsym $mod+g move workspace to output left
+bindsym $mod+Shift+c --release exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -61,7 +62,7 @@ bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -138,7 +139,7 @@ bindsym $mod+Shift+9 move container to workspace 9:VirtualBox
 bindsym $mod+Shift+0 move container to workspace 10:Gimp
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r exec ~/.i3/generatei3.sh, restart
 # exit i3 (logs you out of your X session)
