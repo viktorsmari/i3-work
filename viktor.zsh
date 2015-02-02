@@ -9,6 +9,8 @@ alias vi="vim"
 
 #commands
 alias commands="echo xmodmap -pke, xev, showkey"
+alias vimrc="vim ~/.vimrc"
+alias ...="cd ../../.."
 
 #config
 alias i="vi ~/.i3/config.base"
