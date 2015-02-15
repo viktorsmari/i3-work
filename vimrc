@@ -218,10 +218,4 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 " QUIT
 nnoremap <C-c> <Esc>:q!<enter>
 
-
-"Show hidden files in NerdTree
-"let NERDTreeShowHidden=1
-"
-""autopen NERDTree and focus cursor in new document
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+map <silent> <C-n> :NERDTreeToggle<CR>
