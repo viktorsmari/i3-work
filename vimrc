@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
 
 
 " All of your Plugins must be added before the following line
@@ -193,8 +194,7 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
-"Quit with Q
-nmap Q :q<CR>
+
 
 "Save with ctrl s
 imap <c-s> <Esc>:w<CR>a
@@ -205,13 +205,23 @@ map <F2> :w<enter>:!gcc % -g; ./a.out<enter>
 imap <F2> <Esc> :w<enter>:!gcc % -g; ./a.out<enter>
 
 "tab
-nnoremap <C-t> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-inoremap <C-t> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
 
-	
+nnoremap <F7> :tabp<CR>
+nnoremap <F8> :tabn<CR>
+inoremap <F7> <ESC>:tabp<CR>
+inoremap <F8> <ESC>:tabn<CR>
+
+
+
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
 " QUIT
 nnoremap <C-c> <Esc>:q!<enter>
+
+
+"Show hidden files in NerdTree
+"let NERDTreeShowHidden=1
+"
+""autopen NERDTree and focus cursor in new document
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p

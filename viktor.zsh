@@ -6,8 +6,10 @@ xset r rate 255
 
 alias v="vim"
 alias vi="vim"
+alias slb="/home/viktor/dev/styr/shlab/shlab-handout"
 
 #commands
+alias styr='cd dev/styr/'
 alias commands="echo xmodmap -pke, xev, showkey"
 alias vimrc="vim ~/.vimrc"
 alias ...="cd ../../.."
@@ -20,7 +22,6 @@ alias getprocid='xprop | grep WM_CLASS'
 
 #handy
 alias www='cd /var/www/html/'
-alias weather=" nohup /opt/extras.ubuntu.com/my-weather-indicator/bin/my-weather-indicator &"
 alias open=xdg-open
 alias xclip='xclip -selection c'
 alias pi='ping 8.8.8.8'
