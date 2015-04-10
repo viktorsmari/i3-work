@@ -10,7 +10,7 @@ alias slb="/home/viktor/dev/styr/shlab/shlab-handout"
 
 #commands
 alias styr='cd dev/styr/'
-alias commands="echo xmodmap -pke, xev, showkey"
+alias commands="echo xmodmap -pke, xev, showkey,exo-preferred-applications"
 alias vimrc="vim ~/.vimrc"
 alias ...="cd ../../.."
 
