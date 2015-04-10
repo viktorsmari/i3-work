@@ -15,6 +15,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
 
 
 " All of your Plugins must be added before the following line
@@ -201,8 +202,8 @@ imap <c-s> <Esc>:w<CR>a
 nmap <c-s> :w<CR>
 
 "run
-map <F2> :w<enter>:!gcc % -g; ./a.out<enter>
-imap <F2> <Esc> :w<enter>:!gcc % -g; ./a.out<enter>
+map <F2> :w<enter>:!rm a.out; gcc % -g; ./a.out<enter>
+imap <F2> <Esc> :w<enter>:!rm a.out; gcc % -g; ./a.out<enter>
 
 "tab
 
