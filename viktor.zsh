@@ -4,21 +4,17 @@
 stty stop undef
 xset r rate 255
 
-alias v="vim"
-alias vi="vim"
-alias slb="/home/viktor/dev/styr/shlab/shlab-handout"
-
-#commands
-alias styr='cd dev/styr/'
-alias commands="echo xmodmap -pke, xev, showkey,exo-preferred-applications"
-alias vimrc="vim ~/.vimrc"
-alias ...="cd ../../.."
-
-#config
-alias i="vi ~/.i3/config.base"
-alias edit='vi ~/.i3/viktor.zsh'
-alias prog='echo gpick, xev, xmodmap -pke'
+#programs
+alias prog="printf 'Keyboard: \txmodmap -pke, xev, showkey,
+Programs: \tgetprocid, exo-preferred-applications, 
+Volume: \tpavucontrol, paprefs (RTP settings for network server)
+Color picker: \tgpick
+'"
 alias getprocid='xprop | grep WM_CLASS'
+
+#i3 config
+alias config="vi ~/.i3/config.base"
+alias edit='vi ~/.i3/viktor.zsh'
 
 #handy
 alias www='cd /var/www/html/'
@@ -33,6 +29,11 @@ alias vold='pactl set-sink-volume 1 10%'
 #adva
 alias avahifix='sudo service avahi-daemon stop'
 alias tunnel='echo ssh -L 8080:localhost:8443 user@host'
+
+#system
+alias v="vim"
+alias vi="vim"
+alias vimrc="vim ~/.vimrc"
 
 alias ll='ls -lhp --group-directories-first'
 alias l=ll
