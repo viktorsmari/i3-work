@@ -6,7 +6,9 @@ set $mod Mod4
 
 # ========  Keyboard and language ============
 # Use Alt + Shift to switch US / IS and use led scroll. Caps / Esc switch.
-exec /usr/bin/setxkbmap -option "caps:escape", grp:switch,grp:alt_shift_toggle,grp_led:scroll us,is
+exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle"
+exec /usr/bin/setxkbmap -layout "us,is"
+
 
 # Keyboard repeat rate
 exec xset r rate 240
