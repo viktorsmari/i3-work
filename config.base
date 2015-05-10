@@ -6,9 +6,9 @@ set $mod Mod4
 
 # ========  Keyboard and language ============
 # Use Alt + Shift to switch US / IS and use led scroll. Caps / Esc switch.
-exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle"
-exec /usr/bin/setxkbmap -layout "us,is"
 
+#exec /usr/bin/setxkbmap -option ""
+exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -layout us,is
 
 # Keyboard repeat rate
 exec xset r rate 240
@@ -44,9 +44,9 @@ assign [class="Nautilus"] 10:Gimp
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock -c 004488, mode "default"
+    bindsym l exec --no-startup-id i3lock -c 0c44c8, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id sudo pm-suspend, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
