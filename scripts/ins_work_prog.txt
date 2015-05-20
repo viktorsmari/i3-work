@@ -9,4 +9,5 @@ git config --global push.default matching
 #Vim plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-
+# Link i3 status 
+ln -s ~/.i3/i3status.conf ~/.i3status.conf
