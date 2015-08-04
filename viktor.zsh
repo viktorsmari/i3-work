@@ -26,9 +26,10 @@ alias pi='ping 8.8.8.8'
 alias volup='pactl set-sink-volume 1 +10%'
 alias vold='pactl set-sink-volume 1 10%'
 
-#adva
-alias avahifix='sudo service avahi-daemon stop'
-alias tunnel='echo ssh -L 8080:localhost:8443 user@host'
+# ssh -L 8080:localhost:8443 user@host
+
+# ssh -p2200 root@hopserver -L 2201:endpoint:2200 -N
+# Then ftp to localhost port 2201
 
 #system
 alias v="vim"
