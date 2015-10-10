@@ -9,6 +9,7 @@ alias prog="printf 'Keyboard: \txmodmap -pke, xev, showkey,
 Programs: \tgetprocid, exo-preferred-applications, 
 Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
+Airplay:	\t rygel
 '"
 alias getprocid='xprop | grep WM_CLASS'
 

@@ -12,11 +12,12 @@ exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -
 bindsym $mod+i exec sh /home/viktor/.i3/kb.sh
 
 # Keyboard repeat rate
-exec xset r rate 240
+#exec xset r rate 240
 
 bindsym $mod+p exec i3lock -i /home/viktor/.i3/big.png -c 212121
 bindsym $mod+g move workspace to output left
-bindsym $mod+Shift+c --release exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym $mod+Shift+s --release exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym $mod+Shift+c exec chromium-browser
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -27,7 +28,6 @@ bindsym $mod+shift+Return exec i3-sensible-terminal -Q -T floatme
 for_window [title="^floatme$"] floating enable
 
 # Make these program start floated
-for_window [class="Pidgin"] floating enable, border normal
 for_window [class="gnome-calculator"] floating enable, border normal
 #unfloat
 for_window [class="Nautilus"] border normal
@@ -49,7 +49,7 @@ mode "$mode_system" {
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym s exec --no-startup-id sudo pm-suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym r exec --no-startup-id shutdown -r now, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
 
     # back to normal: Enter or Escape
