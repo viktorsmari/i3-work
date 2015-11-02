@@ -34,7 +34,7 @@ git config --global push.default matching
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #link vimrc
-ln -s ~/i3/vimrc ~/.vimrc
+ln -s ~/.i3/vimrc ~/.vimrc
 
 
 #
