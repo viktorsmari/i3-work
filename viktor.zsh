@@ -1,4 +1,4 @@
-# This file is public on github
+## This file is public on github
 # ZSH config is in ~/.zshrc
 
 stty stop undef

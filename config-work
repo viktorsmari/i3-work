@@ -24,4 +24,6 @@ bindsym XF86PowerOff exec notify-send -t 1000 PowerButton
 #
 #
 # ====================== Display ===============================
-exec xrandr --output HDMI2 --mode 1920x1080 --primary --pos 0x0 --rotate normal --output HDMI1 --off --output DP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output eDP1 --off --output VIRTUAL1 --off
+
+exec xrandr --output VIRTUAL1 --off --output eDP1 --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output HDMI2 --off --output HDMI1 --off --output DP2 --off
+
