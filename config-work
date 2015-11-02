@@ -10,14 +10,15 @@ bindsym XF86AudioMute exec pactl -- set-sink-mute 1 toggle
 bindsym XF86KbdBrightnessUp exec notify-send -t 1000 kb-up
 bindsym XF86KbdBrightnessDown exec notify-send -t 1000 kb-dwn
 
-# Not working:
-bindsym XF86MonBrightnessUp exec notify-send -t 1000 BrUp
-bindsym XF86MonBrightnessDown exec notify-send -t 1000 BrDown
+exec sudo chmod o+w /sys/class/backlight/intel_backlight/brightness
+
+bindsym XF86MonBrightnessDown exec echo $((-50 + $(cat /sys/class/backlight/intel_backlight/brightness))) > /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessUp exec echo $((50 + $(cat /sys/class/backlight/intel_backlight/brightness))) > /sys/class/backlight/intel_backlight/brightness
 
 # ======================= Power buttons ========================
 bindsym XF86Sleep exec i3lock -i /home/viktor/.i3/big.png -c 212121, exec sudo pm-suspend
 #Power button - not working?
-bindsym XF86PowerOff exec notify-send -t 1000 PowerButton 
+bindsym XF86PowerOff exec notify-send -t 1000 PowerButton
 
 
 # ====================== Playback Buttons ======================
@@ -26,4 +27,3 @@ bindsym XF86PowerOff exec notify-send -t 1000 PowerButton
 # ====================== Display ===============================
 
 exec xrandr --output VIRTUAL1 --off --output eDP1 --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output HDMI2 --off --output HDMI1 --off --output DP2 --off
-
