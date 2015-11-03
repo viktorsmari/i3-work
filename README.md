@@ -1,12 +1,10 @@
 i3-work
 =======
 
-This repo contains my i3wm config along with some install scripts for fast setup.
+This repo contains my i3wm config along with some install scripts for fast setup on a CLEAN computer
 
 
 
-Just run the scripts with sh, example:
+Start by running bootstrap.sh from the shell, no need to clone the repo.
 
-  sh install_sublime.txt
-
-
+bootstrap.sh installs all the stuff including git, and then clones this repo
