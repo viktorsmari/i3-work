@@ -9,7 +9,7 @@ set $mod Mod4
 
 #exec /usr/bin/setxkbmap -layout us,is
 exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -layout us,is
-bindsym $mod+i exec sh /home/viktor/.i3/kb.sh
+bindsym $mod+i exec sh /home/viktor/.i3/kb-is.sh
 bindsym $mod+o exec sh /home/viktor/.i3/kb-en.sh
 
 # Keyboard repeat rate
