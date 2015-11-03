@@ -10,6 +10,7 @@ set $mod Mod4
 #exec /usr/bin/setxkbmap -layout us,is
 exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -layout us,is
 bindsym $mod+i exec sh /home/viktor/.i3/kb.sh
+bindsym $mod+o exec sh /home/viktor/.i3/kb-en.sh
 
 # Keyboard repeat rate
 #exec xset r rate 240
@@ -186,7 +187,6 @@ exec --no-startup-id xsetroot -solid "#333333"
 exec chromium-browser 
 exec gnome-sound-applet
 exec nm-applet
-exec parcellite
 
 # =================== End base ============================
 
