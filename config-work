@@ -13,7 +13,7 @@ bindsym XF86KbdBrightnessDown exec notify-send -t 1000 kb-dwn
 
 exec sudo chmod o+w /sys/class/backlight/intel_backlight/brightness
 
-bindsym XF86MonBrightnessDown exec echo $((-50 + $(cat /sys/class/backlight/intel_backlight/brightness))) > /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown exec echo $((-50 + $(cat /sys/class/backlight/intel_backlight/brightness))) > /sys/class/backlight/intel_backlight/brightness, exec notify-send -t 1000 Mon-Down
 bindsym XF86MonBrightnessUp exec echo $((50 + $(cat /sys/class/backlight/intel_backlight/brightness))) > /sys/class/backlight/intel_backlight/brightness
 
 # ======================= Power buttons ========================
