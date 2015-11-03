@@ -48,7 +48,8 @@ set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) re
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock -c 0c44c8, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id sudo pm-suspend, mode "default"
+    #bindsym s exec --no-startup-id sudo pm-suspend, mode "default"
+    bindsym s exec --no-startup-id poweroff, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id shutdown -r now, mode "default"
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
