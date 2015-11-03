@@ -1,4 +1,5 @@
-######################### ASUS settings
+######################### work computer settings
+exec pidgin
 # ======================= Speaker asus =========================
 bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5%
 bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5%

@@ -40,6 +40,7 @@ assign [class="Firefox"] 4:Firefox
 assign [class="Thunar"] 5:Thunar
 assign [class="Filezilla"] 6:FileZilla
 assign [class="VirtualBox"] 9:VirtualBox
+assign [class="Pidgin"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
 assign [class="Nautilus"] 10:Gimp
 
