@@ -17,7 +17,7 @@ alias getprocid='xprop | grep WM_CLASS'
 
 #i3 config
 alias config="vi ~/.i3/config.base"
-alias edit='vi ~/.i3/viktor.zsh'
+alias edit='vi ~/.i3/zsh.zsh'
 
 #handy
 alias www='cd /var/www/html/'
