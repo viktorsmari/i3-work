@@ -16,6 +16,7 @@ bindsym $mod+o exec sh /home/viktor/.i3/scripts/kb-en.sh
 #exec xset r rate 240
 
 bindsym $mod+p exec i3lock -i /home/viktor/.i3/big.png -c 212121
+bindsym $mod+Shift+p exec i3lock -i /home/viktor/.i3/big.png -c 212121, exec systemctl suspend
 bindsym $mod+g move workspace to output left
 bindsym $mod+s --release exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 bindsym $mod+Shift+c exec chromium-browser
