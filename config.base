@@ -5,10 +5,10 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 set $mod Mod4
 
 # ========  Keyboard and language ============
-# Use Alt + Shift to switch US / IS and use led scroll. Caps / Esc switch.
+# Caps / Esc switch.
 
 #exec /usr/bin/setxkbmap -layout us,is
-exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -layout us,is
+#exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -layout us,is
 bindsym $mod+i exec sh /home/viktor/.i3/scripts/kb-is.sh
 bindsym $mod+o exec sh /home/viktor/.i3/scripts/kb-en.sh
 
@@ -175,7 +175,7 @@ exec --no-startup-id xsetroot -solid "#333333"
 exec chromium-browser 
 exec gnome-sound-applet
 exec nm-applet
-exec glipper
+exec glipper #clipboard history
 
 # =================== End base ============================
 

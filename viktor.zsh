@@ -1,5 +1,7 @@
 ## This file is public on github
 # ZSH config is in ~/.zshrc
+export EDITOR=vim
+ZSH_THEME="dieter"
 
 stty stop undef
 xset r rate 255
