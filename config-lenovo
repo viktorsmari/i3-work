@@ -32,5 +32,4 @@ bindsym XF86AudioNext exec notify-send -t 1000 Next
 bindsym XF86Launch1 exec notify-send -t 1000 RescueButton
 
 # ================== Video config =============================== 
-exec xrandr --output HDMI1 --off --output LVDS1 --mode 1366x768 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output DP1 --off --output VGA1 --primary--mode 1920x1080 --pos 1366x0 --rotate normal
-exec xrandr --output LVDS1 
+exec xrandr --output HDMI1 --off --output LVDS1 --mode 1366x768 --pos 0x0 --rotate normal --output VIRTUAL1 --off --output DP1 --off --output VGA1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal
