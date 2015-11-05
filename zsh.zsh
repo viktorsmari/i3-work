@@ -1,5 +1,7 @@
 ## This file is public on github
 # ZSH config is in ~/.zshrc
+export EDITOR=vim
+ZSH_THEME="dieter"
 
 stty stop undef
 xset r rate 255
@@ -15,7 +17,7 @@ alias getprocid='xprop | grep WM_CLASS'
 
 #i3 config
 alias config="vi ~/.i3/config.base"
-alias edit='vi ~/.i3/viktor.zsh'
+alias edit='vi ~/.i3/zsh.zsh'
 
 #handy
 alias www='cd /var/www/html/'

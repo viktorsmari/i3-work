@@ -1,9 +1,0 @@
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
-
-# change default shell
-chsh -s /bin/zsh 
-
-echo 'Remember to do: (sudo?) chsh -s /bin/zsh'
-
-# link my zsh config 
-ln -s /home/viktor/.i3/viktor.zsh ~/.oh-my-zsh/custom/viktor.zsh
