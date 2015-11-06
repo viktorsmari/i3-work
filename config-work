@@ -13,8 +13,9 @@ bindsym XF86KbdBrightnessDown exec notify-send -t 1000 kb-dwn
 
 exec sudo chmod o+w /sys/class/backlight/intel_backlight/brightness
 
-bindsym XF86MonBrightnessDown exec echo $((-50 + $(cat /sys/class/backlight/intel_backlight/brightness))) > /sys/class/backlight/intel_backlight/brightness, exec notify-send -t 1000 Mon-Down
-bindsym XF86MonBrightnessUp exec echo $((50 + $(cat /sys/class/backlight/intel_backlight/brightness))) > /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown exec notify-send MonDown, exec  ~/.i3/scripts/brightness_intel.sh -50
+bindsym XF86MonBrightnessUp   exec notify-send MonUp,   exec ~/.i3/scripts/brightness_intel.sh 50
+
 
 # ======================= Power buttons ========================
 bindsym XF86Sleep exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
@@ -27,4 +28,4 @@ bindsym XF86PowerOff exec notify-send -t 1000 PowerButton
 #
 # ====================== Display ===============================
 
-exec xrandr --output VIRTUAL1 --off --output eDP1 --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output HDMI2 --off --output HDMI1 --off --output DP2 --off
+exec xrandr --output VIRTUAL1 --off --output eDP1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output HDMI2 --off --output HDMI1 --off --output DP2 --off
