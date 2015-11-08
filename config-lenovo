@@ -15,8 +15,6 @@ bindsym $mod+F12 exec pactl -- set-sink-volume 0 +5%
 
 # ================== Brightness =================================
 # script to control brightness
-exec sudo chmod o+w /sys/class/backlight/acpi_video0/brightness
-
 bindsym XF86MonBrightnessUp   exec notify-send Brightness-Up   -t 1000, exec ~/.i3/scripts/brightness_intel.sh 50
 bindsym XF86MonBrightnessDown exec notify-send Brightness-Down -t 1000, exec ~/.i3/scripts/brightness_intel.sh -50
 
