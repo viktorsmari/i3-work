@@ -1,6 +1,7 @@
 #########################  Lenovo
 #bindsym $mod+o exec setxkbmap us
 #bindsym $mod+i exec setxkbmap is
+bindsym $mod+Shift+p exec systemctl suspend #no password locking
 
 # ======================= Speaker lenovo ========================
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute

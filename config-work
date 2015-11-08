@@ -1,5 +1,6 @@
 ######################### work computer settings
-exec pidgin
+exec empathy
+bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 # ======================= Speaker asus =========================
 bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5%
 bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5%

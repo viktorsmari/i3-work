@@ -16,7 +16,7 @@ bindsym $mod+o exec sh ~/.i3/scripts/kb-en.sh
 #exec xset r rate 240
 
 bindsym $mod+p exec i3lock -i ~/.i3/penguin.png -c 212121
-bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
+#computerspecific bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 bindsym $mod+g move workspace to output left
 bindsym $mod+s --release exec notify-send Screenshot, exec scrot -s -e 'mv $f /home/$(whoami)/Pictures/'
 bindsym $mod+Shift+c exec chromium-browser
