@@ -220,3 +220,4 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 nnoremap <C-c> <Esc>:q!<enter>
 
 map <silent> <C-n> :NERDTreeToggle<CR>
+set paste
