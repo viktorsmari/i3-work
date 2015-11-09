@@ -26,7 +26,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+shift+Return exec i3-sensible-terminal -Q -T floatme
+bindsym $mod+shift+Return exec notify-send -t 1000 IshouldFloat, exec i3-sensible-terminal -Q -T floatme
 for_window [title="^floatme$"] floating enable
 
 # Make these program start floated
@@ -39,10 +39,10 @@ assign [class="i3-sensible-terminal"] 2:Term
 assign [class="sublime-text"] 3:Atom
 assign [class="atom"] 3:Atom
 assign [class="Firefox"] 4:Firefox
+assign [class="Empathy"] 4:Firefox
 assign [class="Thunar"] 5:Thunar
 assign [class="Filezilla"] 6:FileZilla
 assign [class="VirtualBox"] 9:VirtualBox
-assign [class="Pidgin"] 9:VirtualBox
 assign [class="Gimp"] 10:Gimp
 assign [class="Nautilus"] 10:Gimp
 
