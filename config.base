@@ -40,6 +40,7 @@ assign [class="sublime-text"] 3:Atom
 assign [class="atom"] 3:Atom
 assign [class="Firefox"] 4:Firefox
 assign [class="Empathy"] 4:Firefox
+assign [class="Pidgin"] 4:Firefox
 assign [class="Thunar"] 5:Thunar
 assign [class="Filezilla"] 6:FileZilla
 assign [class="VirtualBox"] 9:VirtualBox
