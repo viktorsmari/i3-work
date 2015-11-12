@@ -38,6 +38,8 @@ alias vold='pactl set-sink-volume 1 10%'
 alias v="vim"
 alias vi="vim"
 alias vimrc="vim ~/.vimrc"
+alias va="vagrant"
+alias vag="vagrant"
 
 alias ll='ls -lhp --group-directories-first'
 alias l=ll
