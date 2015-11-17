@@ -103,8 +103,8 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+Tab focus mode_toggle
-bindsym Mod1+Tab workspace back_and_forth
+bindsym Mod1+Tab focus mode_toggle
+bindsym $mod+Tab workspace back_and_forth
 
 bindsym $mod+Shift+m move scratchpad
 bindsym $mod+m scratchpad show
@@ -138,6 +138,9 @@ bindsym $mod+Shift+7 move container to workspace 7:
 bindsym $mod+Shift+8 move container to workspace 8:
 bindsym $mod+Shift+9 move container to workspace 9:VirtualBox
 bindsym $mod+Shift+0 move container to workspace 10:Gimp
+
+# Start workspaces on specified monitors
+workspace 3 output DP2
 
 # reload the configuration file
 #bindsym $mod+Shift+c reload
