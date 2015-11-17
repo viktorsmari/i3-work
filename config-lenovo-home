@@ -18,6 +18,9 @@ bindsym $mod+F12 exec pactl -- set-sink-volume 0 +5%
 # script to control brightness
 bindsym XF86MonBrightnessUp   exec notify-send Brightness-Up   -t 1000, exec ~/.i3/scripts/brightness_intel.sh 50
 bindsym XF86MonBrightnessDown exec notify-send Brightness-Down -t 1000, exec ~/.i3/scripts/brightness_intel.sh -50
+# or use xbacklight
+#bindsym XF86MonBrightnessUp   exec notify-send Brightness-Up   -t 1000, exec xbacklight -dec 1
+#bindsym XF86MonBrightnessDown exec notify-send Brightness-Down -t 1000, exec xbacklight -inc 1
 
 # ================== Power button - not working? ================
 bindsym XF86Sleep    exec notify-send -t 1000 Sleeping,    exec systemctl suspend
