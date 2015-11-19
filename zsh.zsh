@@ -40,6 +40,8 @@ alias vi='vim'
 alias vimrc='vim ~/.vimrc'
 alias va='vagrant'
 alias vag='vagrant'
+alias doc='docker'
+alias dock='docker'
 
 alias ll='ls -lhp --group-directories-first'
 alias l=ll
