@@ -35,8 +35,9 @@ alias vold='pactl set-sink-volume 1 10%'
 # Then ftp to localhost port 2201
 
 #system
-alias v='vim'
-alias vi='vim'
+alias v='vim -p'
+alias vi='vim -p'
+alias vim='vim -p'
 alias vimrc='vim ~/.vimrc'
 alias va='vagrant'
 alias vag='vagrant'
