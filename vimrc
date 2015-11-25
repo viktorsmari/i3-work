@@ -159,8 +159,8 @@ set number
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
-" Use <F11> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F11>
+" Use <F2> to toggle between 'paste' and 'nopaste'
+set pastetoggle=<F2>
 
 
 "------------------------------------------------------------
@@ -202,9 +202,6 @@ nnoremap <C-L> :nohl<CR><C-L>
 imap <c-s> <Esc>:w<CR>a
 nmap <c-s> :w<CR>
 
-"run
-map <F2> :w<enter>:!rm a.out; gcc % -g; ./a.out<enter>
-imap <F2> <Esc> :w<enter>:!rm a.out; gcc % -g; ./a.out<enter>
 
 "tab
 
