@@ -96,6 +96,7 @@ set showcmd
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
+set incsearch "show search match as you type
 
 " Modelines have historically been a source of security vulnerabilities. As
 " such, it may be a good idea to disable them and use the securemodelines
@@ -112,7 +113,7 @@ set hlsearch
 " use is very much a personal preference, but they are harmless.
 
 " Use case insensitive search, except when using capital letters
-set ignorecase
+set ignorecase 
 set smartcase
 
 " Allow backspacing over autoindent, line breaks and start of insert action
@@ -121,6 +122,7 @@ set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
+set copyindent "copy the previous indentation on autoindenting
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
@@ -180,7 +182,7 @@ set pastetoggle=<F2>
 set shiftwidth=4
 set tabstop=4
 
-
+set showmatch "set show matching parenthesis
 
 "------------------------------------------------------------
 " Mappings {{{1
