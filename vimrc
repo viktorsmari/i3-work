@@ -22,6 +22,7 @@ Plugin 'airblade/vim-gitgutter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -56,6 +57,8 @@ set nocompatible
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
 filetype indent plugin on
+
+autocmd filetype python set expandtab
 
 " Enable syntax highlighting
 syntax on
@@ -198,6 +201,9 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
+
+set nobackup
+set noswapfile
 
 
 "Save with ctrl s
