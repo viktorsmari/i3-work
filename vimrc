@@ -167,6 +167,9 @@ set notimeout ttimeout ttimeoutlen=200
 " Use <F2> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F2>
 
+" use F3 to toggle flsearch
+nnoremap <F3> :set hlsearch!<CR>
+
 
 "------------------------------------------------------------
 " Indentation options {{{1
