@@ -17,8 +17,8 @@ bindsym XF86KbdBrightnessDown exec notify-send -t 1000 kb-dwn
 #Monitor
 exec sudo chmod o+w /sys/class/backlight/intel_backlight/brightness
 
-bindsym XF86MonBrightnessDown exec notify-send MonDown, exec  ~/.i3/scripts/brightness_intel.sh -50
-bindsym XF86MonBrightnessUp   exec notify-send MonUp,   exec ~/.i3/scripts/brightness_intel.sh 50
+bindsym XF86MonBrightnessDown exec notify-send MonDown, exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp   exec notify-send MonUp,   exec xbacklight -inc 10
 
 # ======================= Power buttons ========================
 bindsym XF86Sleep    exec notify-send -t 1000 Sleeping, exec sleep 1,  exec i3lock -i ~/.i3/penguin.png -c 212121 , exec systemctl suspend
