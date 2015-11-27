@@ -36,15 +36,19 @@ for_window [class="Nautilus"] border normal
 
 #assign [class="Chromium"] 1:Chrome
 assign [class="i3-sensible-terminal"] 2:Term
-assign [class="sublime-text"] 3:Atom
-assign [class="atom"] 3:Atom
-assign [class="Firefox"] 4:Firefox
-assign [class="Empathy"] 4:Firefox
-assign [class="Pidgin"] 4:Firefox
-assign [class="Thunar"] 5:Thunar
-assign [class="Filezilla"] 6:FileZilla
-assign [class="VirtualBox"] 9:VirtualBox
-assign [class="Gimp"] 10:Gimp
+assign [class="ardour_mixer"]  2:Term
+assign [class="ardour_editor"] 3:Atom
+assign [class="sublime-text"]  3:Atom
+assign [class="atom"]          3:Atom
+assign [class="Firefox"]       4:Firefox
+assign [class="Empathy"]       4:Firefox
+assign [class="Pidgin"]        4:Firefox
+assign [class="Thunar"]        5:Thunar
+assign [class="Filezilla"]     6:FileZilla
+assign [class="VirtualBox"]    9:VirtualBox
+assign [class="pavucontrol"]   9:Settings
+assign [class="qjackctl"]      9:Settings
+assign [class="Gimp"]     10:Gimp
 assign [class="Nautilus"] 10:Gimp
 
 
