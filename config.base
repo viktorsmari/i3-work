@@ -11,7 +11,7 @@ set $mod Mod4
 #exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -layout us,is
 bindsym $mod+i exec sh ~/.i3/scripts/kb-is.sh
 bindsym $mod+o exec sh ~/.i3/scripts/kb-en.sh
-bindsym --release button2 kill
+bindsym --release $mod+button2 kill
 
 # Keyboard repeat rate
 #exec xset r rate 240
