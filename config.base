@@ -184,6 +184,7 @@ exec chromium-browser
 exec gnome-sound-applet
 exec nm-applet
 exec glipper #clipboard history
+exec i3-sensible-terminal -name scratchpad -e bash
 
 # =================== End base ============================
 
