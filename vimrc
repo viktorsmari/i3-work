@@ -16,6 +16,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'chase/vim-ansible-yaml'
 
 
 " All of your Plugins must be added before the following line
@@ -122,7 +123,6 @@ set backspace=indent,eol,start
 
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
-set autoindent
 set copyindent "copy the previous indentation on autoindenting
 
 " Stop certain movements from always going to the first character of a line.
@@ -221,3 +221,4 @@ inoremap <F8> <ESC>:tabn<CR>
 nnoremap <C-c> <Esc>:q!<enter>
 
 map <silent> <C-n> :NERDTreeToggle<CR>
+set autoindent
