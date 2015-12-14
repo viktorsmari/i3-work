@@ -44,6 +44,7 @@ alias va='vagrant'
 alias vag='vagrant'
 alias doc='docker'
 alias dock='docker'
+alias doco='docker-compose'
 
 alias ll='ls -lhp --group-directories-first'
 alias l=ll

@@ -1,4 +1,3 @@
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 
@@ -56,7 +55,6 @@ set nocompatible
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
-filetype indent plugin on
 
 autocmd filetype python set expandtab
 
@@ -176,11 +174,7 @@ nnoremap <F3> :set hlsearch!<CR>
 "
 " Indentation settings according to personal preference.
 
-" Indentation settings for using 2 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 with this setup.
-"set shiftwidth=2
-"set softtabstop=2
-"set expandtab
+set expandtab 
 	
 
 " Indentation settings for using hard tabs for indent. Display tabs as
@@ -223,10 +217,7 @@ inoremap <F8> <ESC>:tabn<CR>
 
 
 
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-
 " QUIT
 nnoremap <C-c> <Esc>:q!<enter>
 
 map <silent> <C-n> :NERDTreeToggle<CR>
-set paste
