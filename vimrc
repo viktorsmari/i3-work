@@ -18,6 +18,7 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'leafgarland/typescript-vim'
 
 
 " All of your Plugins must be added before the following line
