@@ -1,5 +1,3 @@
-filetype off                  " required
-
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -179,8 +177,8 @@ set expandtab
 
 " Indentation settings for using hard tabs for indent. Display tabs as
 " two characters wide.
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 set showmatch "set show matching parenthesis
 
@@ -215,7 +213,9 @@ nnoremap <F8> :tabn<CR>
 inoremap <F7> <ESC>:tabp<CR>
 inoremap <F8> <ESC>:tabn<CR>
 
-
+"move tab
+nnoremap <S-F7> :tabm -1<CR>
+nnoremap <S-F8> :tabm +1<CR>
 
 " QUIT
 nnoremap <C-c> <Esc>:q!<enter>
