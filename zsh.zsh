@@ -7,9 +7,14 @@ export EDITOR=vim
 stty stop undef
 xset r rate 255
 
+############ SSH tips
 # ssh -L 8080:localhost:8443 user@host
+
 # ssh -p2200 root@hopserver -L 2201:endpoint:2200 -N
 # Then ftp to localhost port 2201
+
+# ssh -D 12345 root@proxyserver 
+# Firefox: Pref - Advanced - Network - Settings -Manual Proxy - Socks Host: localhost, Port 12345
 
 #programs
 alias handy="printf 'Keyboard: \txmodmap -pke, xev, showkey,
