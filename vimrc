@@ -219,7 +219,8 @@ nnoremap <S-F7> :tabm -1<CR>
 nnoremap <S-F8> :tabm +1<CR>
 
 " QUIT
-nnoremap <C-c> <Esc>:q!<enter>
+nnoremap <C-c> "+yy
+vnoremap <C-c> "+y
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 set autoindent
