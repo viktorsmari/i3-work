@@ -224,3 +224,5 @@ vnoremap <C-c> "+y
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 set autoindent
+
+autocmd VimEnter * if !argc() | NERDTree | endif  "start vim with NERDTree open if no arguments
