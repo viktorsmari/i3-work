@@ -10,6 +10,9 @@ xset r rate 255
 ############ SSH tips
 # ssh -L 8080:localhost:8443 user@host
 
+# display my rails app(must be running on 3000) on a remote machine:8080
+# ssh -R 8080:localhost:3000 user@remote
+
 # ssh -p2200 root@hopserver -L 2201:endpoint:2200 -N
 # Then ftp to localhost port 2201
 
