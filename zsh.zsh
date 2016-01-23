@@ -8,7 +8,11 @@ stty stop undef
 xset r rate 255
 
 ############ SSH tips
-# ssh -L 8080:localhost:8443 user@host
+# Access a servers website (behind a firewall) on ip:8080
+# ssh -L 8080:localhost:80 user@host 
+
+# Allow Local device to access the tunnel via lanip:8080
+# ssh -L \*8080:localhost:8443 user@host 
 
 # display my rails app(must be running on 3000) on a remote machine:8080
 # ssh -R 8080:localhost:3000 user@remote
@@ -18,6 +22,7 @@ xset r rate 255
 
 # ssh -D 12345 root@proxyserver 
 # Firefox: Pref - Advanced - Network - Settings -Manual Proxy - Socks Host: localhost, Port 12345
+# ssh -D 192.168.0.10 ... allows local clients to share the tunnel
 
 #programs
 alias handy="printf 'Keyboard: \txmodmap -pke, xev, showkey,
