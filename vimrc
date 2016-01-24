@@ -203,7 +203,7 @@ set noswapfile
 
 
 "Save with ctrl s
-imap <c-s> <Esc>:w<CR>a
+imap <c-s> <Esc>:w<CR>
 nmap <c-s> :w<CR>
 
 
