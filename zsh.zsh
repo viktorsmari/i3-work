@@ -31,6 +31,8 @@ Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
 Airplay:	\t rygel
 dd progress:	\t sudo kill -USR1 $(pgrep ^dd)
+debug: \t dmesg, vmstat 1, mpstat -P ALL, iostat -xz 1,
+ sar -n DEV 1, sar -n TCP, ETCP 1
 '"
 alias getprocid='xprop | grep WM_CLASS'
 
