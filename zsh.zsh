@@ -9,6 +9,7 @@ xset r rate 255
 
 ############ SSH tips
 # Access a servers website (behind a firewall) on ip:8080
+# Server needs to add 'GatewayPorts yes' in /etc/ssh/sshd_config
 # ssh -L 8080:localhost:80 user@host 
 
 # Allow Local device to access the tunnel via lanip:8080
