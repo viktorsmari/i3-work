@@ -63,6 +63,8 @@ alias dock='docker'
 alias doco='docker-compose'
 alias doci='docker images'
 alias docrmi='docker rmi --force'
+alias docrmc='docker rm `docker ps -aq`'
+
 
 alias ll='ls -lhp --group-directories-first'
 alias l=ll
