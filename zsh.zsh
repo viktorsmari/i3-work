@@ -61,6 +61,8 @@ alias vag='vagrant'
 alias doc='docker'
 alias dock='docker'
 alias doco='docker-compose'
+alias doci='docker images'
+alias docrmi='docker rmi --force'
 
 alias ll='ls -lhp --group-directories-first'
 alias l=ll
