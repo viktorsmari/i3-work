@@ -8,15 +8,15 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'bling/vim-airline'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'tpope/vim-surround'
+"Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'chase/vim-ansible-yaml'
-Plugin 'leafgarland/typescript-vim'
+"Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -228,4 +228,4 @@ set autoindent
 autocmd VimEnter * if !argc() | NERDTree | endif  "start vim with NERDTree open if no arguments
 
 "close abbrev
-imap ,/ </<C-X><C-O>
+inoremap <NUL> </<C-X><C-O>
