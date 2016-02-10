@@ -181,6 +181,7 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
+set wrap!
 set showmatch "set show matching parenthesis
 
 "------------------------------------------------------------
