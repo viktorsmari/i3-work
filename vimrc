@@ -227,5 +227,12 @@ set autoindent
 
 autocmd VimEnter * if !argc() | NERDTree | endif  "start vim with NERDTree open if no arguments
 
-"close abbrev
+"close abbrev with C-Space
 inoremap <NUL> </<C-X><C-O>
+
+
+"notes
+" increment number with C-a
+" change insite html tags with 'cit'
+" create mark ma   mb 
+" load   mark `a   `b
