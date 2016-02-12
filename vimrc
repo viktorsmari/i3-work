@@ -233,7 +233,9 @@ inoremap <NUL> </<C-X><C-O>
 
 
 "notes
-" increment number with C-a
-" change insite html tags with 'cit'
-" create mark ma   mb 
-" load   mark `a   `b
+" Copy to clipboard:        "+y
+" increment number:         C-a
+" change inside html tags:  cit
+" create mark a:            ma 
+" load   mark a:            `a   
+
