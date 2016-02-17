@@ -1,5 +1,5 @@
 #Step 1 - install programs including git to be able to clone in the next step
-sudo apt-get install pwgen curl nmap vim vim-gnome zsh git git-core arandr g++ automake make chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper
+sudo apt-get install pwgen curl nmap vim vim-gnome zsh git git-core arandr g++ automake make chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper vim-snippets
 #gnome-icon-theme-full 
 
 #Step 2 - Clone the i3 repo
