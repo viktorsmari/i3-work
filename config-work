@@ -30,4 +30,4 @@ bindsym Menu exec notify-send -t 1000 Menu
 #
 #
 # ====================== Display ===============================
-exec ~/.i3/scripts/disp-dtu.sh
+exec ~/.i3/scripts/disp-dtu-dual-2560.sh
