@@ -2,6 +2,7 @@
 exec pidgin
 exec firefox
 bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
+
 # ======================= Speaker asus =========================
 bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5%, exec notify-send -t 1000 Volup
 bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5%, exec notify-send -t 1000 Voldn
@@ -9,20 +10,16 @@ bindsym $mod+F12             exec pactl -- set-sink-volume 1 +5%, exec notify-se
 bindsym $mod+F11             exec pactl -- set-sink-volume 1 -5%, exec notify-send -t 1000 Voldn
 bindsym XF86AudioMute        exec pactl -- set-sink-mute 1 toggle, exec notify-send -t 1000 Mute
 
-# ======================= Brightness ===========================
 #Keyboard
 bindsym XF86KbdBrightnessUp exec notify-send -t 1000 kb-up
 bindsym XF86KbdBrightnessDown exec notify-send -t 1000 kb-dwn
 
 #Monitor
-exec sudo chmod o+w /sys/class/backlight/intel_backlight/brightness
-
 bindsym XF86MonBrightnessDown exec notify-send MonDown, exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp   exec notify-send MonUp,   exec xbacklight -inc 10
 
 # ======================= Power buttons ========================
 bindsym XF86Sleep    exec notify-send -t 1000 Sleeping, exec sleep 1,  exec i3lock -i ~/.i3/penguin.png -c 212121 , exec systemctl suspend
-#Power button - not working?
 bindsym XF86PowerOff exec notify-send -t 1000 PowerButton
 bindsym Menu exec notify-send -t 1000 Menu
 

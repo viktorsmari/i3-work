@@ -1,6 +1,4 @@
 #########################  Lenovo
-#bindsym $mod+o exec setxkbmap us
-#bindsym $mod+i exec setxkbmap is
 bindsym $mod+Shift+p exec systemctl suspend #no password locking
 
 # ======================= Speaker lenovo ========================
@@ -14,11 +12,7 @@ bindsym $mod+F10 exec pactl -- set-sink-mute   0 toggle
 bindsym $mod+F11 exec pactl -- set-sink-volume 0 -5% 
 bindsym $mod+F12 exec pactl -- set-sink-volume 0 +5%
 
-# ================== Brightness =================================
-# script to control brightness
-#bindsym XF86MonBrightnessUp   exec notify-send Brightness-Up   -t 1000, exec ~/.i3/scripts/brightness_intel.sh 50
-#bindsym XF86MonBrightnessDown exec notify-send Brightness-Down -t 1000, exec ~/.i3/scripts/brightness_intel.sh -50
-# or use xbacklight
+# xbacklight
 bindsym XF86MonBrightnessUp   exec notify-send xBrightness-Up   -t 1000, exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec notify-send xBrightness-Down -t 1000, exec xbacklight -dec 10
 
