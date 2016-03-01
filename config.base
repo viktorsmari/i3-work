@@ -7,14 +7,10 @@ set $mod Mod4
 # ========  Keyboard and language ============
 # Caps / Esc switch.
 
-#exec /usr/bin/setxkbmap -layout us,is
-#exec /usr/bin/setxkbmap -option "caps:escape, grp:switch,grp:alt_shift_toggle" -layout us,is
 bindsym $mod+i exec sh ~/.i3/scripts/kb-is.sh
 bindsym $mod+o exec sh ~/.i3/scripts/kb-en.sh
 bindsym --release $mod+button2 kill
 
-# Keyboard repeat rate
-#exec xset r rate 240
 
 bindsym $mod+p exec i3lock -i ~/.i3/penguin.png -c 212121
 #computerspecific bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
