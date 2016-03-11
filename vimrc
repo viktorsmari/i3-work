@@ -1,4 +1,3 @@
-
 set nocompatible        " vundle required
 filetype off            " vundle required
 
@@ -11,8 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
 "Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -233,6 +232,8 @@ autocmd VimEnter * if !argc() | NERDTree | endif  "start vim with NERDTree open 
 "close abbrev with C-Space
 inoremap <NUL> </<C-X><C-O>
 
+colorscheme monokai
+"let g:airline#extensions#tabline#enabled = 1
 
 "notes
 " Copy to clipboard:        "+y
