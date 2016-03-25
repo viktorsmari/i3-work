@@ -64,6 +64,7 @@ alias doco='docker-compose'
 alias doci='docker images'
 alias docrmi='docker rmi --force'
 alias docrmc='docker rm `docker ps -aq`'
+alias dm='docker-machine'
 
 
 alias ll='ls -lhp --group-directories-first'
@@ -72,6 +73,5 @@ alias la='ls -lAhp --group-directories-first'
 
 # Switch timezones
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
-alias AMS="timedatectl set-timezone Europe/Amsterdam"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
 
