@@ -199,6 +199,8 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 "------------------------------------------------------------
 
+"disable Ex mode
+nnoremap Q <Nop>
 
 set nobackup
 set noswapfile
@@ -224,10 +226,15 @@ nnoremap <S-F8> :tabm +1<CR>
 nnoremap <C-c> "+yy
 vnoremap <C-c> "+y
 
-map <silent> <C-n> :NERDTreeToggle<CR>
 set autoindent
 
-autocmd VimEnter * if !argc() | NERDTree | endif  "start vim with NERDTree open if no arguments
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+let mapleader = ","
+map <Leader>m :NERDTreeToggle<CR>
+
 
 "close abbrev with C-Space
 inoremap <NUL> </<C-X><C-O>
