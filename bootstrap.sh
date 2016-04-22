@@ -41,6 +41,10 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #link vimrc
 ln -s ~/.i3/vimrc ~/.vimrc
 
+#vim color scheme monokai
+mkdir -p ~/.vim/colors
+wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -P ~/.vim/colors
+wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors
 #Step 5 - install oh my zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
