@@ -1,7 +1,7 @@
 # Script to join config file base depending on hostname
 HOST=$(hostname)
 
-if [ "$HOST" = studio ]; then
+if [ "$HOST" = leno ]; then
     printf " using leno i3"
 	cat ~/.i3/config.base ~/.i3/config-lenovo-home > ~/.i3/config
 else
