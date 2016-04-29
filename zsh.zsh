@@ -2,7 +2,10 @@
 # ZSH config is in ~/.zshrc
 export EDITOR=vim
 #ZSH_THEME="pure"
-#ZSH_THEME="agnoster"
+ZSH_THEME="agnoster"
+
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
 
 stty stop undef
 xset r rate 255
