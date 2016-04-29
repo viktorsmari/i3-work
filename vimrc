@@ -210,9 +210,16 @@ set noswapfile
 imap <c-s> <Esc>:w<CR>
 nmap <c-s> :w<CR>
 
+"navigate splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
 
 "tab
-
 nnoremap <F7> :tabp<CR>
 nnoremap <F8> :tabn<CR>
 inoremap <F7> <ESC>:tabp<CR>
@@ -234,6 +241,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 let mapleader = ","
 map <Leader>m :NERDTreeToggle<CR>
+
+nnoremap <C-t> :NERDTreeToggle<CR>
+inoremap <C-t> :NERDTreeToggle<CR>
 
 
 "close abbrev with C-Space
