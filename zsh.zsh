@@ -68,6 +68,9 @@ alias dock='docker'
 alias doco='docker-compose'
 alias doci='docker images'
 alias docrmi='docker rmi --force'
+# remove all untagged images
+alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")' 
+#remove all stopped containers:
 alias docrmc='docker rm `docker ps -aq`'
 alias dm='docker-machine'
 alias ap='ansible-playbook'
