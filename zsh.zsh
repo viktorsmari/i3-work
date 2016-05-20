@@ -18,9 +18,10 @@ xset r rate 255
 # Allow Local device to access the tunnel via lanip:8080
 # ssh -L \*8080:localhost:8443 user@host 
 
-# display my rails app(must be running on 3000) on a remote machine:8080
+# display my local rails app(must be running on 3000) on a remote machine:8080
 # ssh -R 8080:localhost:3000 user@remote
 
+# If hopserver:2200 is the only one with ssh access to endpoint:2200
 # ssh -p2200 root@hopserver -L 2201:endpoint:2200 -N
 # Then ftp to localhost port 2201
 
@@ -33,8 +34,8 @@ alias handy="printf 'Keyboard: \txmodmap -pke, xev, showkey,
 Programs: \tgetprocid, exo-preferred-applications, 
 Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
-Airplay:	\t rygel
-dd progress:	\t sudo kill -USR1 $(pgrep ^dd)
+Airplay:\t rygel
+dd progress:\t sudo kill -USR1 $(pgrep ^dd)
 debug: \t dmesg, vmstat 1, mpstat -P ALL, iostat -xz 1,
  sar -n DEV 1, sar -n TCP, ETCP 1
 '"
@@ -48,6 +49,7 @@ alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
 alias open=xdg-open
 alias xclip='xclip -selection c'
 alias pi='ping 8.8.8.8'
+alias wer='curl wttr.in/lyngby'
 
 #vol
 alias volup='pactl set-sink-volume 1 +10%'
@@ -68,6 +70,7 @@ alias doci='docker images'
 alias docrmi='docker rmi --force'
 alias docrmc='docker rm `docker ps -aq`'
 alias dm='docker-machine'
+alias ap='ansible-playbook'
 
 
 alias ll='ls -lhp --group-directories-first'

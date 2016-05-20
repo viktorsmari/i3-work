@@ -61,6 +61,7 @@ autocmd filetype python set expandtab
 
 " Enable syntax highlighting
 syntax on
+au BufRead,BufNewFile *.dk setfiletype apache
 
 
 "------------------------------------------------------------
