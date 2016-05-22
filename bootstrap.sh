@@ -26,7 +26,7 @@ ln -s ~/.i3/i3status.conf ~/.i3status.conf
 #Step 4 - Program settings
 
 #Reverse mouse scroll
-echo "pointer = 1 2 3 5 4 7 6 8 9 10 11 12" > ~/.Xmodmap
+#echo "pointer = 1 2 3 5 4 7 6 8 9 10 11 12" > ~/.Xmodmap
 
 #git settings
 git config --global core.editor "vim"
