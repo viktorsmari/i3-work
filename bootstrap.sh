@@ -23,10 +23,7 @@ sudo apt-get install i3
 ln -s ~/.i3/i3status.conf ~/.i3status.conf
 
 
-#Step 4 - Program settings
-
-#Reverse mouse scroll
-#echo "pointer = 1 2 3 5 4 7 6 8 9 10 11 12" > ~/.Xmodmap
+#Step 4 - Git
 
 #git settings
 git config --global core.editor "vim"
@@ -34,6 +31,8 @@ git config --global push.default matching
 #git config --global user.name ""
 #git config --global user.email "email"
 
+
+#Step 5 - Vim
 
 #Vim plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -45,15 +44,19 @@ ln -s ~/.i3/vimrc ~/.vimrc
 mkdir -p ~/.vim/colors
 wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -P ~/.vim/colors
 wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors
-#Step 5 - install oh my zsh
-wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+
+
+#Step 6 - Shell
 
 # change default shell
 chsh -s /bin/zsh 
 
-echo 'Remember to check if this is needed: (sudo?) chsh -s /bin/zsh'
+# install oh my zsh
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
 # link my zsh config 
 ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
+
+echo 'Remember to check if this is needed: (sudo?) chsh -s /bin/zsh'
 
 #TODO: what about .zshrc?
