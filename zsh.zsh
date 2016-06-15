@@ -84,3 +84,4 @@ alias la='ls -lAhp --group-directories-first'
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
 
+alias dualwork="sh ~/.i3/scripts/disp-dtu-dual-2560.sh"
