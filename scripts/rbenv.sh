@@ -18,3 +18,5 @@ ruby -v
 rbenv install --list
 
 
+# Postgres, sqlite dep
+sudo  apt-get install libsqlite3-dev libpq-dev
