@@ -1,7 +1,6 @@
 ## This file is public on github
 # ZSH config is in ~/.zshrc
 export EDITOR=vim
-#ZSH_THEME="pure"
 ZSH_THEME="agnoster"
 
 LC_CTYPE=en_US.UTF-8
