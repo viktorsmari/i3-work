@@ -79,6 +79,8 @@ alias ll='ls -lhp --group-directories-first'
 alias l=ll
 alias la='ls -lAhp --group-directories-first'
 
+alias htop='htop -d 10'
+
 # Switch timezones
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
