@@ -85,4 +85,7 @@ alias htop='htop -d 10'
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
 
-alias dualwork="sh ~/.i3/scripts/disp-dtu-dual-2560.sh"
+alias workdual="sh ~/.i3/scripts/disp-dtu-dual-2560.sh"
+alias homedual="sh ~/.i3/scripts/disp-home-dualHD.sh"
+alias homesingle="sh ~/.i3/scripts/disp-home-single.sh"
+alias home2="sh ~/.i3/scripts/disp-home2.sh"
