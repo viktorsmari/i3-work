@@ -253,6 +253,10 @@ inoremap <NUL> </<C-X><C-O>
 colorscheme monokai
 "let g:airline#extensions#tabline#enabled = 1
 
+" Show trailing whitespace:
+set listchars=tab:>-,trail:-
+set list
+
 "notes
 " Copy to clipboard:        "+y
 " increment number:         C-a
