@@ -60,7 +60,6 @@ alias v='vim -p'
 alias vi='vim -p'
 alias vim='vim -p'
 alias vimrc='vim ~/.vimrc'
-alias va='vagrant'
 alias vag='vagrant'
 alias doc='docker'
 alias dock='docker'
@@ -72,8 +71,11 @@ alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 #remove all stopped containers:
 alias docrmc='docker rm `docker ps -aq`'
 alias dm='docker-machine'
+alias dn='docker node'
+alias ds='docker service'
 alias ap='ansible-playbook'
 
+alias wn='watch -n'
 
 alias ll='ls -lhp --group-directories-first'
 alias l=ll

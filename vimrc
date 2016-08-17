@@ -9,19 +9,21 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
 "Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
 Plugin 'henrik/vim-indexed-search'
-"Plugin 'leafgarland/typescript-vim'
+" Syntax
+Plugin 'tpope/vim-rails'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -134,6 +136,9 @@ set nostartofline
 " Display the cursor position on the last line of the screen or in the status
 " line of a window
 set ruler
+
+" Higlight current line
+set cursorline
 
 " Always display the status line, even if only one window is displayed
 set laststatus=2
