@@ -118,7 +118,7 @@ set incsearch "show search match as you type
 " use is very much a personal preference, but they are harmless.
 
 " Use case insensitive search, except when using capital letters
-set ignorecase 
+set ignorecase
 set smartcase
 
 " Allow backspacing over autoindent, line breaks and start of insert action
@@ -180,8 +180,7 @@ nnoremap <F3> :set hlsearch!<CR>
 "
 " Indentation settings according to personal preference.
 
-set expandtab 
-	
+set expandtab
 
 " Indentation settings for using hard tabs for indent. Display tabs as
 " two characters wide.
@@ -266,6 +265,6 @@ set list
 " Copy to clipboard:        "+y
 " increment number:         C-a
 " change inside html tags:  cit
-" create mark a:            ma 
-" load   mark a:            `a   
+" create mark a:            ma
+" load   mark a:            `a
 
