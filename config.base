@@ -19,6 +19,7 @@ bindsym $mod+p exec i3lock -i ~/.i3/penguin.png -c 212121
 bindsym $mod+Shift+g move workspace to output left
 bindsym $mod+s --release exec notify-send Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
 bindsym $mod+Shift+c exec chromium-browser
+bindsym $mod+Shift+t exec thunar
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
