@@ -73,7 +73,10 @@ alias docrmc='docker rm `docker ps -aq`'
 alias dm='docker-machine'
 alias dn='docker node'
 alias ds='docker service'
+
 alias ap='ansible-playbook'
+alias rb='rbenv'
+alias gap='git add -p'
 
 alias wn='watch -n'
 
