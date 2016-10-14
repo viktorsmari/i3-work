@@ -1,4 +1,5 @@
 #!/bin/bash
+#inverse scrolling
 
 MOUSEID=$(xinput list |grep Gaming|cut -c 55-56| head -1)
 echo $MOUSEID

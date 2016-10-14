@@ -12,10 +12,10 @@ xset r rate 255
 ############ SSH tips
 # Access a servers website (behind a firewall) on ip:8080
 # Server needs to add 'GatewayPorts yes' in /etc/ssh/sshd_config
-# ssh -L 8080:localhost:80 user@host 
+# ssh -L 8080:localhost:80 user@host
 
 # Allow Local device to access the tunnel via lanip:8080
-# ssh -L \*8080:localhost:8443 user@host 
+# ssh -L \*8080:localhost:8443 user@host
 
 # display my local rails app(must be running on 3000) on a remote machine:8080
 # ssh -R 8080:localhost:3000 user@remote
@@ -24,13 +24,13 @@ xset r rate 255
 # ssh -p2200 root@hopserver -L 2201:endpoint:2200 -N
 # Then ftp to localhost port 2201
 
-# ssh -D 12345 root@proxyserver 
+# ssh -D 12345 root@proxyserver
 # Firefox: Pref - Advanced - Network - Settings -Manual Proxy - Socks Host: localhost, Port 12345
 # ssh -D 192.168.0.10 ... allows local clients to share the tunnel
 
 #programs
 alias handy="printf 'Keyboard: \txmodmap -pke, xev, showkey,
-Programs: \tgetprocid, exo-preferred-applications, 
+Programs: \tgetprocid, exo-preferred-applications,
 Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
 Airplay:\t rygel
@@ -67,7 +67,7 @@ alias doco='docker-compose'
 alias doci='docker images'
 alias docrmi='docker rmi --force'
 # remove all untagged images
-alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")' 
+alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 #remove all stopped containers:
 alias docrmc='docker rm `docker ps -aq`'
 alias dm='docker-machine'
