@@ -60,7 +60,17 @@ filetype plugin indent on    " required
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
 
+
+set autoindent
+
 autocmd filetype python set expandtab
+autocmd BufRead,BufNewFile   *.c,*.h,*.java set noic cin noexpandtab
+autocmd BufRead,BufNewFile   *.pl syntax on
+
+autocmd FileType html setlocal shiftwidth=6 tabstop=6
+autocmd FileType java setlocal shiftwidth=4 tabstop=4
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Enable syntax highlighting
 syntax on
@@ -235,15 +245,9 @@ inoremap <F8> <ESC>:tabn<CR>
 nnoremap <S-F7> :tabm -1<CR>
 nnoremap <S-F8> :tabm +1<CR>
 
-" QUIT
+" Ctrl C will copy
 nnoremap <C-c> "+yy
 vnoremap <C-c> "+y
-
-set autoindent
-
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 
 let mapleader = ","
 map <Leader>m :NERDTreeToggle<CR>
