@@ -10,6 +10,7 @@ set $mod Mod4
 
 bindsym $mod+i exec sh ~/.i3/scripts/kb-is.sh
 bindsym $mod+o exec sh ~/.i3/scripts/kb-en.sh
+bindsym $mod+shift+o exec "setxkbmap -option ''"
 bindsym $mod+u exec sh ~/.i3/scripts/kb-dk.sh
 bindsym --release $mod+button2 kill
 
