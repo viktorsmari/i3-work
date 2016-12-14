@@ -25,6 +25,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'rodjek/vim-puppet'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
