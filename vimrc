@@ -68,7 +68,7 @@ autocmd filetype python set expandtab
 autocmd BufRead,BufNewFile   *.c,*.h,*.java set noic cin noexpandtab
 autocmd BufRead,BufNewFile   *.pl syntax on
 
-autocmd FileType html setlocal shiftwidth=6 tabstop=6
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType java setlocal shiftwidth=4 tabstop=4
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
