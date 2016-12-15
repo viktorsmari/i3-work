@@ -46,6 +46,7 @@ alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
 
 #handy
 alias open=xdg-open
+alias img=gpicview
 alias xclip='xclip -selection c'
 alias pi='ping 8.8.8.8'
 alias wer='curl wttr.in/lyngby'
