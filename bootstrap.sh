@@ -1,7 +1,7 @@
 # Install programs including git to be able to clone in the next step
 sudo apt-get install pwgen curl nmap zsh git git-core arandr g++ automake make \
   chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper \
-  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview
+  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline
 #gnome-icon-theme-full 
 
 # Clone my i3 repo
