@@ -26,18 +26,20 @@ xset r rate 255
 # Then ftp to localhost port 2201
 
 # ssh -D 12345 root@proxyserver
-# Firefox: Pref - Advanced - Network - Settings -Manual Proxy - Socks Host: localhost, Port 12345
-# ssh -D 192.168.0.10 ... allows local clients to share the tunnel
+# Firefox: Pref - Advanced - Network - Settings -Manual Proxy
+# - Socks Host: localhost, Port 12345
+# ssh -D 192.168.0.10 ... allows lan clients to share the tunnel (not only localhost)
 
 #programs
 alias handy="printf 'Keyboard: \txmodmap -pke, xev, showkey,
 Programs: \tgetprocid, exo-preferred-applications,
 Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
-Airplay:\t rygel
-dd progress:\t sudo kill -USR1 $(pgrep ^dd)
+Airplay: \trygel
+dd progress: \tsudo kill -USR1 $(pgrep ^dd)
 debug: \t dmesg, vmstat 1, mpstat -P ALL, iostat -xz 1,
- sar -n DEV 1, sar -n TCP, ETCP 1
+debug: \t sar -n DEV 1, sar -n TCP, ETCP 1
+webcamgrab: outputs to /tmp
 '"
 alias getprocid='xprop | grep WM_CLASS'
 
@@ -50,7 +52,7 @@ alias open=xdg-open
 alias img=gpicview
 alias xclip='xclip -selection c'
 alias pi='ping 8.8.8.8'
-alias wer='curl wttr.in/lyngby'
+alias wer='curl wttr.in/bcn'
 
 #vol
 alias volup='pactl set-sink-volume 1 +10%'
@@ -72,7 +74,6 @@ alias docrmi='docker rmi --force'
 alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 #remove all stopped containers:
 alias docrmc='docker rm `docker ps -aq`'
-alias dm='docker-machine'
 alias dn='docker node'
 alias ds='docker service'
 
@@ -96,3 +97,5 @@ alias workdual="sh ~/.i3/scripts/disp-dtu-dual-2560.sh"
 alias homedual="sh ~/.i3/scripts/disp-home-dualHD.sh"
 alias homesingle="sh ~/.i3/scripts/disp-home-single.sh"
 alias home2="sh ~/.i3/scripts/disp-home2.sh"
+
+alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 /tmp/webcamgrab-%01d.jpg"
