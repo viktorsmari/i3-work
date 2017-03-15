@@ -6,10 +6,10 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 #bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym $mod+shift+F10 exec pactl -- set-sink-mute   1 toggle
-bindsym $mod+shift+F11 exec pactl -- set-sink-volume 1 -5% 
+bindsym $mod+shift+F11 exec pactl -- set-sink-volume 1 -5%
 bindsym $mod+shift+F12 exec pactl -- set-sink-volume 1 +5%
 bindsym $mod+F10 exec pactl -- set-sink-mute   0 toggle
-bindsym $mod+F11 exec pactl -- set-sink-volume 0 -5% 
+bindsym $mod+F11 exec pactl -- set-sink-volume 0 -5%
 bindsym $mod+F12 exec pactl -- set-sink-volume 0 +5%
 
 # xbacklight
@@ -25,7 +25,7 @@ bindsym XF86AudioPlay exec notify-send -t 1000 Play
 bindsym XF86AudioStop exec notify-send -t 1000 Stop
 bindsym XF86AudioPrev exec notify-send -t 1000 Prev
 bindsym XF86AudioNext exec notify-send -t 1000 Next
-bindsym XF86Launch1 exec notify-send -t 1000 RescueButton
+bindsym XF86Launch1 exec notify-send -t 1000 FABLAB, exec ~/.i3/scripts/fablab.sh
 
 # ================== Video config ===============================
 exec ~/.i3/scripts/disp-home2.sh

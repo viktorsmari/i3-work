@@ -95,7 +95,9 @@ alias KOB="timedatectl set-timezone Europe/Copenhagen"
 
 alias workdual="sh ~/.i3/scripts/disp-dtu-dual-2560.sh"
 alias homedual="sh ~/.i3/scripts/disp-home-dualHD.sh"
-alias homesingle="sh ~/.i3/scripts/disp-home-single.sh"
+alias single="sh ~/.i3/scripts/disp-home-single.sh"
 alias home2="sh ~/.i3/scripts/disp-home2.sh"
+alias fablab="sh ~/.i3/scripts/fablab.sh"
 
-alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 /tmp/webcamgrab-%01d.jpg"
+alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"
+
