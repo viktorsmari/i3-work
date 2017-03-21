@@ -39,10 +39,10 @@ for_window [class="Nautilus"] border normal
 #assign [class="Chromium"] 1:Chrome
 assign [class="i3-sensible-terminal"] 2:Term
 assign [class="ardour_mixer"]  2:Term
-assign [class="Ardour"]        3:Atom
-assign [class="ardour_editor"] 3:Atom
-assign [class="sublime-text"]  3:Atom
-assign [class="atom"]          3:Atom
+assign [class="Ardour"]        3:Ansible
+assign [class="ardour_editor"] 3:Ansible
+assign [class="sublime-text"]  3:Ansible
+assign [class="atom"]          3:Ansible
 assign [class="Firefox"]       4:Firefox
 assign [class="Empathy"]       4:Firefox
 assign [class="Pidgin"]        4:Firefox
@@ -132,7 +132,7 @@ bindsym $mod+c focus child
 # switch to workspace
 bindsym $mod+1 workspace 1:Chrome
 bindsym $mod+2 workspace 2:Term
-bindsym $mod+3 workspace 3:Atom
+bindsym $mod+3 workspace 3:Ansible
 bindsym $mod+4 workspace 4:Firefox
 bindsym $mod+5 workspace 5:Thunar
 bindsym $mod+6 workspace 6:FileZilla
@@ -144,7 +144,7 @@ bindsym $mod+0 workspace 10:Gimp
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:Chrome
 bindsym $mod+Shift+2 move container to workspace 2:Term
-bindsym $mod+Shift+3 move container to workspace 3:Atom
+bindsym $mod+Shift+3 move container to workspace 3:Ansible
 bindsym $mod+Shift+4 move container to workspace 4:Firefox
 bindsym $mod+Shift+5 move container to workspace 5:Thunar
 bindsym $mod+Shift+6 move container to workspace 6:FileZilla
