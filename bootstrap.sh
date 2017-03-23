@@ -67,6 +67,7 @@ ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
 echo 'All done! What manual steps are missing?'
 echo 'TODO: ~/.zshrc file loads plugins and sets ZSH theme'
+echo 'TODO: open vim, do :PluginInstall'
 echo 'TODO: Install rbenv? scripts/rbenv.sh'
 echo 'TODO: generate SSH key'
 
