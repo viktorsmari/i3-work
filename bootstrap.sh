@@ -25,6 +25,8 @@ sudo apt-get install i3
 # Link i3 status bar
 ln -s ~/.i3/i3status.conf ~/.i3status.conf
 
+# Create the first config
+~/.i3/generatei3.sh
 
 echo "================== Setup git ====================="
 git config --global core.editor "vim"
@@ -59,10 +61,8 @@ wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 # link my zsh config
 ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
-#TODO: what about .zshrc?
-
-# Create the first config
-~/.i3/generatei3.sh
 
 echo 'All done!'
+echo 'TODO: .zshrc file'
+echo 'TODO: Install rbenv? scripts/rbenv.sh'
 
