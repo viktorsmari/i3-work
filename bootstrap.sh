@@ -1,8 +1,9 @@
+sudo apt-get update
 # Install programs including git to be able to clone in the next step
-sudo apt-get install pwgen curl nmap zsh git git-core arandr g++ automake make \
+sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
   chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper \
   vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline
-#gnome-icon-theme-full 
+#gnome-icon-theme-full
 
 # Clone my i3 repo
 git clone https://github.com/viktorsmari/i3-work.git ~/.i3
