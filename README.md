@@ -12,4 +12,4 @@ This will change our git username to me, so change it afterwards with:
 
 Don't run this unless you trust me and have verified the files contents:
 
-`curl https://raw.githubusercontent.com/viktorsmari/i3-work/master/bootstrap.sh| sh`
+`wget -qO- https://raw.githubusercontent.com/viktorsmari/i3-work/master/bootstrap.sh| sh`
