@@ -52,7 +52,7 @@ wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai
 
 echo "================== Setup oh-my-zsh ====================="
 
-# Change default shell
+# Change default shell to ZSH
 chsh -s /bin/zsh
 
 # install oh my zsh
@@ -63,6 +63,6 @@ ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
 
 echo 'All done!'
-echo 'TODO: .zshrc file'
+echo 'TODO: .zshrc file loads plugins and sets ZSH theme'
 echo 'TODO: Install rbenv? scripts/rbenv.sh'
 

@@ -1,6 +1,4 @@
 ######################### work computer settings
-exec pidgin
-exec firefox
 bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 
 # ======================= Speaker asus =========================
