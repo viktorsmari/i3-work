@@ -34,6 +34,9 @@ git config --global push.default matching
 git config --global user.name "viktorsmari"
 #git config --global user.email "email"
 
+# Generate ssh key?
+# ssh-keygen -t rsa -b 4096
+
 
 
 echo "================== Setup vim ====================="
@@ -49,6 +52,9 @@ mkdir -p ~/.vim/colors
 wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -P ~/.vim/colors
 wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors
 
+# Install plugins
+vim -c 'PluginInstall' -c 'qa!'
+
 
 echo "================== Setup oh-my-zsh ====================="
 
@@ -62,7 +68,8 @@ wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
 
-echo 'All done!'
-echo 'TODO: .zshrc file loads plugins and sets ZSH theme'
+echo 'All done! What manual steps are missing?'
+echo 'TODO: ~/.zshrc file loads plugins and sets ZSH theme'
 echo 'TODO: Install rbenv? scripts/rbenv.sh'
+echo 'TODO: generate SSH key'
 
