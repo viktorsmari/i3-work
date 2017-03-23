@@ -1,14 +1,12 @@
 ######################### work computer settings
 bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 
-# ======================= Speaker lenovo ========================
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute, exec notify-send 2dB+
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute, exec notify-send 2dB-
-bindsym XF86AudioMute exec pactl -- set-sink-mute   0 toggle, exec notify-send Toggle
-
-bindsym $mod+F10 exec pactl -- set-sink-mute   0 toggle
-bindsym $mod+F11 exec pactl -- set-sink-volume 0 -5%
-bindsym $mod+F12 exec pactl -- set-sink-volume 0 +5%
+# ======================= Speaker asus =========================
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 1 +5%, exec notify-send -t 1000 Volup
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 1 -5%, exec notify-send -t 1000 Voldn
+bindsym $mod+F12             exec pactl -- set-sink-volume 1 +5%, exec notify-send -t 1000 Volup
+bindsym $mod+F11             exec pactl -- set-sink-volume 1 -5%, exec notify-send -t 1000 Voldn
+bindsym XF86AudioMute        exec pactl -- set-sink-mute 1 toggle, exec notify-send -t 1000 Mute
 
 #Keyboard
 bindsym XF86KbdBrightnessUp exec notify-send -t 1000 kb-up
@@ -21,12 +19,10 @@ bindsym XF86MonBrightnessUp   exec notify-send MonUp,   exec xbacklight -inc 10
 # ======================= Power buttons ========================
 bindsym XF86Sleep    exec notify-send -t 1000 Sleeping, exec sleep 1,  exec i3lock -i ~/.i3/penguin.png -c 212121 , exec systemctl suspend
 bindsym XF86PowerOff exec notify-send -t 1000 PowerButton
-#bindsym Menu exec notify-send -t 1000 Menu
+bindsym Menu exec notify-send -t 1000 Menu
 
 # ====================== Playback Buttons ======================
-bindsym XF86AudioPlay exec notify-send -t 1000 Play
-bindsym XF86AudioStop exec notify-send -t 1000 Stop
-bindsym XF86AudioPrev exec notify-send -t 1000 Prev
-bindsym XF86AudioNext exec notify-send -t 1000 Next
+#
+#
 # ====================== Display ===============================
-exec ~/.i3/scripts/disp-thinkpad2.sh
+exec ~/.i3/scripts/disp-dtu-dual-2560.sh
