@@ -1,11 +1,11 @@
 sudo apt-get update
-# Install programs including git to be able to clone in the next step
+echo "================== Install programs  ====================="
 sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
   chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper \
   vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline
 #gnome-icon-theme-full
 
-# Clone my i3 repo
+echo "================== Clone my i3 repo and setup ====================="
 git clone https://github.com/viktorsmari/i3-work.git ~/.i3
 
 # Install i3 stable newest
@@ -26,9 +26,7 @@ sudo apt-get install i3
 ln -s ~/.i3/i3status.conf ~/.i3status.conf
 
 
-
-# Git settings
-
+echo "================== Setup git ====================="
 git config --global core.editor "vim"
 git config --global push.default matching
 git config --global user.name "viktorsmari"
@@ -36,7 +34,7 @@ git config --global user.name "viktorsmari"
 
 
 
-# Vim
+echo "================== Setup vim ====================="
 
 # Get Vundle, Vim plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -50,15 +48,15 @@ wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim 
 wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors
 
 
-# ZSH & oh-my-zsh
+echo "================== Setup oh-my-zsh ====================="
 
 # Change default shell
-chsh -s /bin/zsh 
+chsh -s /bin/zsh
 
 # install oh my zsh
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 
-# link my zsh config 
+# link my zsh config
 ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
 echo 'All done!'
