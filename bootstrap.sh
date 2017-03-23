@@ -2,7 +2,7 @@ sudo apt-get update
 echo "================== Install programs  ====================="
 sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
   chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper \
-  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline
+  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal
 #gnome-icon-theme-full
 
 echo "================== Clone my i3 repo and setup ====================="
@@ -59,6 +59,10 @@ wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 # link my zsh config
 ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
+#TODO: what about .zshrc?
+
+# Create the first config
+~/.i3/generatei3.sh
+
 echo 'All done!'
 
-#TODO: what about .zshrc?
