@@ -52,6 +52,9 @@ mkdir -p ~/.vim/colors
 wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -P ~/.vim/colors
 wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -P ~/.vim/colors
 
+# Install plugins
+vim -c 'PluginInstall' -c 'qa!'
+
 
 echo "================== Setup oh-my-zsh ====================="
 
@@ -67,7 +70,6 @@ ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
 echo 'All done! What manual steps are missing?'
 echo 'TODO: ~/.zshrc file loads plugins and sets ZSH theme'
-echo 'TODO: open vim, do :PluginInstall'
 echo 'TODO: Install rbenv? scripts/rbenv.sh'
 echo 'TODO: generate SSH key'
 
