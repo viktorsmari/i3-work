@@ -25,8 +25,6 @@ bindsym XF86AudioPlay exec notify-send -t 1000 Play
 bindsym XF86AudioStop exec notify-send -t 1000 Stop
 bindsym XF86AudioPrev exec notify-send -t 1000 Prev
 bindsym XF86AudioNext exec notify-send -t 1000 Next
-bindsym XF86Launch1 exec notify-send -t 1000 FABLAB, exec ~/.i3/scripts/fablab.sh
+bindsym XF86Launch1 exec notify-send -t 1000 SingleConf, exec ~/.i3/scripts/disp-leno.sh
 
 # ================== Video config ===============================
-exec ~/.i3/scripts/disp-home2.sh
-exec ~/.i3/scripts/disp-home-dualHD.sh
