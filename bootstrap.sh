@@ -4,7 +4,8 @@ sudo apt-get update
 echo "================== Install programs  ====================="
 sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
   chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper \
-  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal
+  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal \
+  python-pip
 #gnome-icon-theme-full
 
 echo "================== Clone my i3 repo and setup ====================="
