@@ -37,7 +37,7 @@ fi
 echo "================== Setup git ====================="
 git config --global core.editor "vim"
 git config --global push.default matching
-git config --global user.name "viktorsmari"
+git config --global user.name "Viktor Smari"
 #git config --global user.email "email"
 
 # Generate ssh key?
