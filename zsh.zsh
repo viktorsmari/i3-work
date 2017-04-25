@@ -99,6 +99,8 @@ alias single="sh ~/.i3/scripts/disp-home-single.sh"
 alias home2="sh ~/.i3/scripts/disp-home2.sh"
 alias fablab="sh ~/.i3/scripts/fablab.sh"
 alias f="cd ~/fablab/"
+alias r='rails'
+alias be='bundle exec'
 
 alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"
 
