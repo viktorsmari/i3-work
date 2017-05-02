@@ -13,3 +13,10 @@ This will change our git username to me, so change it afterwards with:
 Don't run this unless you trust me and have verified the files contents:
 
 `wget -qO- https://raw.githubusercontent.com/viktorsmari/i3-work/master/bootstrap.sh| sh`
+
+
+### Notes
+
+* I use this repo on 2 different computers, work and home, and they had different audio settings.
+Therefore have I bound the 'Meta + Shift + r' to reload the config, checking which computer you are on.
+It checks which host you are on and generates a config with 'config.base' + config-computer

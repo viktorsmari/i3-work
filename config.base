@@ -36,8 +36,7 @@ for_window [class="gnome-calculator"] floating enable, border normal
 #unfloat
 for_window [class="Nautilus"] border normal
 
-#assign [class="Chromium"] 1:Chrome
-assign [class="i3-sensible-terminal"] 2:Term
+#assign [class="Chromium"]      1:Chrome
 assign [class="ardour_mixer"]  2:Term
 assign [class="Ardour"]        3:Ansible
 assign [class="ardour_editor"] 3:Ansible
@@ -49,11 +48,12 @@ assign [class="Pidgin"]        4:Firefox
 assign [class="Thunar"]        5:Thunar
 assign [class="Filezilla"]     6:FileZilla
 assign [class="Spotify"]       8:Spotify
+assign [class="spotify"]       8:Spotify
 assign [class="VirtualBox"]    9:Settings
 assign [class="pavucontrol"]   9:Settings
 assign [class="qjackctl"]      9:Settings
-assign [class="Gimp"]     10:Gimp
-assign [class="Nautilus"] 10:Gimp
+assign [class="Gimp"]          10:Gimp
+assign [class="Nautilus"]      10:Gimp
 
 
 # kill focused window
@@ -194,7 +194,7 @@ bar {
 exec --no-startup-id xsetroot -solid "#333333"
 
 # End with opening up programs
-exec chromium-browser 
+exec chromium-browser
 exec gnome-sound-applet
 exec nm-applet
 exec glipper #clipboard history
