@@ -2,9 +2,9 @@
 HOST=$(hostname)
 
 if [ "$HOST" = leno ]; then
-    printf " using HOME leno i3"
-	cat ~/.i3/config.base ~/.i3/config-lenovo-home > ~/.i3/config
+    printf " using HOME leno i3 config..."
+    cat ~/.i3/config.base ~/.i3/config-lenovo-home > ~/.i3/config
 else
-    printf " using WORK i3 "
-	cat ~/.i3/config.base ~/.i3/config-work > ~/.i3/config
+    printf " using WORK i3 config..."
+    cat ~/.i3/config.base ~/.i3/config-work > ~/.i3/config
 fi

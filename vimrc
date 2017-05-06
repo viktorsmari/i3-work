@@ -184,8 +184,8 @@ set notimeout ttimeout ttimeoutlen=200
 " Use <F2> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F2>
 
-" use F3 to toggle flsearch
-nnoremap <F3> :set hlsearch!<CR>
+" use F3 to disable highlight search, until next search
+nnoremap <F3> :noh<CR>
 
 
 "------------------------------------------------------------
@@ -262,6 +262,7 @@ inoremap <C-t> :NERDTreeToggle<CR>
 inoremap <NUL> </<C-X><C-O>
 
 colorscheme monokai
+hi Search cterm=NONE ctermfg=black ctermbg=blue
 "let g:airline#extensions#tabline#enabled = 1
 
 " Show trailing whitespace:

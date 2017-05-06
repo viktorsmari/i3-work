@@ -1,8 +1,11 @@
+#!/bin/bash
+
 sudo apt-get update
 echo "================== Install programs  ====================="
 sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
   chromium-browser tree scrot bc traceroute htop whois xclip thunar bmon glipper \
-  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal
+  vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal \
+  python-pip virtualenv
 #gnome-icon-theme-full
 
 echo "================== Clone my i3 repo and setup ====================="
@@ -13,7 +16,7 @@ sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /et
 sudo apt-get update
 sudo apt-get --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
-sudo apt-get install i3
+sudo apt-get install i3 -y
 
 # Use this if you rather want unstable dev
 #sudo echo 'deb http://build.i3wm.org/ubuntu/trusty trusty main' >> /etc/apt/sources.list
@@ -23,7 +26,11 @@ sudo apt-get install i3
 #sudo apt-get install i3
 
 # Link i3 status bar
-ln -s ~/.i3/i3status.conf ~/.i3status.conf
+if [[ $(hostname -s) = "tpad" ]]; then
+  ln -s ~/.i3/i3status_thinkpad.conf ~/.i3status.conf
+else
+  ln -s ~/.i3/i3status.conf ~/.i3status.conf
+fi
 
 # Create the first config
 ~/.i3/generatei3.sh
@@ -31,13 +38,11 @@ ln -s ~/.i3/i3status.conf ~/.i3status.conf
 echo "================== Setup git ====================="
 git config --global core.editor "vim"
 git config --global push.default matching
-git config --global user.name "viktorsmari"
+git config --global user.name "Viktor Smari"
 #git config --global user.email "email"
 
 # Generate ssh key?
 # ssh-keygen -t rsa -b 4096
-
-
 
 echo "================== Setup vim ====================="
 
@@ -58,7 +63,7 @@ vim -c 'PluginInstall' -c 'qa!'
 
 echo "================== Setup oh-my-zsh ====================="
 
-# Change default shell to ZSH
+#TODO (fails): Change default shell to ZSH
 chsh -s /bin/zsh
 
 # install oh my zsh

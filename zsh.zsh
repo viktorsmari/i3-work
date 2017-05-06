@@ -41,63 +41,56 @@ debug: \t dmesg, vmstat 1, mpstat -P ALL, iostat -xz 1,
 debug: \t sar -n DEV 1, sar -n TCP, ETCP 1
 webcamgrab: outputs to /tmp
 '"
-alias getprocid='xprop | grep WM_CLASS'
 
 #i3 config
 alias config="vi ~/.i3/config.base"
 alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
 
-#handy
-alias open=xdg-open
-alias img=gpicview
-alias xclip='xclip -selection c'
-alias pi='ping 8.8.8.8'
-alias wer='curl wttr.in/bcn'
-
-#vol
-alias volup='pactl set-sink-volume 1 +10%'
-alias vold='pactl set-sink-volume 1 10%'
-
-
 #system
+alias dn='docker node'
+alias doc='docker'
+alias doci='docker images'
+alias dock='docker'
+alias doco='docker-compose'
+alias docrmc='docker rm `docker ps -aq`'
+alias docrmi='docker rmi --force'
+alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+alias ds='docker service'
+alias getprocid='xprop | grep WM_CLASS'
+alias htop='htop -d 10'
 alias v='vim -p'
+alias vag='vagrant'
 alias vi='vim -p'
 alias vim='vim -p'
 alias vimrc='vim ~/.vimrc'
-alias vag='vagrant'
-alias doc='docker'
-alias dock='docker'
-alias doco='docker-compose'
-alias doci='docker images'
-alias docrmi='docker rmi --force'
-# remove all untagged images
-alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
-#remove all stopped containers:
-alias docrmc='docker rm `docker ps -aq`'
-alias dn='docker node'
-alias ds='docker service'
 
+# Programs etc
 alias ap='ansible-playbook'
-alias rb='rbenv'
+alias be='bundle exec'
 alias gap='git add -p'
-
+alias img=gpicview
+alias open=xdg-open
+alias pi='ping 8.8.8.8'
+alias r='rails'
+alias rb='rbenv'
+alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"
 alias wn='watch -n'
+alias xclip='xclip -selection c'
 
-alias ll='ls -lhp --group-directories-first'
+# Folders
+alias f="cd ~/fablab/"
 alias l=ll
 alias la='ls -lAhp --group-directories-first'
-
-alias htop='htop -d 10'
+alias ll='ls -lhp --group-directories-first'
 
 # Switch timezones
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
 
+# Scripts
 alias workdual="sh ~/.i3/scripts/disp-dtu-dual-2560.sh"
 alias homedual="sh ~/.i3/scripts/disp-home-dualHD.sh"
 alias single="sh ~/.i3/scripts/disp-home-single.sh"
 alias home2="sh ~/.i3/scripts/disp-home2.sh"
 alias fablab="sh ~/.i3/scripts/fablab.sh"
-
-alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"
-
+alias wer='curl wttr.in/bcn'
