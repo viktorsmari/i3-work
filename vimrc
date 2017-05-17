@@ -252,7 +252,7 @@ nnoremap <C-c> "+yy
 vnoremap <C-c> "+y
 
 let mapleader = ","
-map <Leader>m :NERDTreeToggle<CR>
+map <Leader>m :NERDTreeFind<CR>
 
 nnoremap <C-t> :NERDTreeToggle<CR>
 inoremap <C-t> :NERDTreeToggle<CR>
@@ -268,6 +268,10 @@ hi Search cterm=NONE ctermfg=black ctermbg=blue
 " Show trailing whitespace:
 set listchars=tab:>-,trail:-
 set list
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bower_components'
+
+
 
 "notes
 " Copy to clipboard:        "+y
