@@ -35,7 +35,7 @@ alias handy="printf 'Keyboard: \txmodmap -pke, xev, showkey,
 Programs: \tgetprocid, exo-preferred-applications,
 Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
-Airplay: \trygel
+Airplay: \tmkchromecast
 dd progress: \tsudo kill -USR1 $(pgrep ^dd)
 debug: \t dmesg, vmstat 1, mpstat -P ALL, iostat -xz 1,
 debug: \t sar -n DEV 1, sar -n TCP, ETCP 1
