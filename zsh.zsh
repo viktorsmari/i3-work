@@ -46,7 +46,10 @@ webcamgrab: outputs to /tmp
 alias config="vi ~/.i3/config.base"
 alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
 
-#system
+
+# Programs etc
+alias ap='ansible-playbook'
+alias be='bundle exec'
 alias dn='docker node'
 alias doc='docker'
 alias doci='docker images'
@@ -56,23 +59,19 @@ alias docrmc='docker rm `docker ps -aq`'
 alias docrmi='docker rmi --force'
 alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias ds='docker service'
+alias gap='git add -p'
 alias getprocid='xprop | grep WM_CLASS'
 alias htop='htop -d 10'
-alias v='vim -p'
-alias vag='vagrant'
-alias vi='vim -p'
-alias vim='vim -p'
-alias vimrc='vim ~/.vimrc'
-
-# Programs etc
-alias ap='ansible-playbook'
-alias be='bundle exec'
-alias gap='git add -p'
 alias img=gpicview
 alias open=xdg-open
 alias pi='ping 8.8.8.8'
 alias r='rails'
 alias rb='rbenv'
+alias vag='vagrant'
+alias vi='vim -p'
+alias vim='vim -p'
+alias vimrc='vim ~/.vimrc'
+alias vio='vim -O'
 alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"
 alias wn='watch -n'
 alias xclip='xclip -selection c'
