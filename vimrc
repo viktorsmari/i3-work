@@ -21,12 +21,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'henrik/vim-indexed-search'
-" Syntax
+"" Syntax
 Plugin 'tpope/vim-rails'
 Plugin 'chase/vim-ansible-yaml'
-Plugin 'leafgarland/typescript-vim'
+"Plugin 'leafgarland/typescript-vim'
 "Plugin 'elixir-lang/vim-elixir'
-Plugin 'rodjek/vim-puppet'
 Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
@@ -77,7 +76,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Enable syntax highlighting
 syntax on
-au BufRead,BufNewFile *.dk setfiletype apache
 
 
 "------------------------------------------------------------
@@ -270,6 +268,7 @@ hi Search cterm=NONE ctermfg=black ctermbg=blue
 set listchars=tab:>-,trail:-
 set list
 
+"ctrl p search ignores folders
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bower_components'
 
 
