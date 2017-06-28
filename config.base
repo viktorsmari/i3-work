@@ -27,8 +27,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
-bindsym $mod+shift+Return exec notify-send -t 1000 IshouldFloat, exec i3-sensible-terminal -Q -T floatme
-bindsym $mod+ctrl+Return exec notify-send -t 1000 GnomeTerm, exec gnome-terminal
+bindsym $mod+shift+Return exec notify-send -t 1000 terminator, exec terminator
+bindsym $mod+ctrl+Return  exec notify-send -t 1000 GnomeTerm,  exec gnome-terminal
 for_window [title="^floatme$"] floating enable
 
 # Make these program start floated
@@ -43,6 +43,7 @@ assign [class="ardour_editor"] 3:Ansible
 assign [class="sublime-text"]  3:Ansible
 assign [class="atom"]          3:Ansible
 assign [class="Firefox"]       4:Firefox
+assign [class="Slack"]         4:Firefox
 assign [class="Empathy"]       4:Firefox
 assign [class="Pidgin"]        4:Firefox
 assign [class="Thunar"]        5:Thunar
