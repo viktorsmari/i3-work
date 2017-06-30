@@ -63,6 +63,7 @@ alias gap='git add -p'
 alias getprocid='xprop | grep WM_CLASS'
 alias htop='htop -d 20'
 alias img=gpicview
+alias cast='python ~/dev/mkchromecast/mkchromecast.py'
 alias open=xdg-open
 alias pi='ping 8.8.8.8'
 alias r='rails'
