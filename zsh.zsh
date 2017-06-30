@@ -66,6 +66,7 @@ alias img=gpicview
 alias open=xdg-open
 alias pi='ping 8.8.8.8'
 alias r='rails'
+alias sshc='vi ~/.ssh/config'
 alias rb='rbenv'
 alias vag='vagrant'
 alias vi='vim -p'

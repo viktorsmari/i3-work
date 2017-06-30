@@ -26,7 +26,7 @@ bindsym $mod+Shift+t exec thunar
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec terminator
 bindsym $mod+shift+Return exec notify-send -t 1000 IshouldFloat, exec i3-sensible-terminal -Q -T floatme
 bindsym $mod+ctrl+Return exec notify-send -t 1000 GnomeTerm, exec gnome-terminal
 for_window [title="^floatme$"] floating enable

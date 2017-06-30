@@ -24,6 +24,7 @@ Plugin 'henrik/vim-indexed-search'
 "" Syntax
 Plugin 'tpope/vim-rails'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'mxw/vim-jsx'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'elixir-lang/vim-elixir'
 Plugin 'terryma/vim-multiple-cursors'
