@@ -26,13 +26,17 @@ bindsym $mod+Shift+t exec thunar
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
-bindsym $mod+shift+Return exec notify-send -t 1000 IshouldFloat, exec i3-sensible-terminal -Q -T floatme
-bindsym $mod+ctrl+Return exec notify-send -t 1000 GnomeTerm, exec gnome-terminal
-for_window [title="^floatme$"] floating enable
+bindsym $mod+Return exec gnome-terminal
+bindsym $mod+shift+Return exec notify-send -t 1000 terminator, exec terminator
+bindsym $mod+ctrl+Return  exec notify-send -t 1000 GnomeTerm,  exec gnome-terminal
 
 # Make these program start floated
+for_window [class="ardour_mixer"]     floating enable, border normal
+for_window [class="ardour_editor"]    floating enable, border normal
+for_window [class="pavucontrol"]      floating enable, border normal
 for_window [class="gnome-calculator"] floating enable, border normal
+for_window [title="^floatme$"] floating enable
+
 #unfloat
 for_window [class="Nautilus"] border normal
 
@@ -43,6 +47,7 @@ assign [class="ardour_editor"] 3:Ansible
 assign [class="sublime-text"]  3:Ansible
 assign [class="atom"]          3:Ansible
 assign [class="Firefox"]       4:Firefox
+assign [class="Slack"]         4:Firefox
 assign [class="Empathy"]       4:Firefox
 assign [class="Pidgin"]        4:Firefox
 assign [class="Thunar"]        5:Thunar
