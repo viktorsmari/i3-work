@@ -70,8 +70,14 @@ autocmd filetype python set expandtab
 autocmd BufRead,BufNewFile   *.c,*.h,*.java set noic cin noexpandtab
 autocmd BufRead,BufNewFile   *.pl syntax on
 
+" nr of spaces for each FileType
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType java setlocal shiftwidth=4 tabstop=4
+
+"use zsh for unknown filetypes
+autocmd BufEnter * if &filetype == "" | setlocal ft=zsh | endif
+
+"open nerdtree in empty vim
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
