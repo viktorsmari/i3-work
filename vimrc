@@ -231,8 +231,8 @@ set noswapfile
 
 
 "Save with ctrl s
-imap <c-s> <Esc>:w<CR>
-nmap <c-s> :w<CR>
+imap <C-s> <Esc>:w<CR>
+nmap <C-s> :w<CR>
 
 "navigate splits
 nnoremap <C-J> <C-W><C-J>
@@ -286,4 +286,13 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|bower_components'
 " change inside html tags:  cit
 " create mark a:            ma
 " load   mark a:            `a
+
+" multiple cursor
+" C-n C-n C-n cw
+"
+" Surround:
+" ysiw '        Creates surround
+" cs"'          Changes " to '
+" ds'           Deletes '
+" yss[          Wrap whole line in []
 
