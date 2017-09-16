@@ -49,7 +49,9 @@ alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
 
 # Programs etc
 alias ap='ansible-playbook'
+alias b='bundle'
 alias be='bundle exec'
+alias bu='bundle update'
 alias dn='docker node'
 alias doc='docker'
 alias doci='docker images'
@@ -59,14 +61,17 @@ alias docrmc='docker rm `docker ps -aq`'
 alias docrmi='docker rmi --force'
 alias docrmu='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias ds='docker service'
+alias dst='docker stats $(docker ps --format={{.Names}})'
 alias gap='git add -p'
+alias gs='git status'
 alias getprocid='xprop | grep WM_CLASS'
-alias htop='htop -d 20'
+alias htop='htop -d 30'
 alias img=gpicview
 alias cast='python ~/dev/mkchromecast/mkchromecast.py'
 alias open=xdg-open
 alias pi='ping 8.8.8.8'
 alias r='rails'
+alias rgrep='rgrep --color'
 alias sshc='vi ~/.ssh/config'
 alias rb='rbenv'
 alias vag='vagrant'

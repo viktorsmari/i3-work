@@ -28,5 +28,7 @@ bindsym XF86AudioNext exec notify-send -t 1000 Next
 
 # ================== Video config ===============================
 bindsym XF86Launch1 exec notify-send -t 1000 SingleConf, exec ~/.i3/scripts/disp-leno.sh
-bindsym $mod+ctrl+F12    exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-leno_vga.sh, exec ~/.i3/scripts/disp-leno_vga_hdmi.sh
-bindsym $mod+XF86Launch1 exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-leno_vga.sh, exec ~/.i3/scripts/disp-leno_vga_hdmi.sh
+bindsym $mod+ctrl+F12    exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-leno_vga.sh, exec ~/.i3/scripts/disp-leno_vga_hdmi2.sh
+bindsym $mod+XF86Launch1 exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-leno_vga.sh, exec ~/.i3/scripts/disp-leno_vga_hdmi2.sh
+bindsym $mod+shift+ctrl+F12    exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-leno_vga.sh, exec ~/.i3/scripts/disp-leno_vga_hdmi.sh
+bindsym $mod+shift+XF86Launch1 exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-leno_vga.sh, exec ~/.i3/scripts/disp-leno_vga_hdmi.sh
