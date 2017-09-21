@@ -28,6 +28,8 @@ Plugin 'mxw/vim-jsx'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'elixir-lang/vim-elixir'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'auto-pairs-gentle'
+Plugin 'kshenoy/vim-signature'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
