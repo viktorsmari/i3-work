@@ -255,6 +255,13 @@ inoremap <F8> <ESC>:tabn<CR>
 nnoremap <S-F7> :tabm -1<CR>
 nnoremap <S-F8> :tabm +1<CR>
 
+" folding
+set foldmethod=manual
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
 " Ctrl C will copy
 nnoremap <C-c> "+yy
 vnoremap <C-c> "+y
