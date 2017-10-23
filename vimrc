@@ -256,7 +256,8 @@ nnoremap <S-F7> :tabm -1<CR>
 nnoremap <S-F8> :tabm +1<CR>
 
 " folding
-set foldmethod=manual
+set foldmethod=indent
+set foldlevel=20
 inoremap <F9> <C-O>za
 nnoremap <F9> za
 onoremap <F9> <C-C>za
