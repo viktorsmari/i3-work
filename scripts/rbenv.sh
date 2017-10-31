@@ -17,5 +17,10 @@ sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline
 ruby -v
 rbenv install --list
 
-# Postgres, sqlite dep
-sudo  apt-get install libsqlite3-dev libpq-dev
+echo '==== Installing ruby 2.4.1, ctrl+c to cancel'
+rbenv install 2.4.1
+rbenv global 2.4.1
+
+
+echo '==== Installing  Postgres, sqlite dependency'
+sudo apt-get install libsqlite3-dev libpq-dev
