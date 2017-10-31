@@ -1,5 +1,32 @@
 #!/bin/bash
 
+echo "======== TODO ========"
+
+echo "1. What is your email? (For git config)"
+read -p 'Email: ' MY_EMAIL
+
+echo "2. Do you want stable or dev i3 (s / d)"
+read -p 'i3 version: ' I3VERSION
+
+echo "3. Do you want rbenv installed?"
+read -p 'y / n ' USE_RBENV
+
+echo "4. Do you want nvm installed?"
+read -p 'y / n ' USE_NVM
+
+echo '-------'
+echo $MY_EMAIL
+echo $I3VERSION
+echo $USE_RBENV
+echo $USE_NVM
+
+echo 'TODO: The ~/.zshrc file (which is not in this repo), loads plugins and sets ZSH theme. Link it with ln?'
+echo 'TODO: Install rbenv? scripts/rbenv.sh'
+echo 'TODO: Install nvm?'
+echo 'TODO: generate SSH key'
+
+#exit
+
 sudo apt-get update
 echo "================== Install programs  ====================="
 sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
@@ -73,8 +100,5 @@ wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
 
-echo 'All done! What manual steps are missing?'
-echo 'TODO: ~/.zshrc file loads plugins and sets ZSH theme'
-echo 'TODO: Install rbenv? scripts/rbenv.sh'
-echo 'TODO: generate SSH key'
+echo 'All done!'
 
