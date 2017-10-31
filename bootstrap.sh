@@ -36,6 +36,7 @@ sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake mak
 #gnome-icon-theme-full
 
 echo "================== Clone my i3 repo and setup ====================="
+cd
 git clone https://github.com/viktorsmari/i3-work.git ~/.i3
 
 # Install i3 stable newest
@@ -100,5 +101,27 @@ wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
 
+if [[ $USE_RBENV -eq 'y' ]]; then
+  echo '==== Installing rbenv ...'
+  #TODO: untested
+  cd
+  ~/.i3/scripts/rbenv.sh
+fi
+
+if [[ $USE_NVM -eq 'y' ]]; then
+  #TODO: untested
+  echo '==== Installing nvm in ~/.nvm ...'
+  cd
+  git clone https://github.com/creationix/nvm.git .nvm
+  cd ~/.nvm
+
+  echo 'export NVM_DIR="$HOME/.nvm"' >> .zshrc
+  # This loads nvm
+  echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> .zshrc
+  # This loads nvm bash_completion
+  echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> .zshrc
+fi
+
 echo 'All done!'
+
 
