@@ -32,6 +32,9 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+shift+Return exec notify-send -t 1000 terminator, exec terminator
 bindsym $mod+ctrl+Return  exec notify-send -t 1000 GnomeTerm,  exec gnome-terminal
 
+# Don't focus on popup
+no_focus [class="Xfce4-notifyd"]
+
 # Make these program start floated
 for_window [class="ardour_mixer"]     floating enable, border normal
 for_window [class="ardour_editor"]    floating enable, border normal
