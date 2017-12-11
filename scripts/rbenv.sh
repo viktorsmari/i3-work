@@ -1,22 +1,26 @@
 cd
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
+cd ~/.rbenv && src/configure && make -C src
+
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc >> ~/.zshrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc >> ~/.zshrc
 
 source ~/.zshrc
 
 type rbenv
 
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
 
 ruby -v
 rbenv install --list
 
+echo '==== Installing ruby 2.4.1, ctrl+c to cancel'
+rbenv install 2.4.1
+rbenv global 2.4.1
 
-# Postgres, sqlite dep
-sudo  apt-get install libsqlite3-dev libpq-dev
+
+echo '==== Installing  Postgres, sqlite dependency'
+sudo apt-get install libsqlite3-dev libpq-dev
