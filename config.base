@@ -10,19 +10,30 @@ set $mod Mod4
 
 bindsym $mod+i exec sh ~/.i3/scripts/kb-is.sh
 bindsym $mod+o exec sh ~/.i3/scripts/kb-en.sh
-bindsym $mod+shift+o exec "setxkbmap -option ''"
-bindsym $mod+u exec sh ~/.i3/scripts/kb-dk.sh
+bindsym $mod+u exec sh ~/.i3/scripts/kb-es.sh
+bindsym $mod+shift+o exec "setxkbmap -option ''", exec notify-send 'reset kb'
+
 bindsym --release $mod+button2 kill
 
-
+# Lock screen
 bindsym $mod+p exec i3lock -i ~/.i3/penguin.png -c 212121
 #computerspecific bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
+
+# Move workspace
 bindsym $mod+Shift+g move workspace to output left
+
+# Screenshots
 bindsym $mod+s --release exec notify-send -t 1000 Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
 bindsym shift+Print --release exec notify-send 'screenshot' 'please select area' && scrot '%Y%m%d_%H%M%S.png' -s -e 'mv $f Pictures/screenshots' && notify-send 'screnshot' 'taken. in ~/Pictures/screenshots'
 
+# Open apps
 bindsym $mod+Shift+c exec chromium-browser
 bindsym $mod+Shift+t exec thunar
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+bindsym $mod+shift+d exec xfce4-appfinder
+bindsym $mod+space exec gnome-do
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -68,11 +79,6 @@ assign [class="Nautilus"]      10:Gimp
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-bindsym $mod+shift+d exec xfce4-appfinder 
-bindsym $mod+space exec gnome-do
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
