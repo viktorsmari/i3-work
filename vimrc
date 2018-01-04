@@ -24,6 +24,7 @@ Plugin 'henrik/vim-indexed-search'
 "" Syntax
 Plugin 'tpope/vim-rails'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'elixir-lang/vim-elixir'
@@ -289,6 +290,8 @@ set list
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|git\|bower_components'
 
 
+"use .jsx syntax also in .js files
+let g:jsx_ext_required = 0
 
 "notes
 " Copy to clipboard:        "+y
