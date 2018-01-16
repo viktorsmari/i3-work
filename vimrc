@@ -30,6 +30,7 @@ Plugin 'mxw/vim-jsx'
 "Plugin 'elixir-lang/vim-elixir'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'auto-pairs-gentle'
+Plugin 'Valloric/MatchTagAlways' " match divs
 Plugin 'kshenoy/vim-signature'
 
 " All of your Plugins must be added before the following line
