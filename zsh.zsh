@@ -101,3 +101,5 @@ alias single="sh ~/.i3/scripts/disp-home-single.sh"
 alias home2="sh ~/.i3/scripts/disp-home2.sh"
 alias fablab="sh ~/.i3/scripts/fablab.sh"
 alias wer='curl wttr.in/bcn'
+alias cheat='curl cheat.sh/$1'
+
