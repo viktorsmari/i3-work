@@ -16,11 +16,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
+"" Search
 Plugin 'kien/ctrlp.vim'
 Plugin 'henrik/vim-indexed-search'
+"" Git
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-fugitive'
 "" Syntax
 Plugin 'tpope/vim-rails'
 Plugin 'chase/vim-ansible-yaml'
@@ -31,7 +33,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'auto-pairs-gentle'
 Plugin 'Valloric/MatchTagAlways' " match divs
-Plugin 'kshenoy/vim-signature'
+Plugin 'kshenoy/vim-signature'   " display marks in gutter
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
