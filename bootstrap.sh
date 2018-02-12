@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "======== TODO ========"
+echo "======== Answer (y/n) - default: no ========"
 
 echo "1. Do you want git setup?"
 read -p 'y / n :' USE_GIT
@@ -20,34 +20,24 @@ if [[ $USE_I3 = 'y' ]]; then
 fi
 
 echo "3. Do you want all dependencies installed?"
-read -p 'y / n :' USE_DEP
+read -p 'y / n : ' USE_DEP
 
 echo "4. Do you want oh my zsh installed?"
-read -p 'y / n :' USE_OHMZ
+read -p 'y / n : ' USE_OHMZ
 
 echo "6. Do you want vim plugins installed?"
-read -p 'y / n :' USE_VIM
+read -p 'y / n : ' USE_VIM
 
 echo "7. Do you want rbenv installed?"
-read -p 'y / n :' USE_RBENV
+read -p 'y / n : ' USE_RBENV
 
 echo "8. Do you want nvm installed?"
-read -p 'y / n :' USE_NVM
+read -p 'y / n : ' USE_NVM
 
-echo '-------'
-echo $USE_I3
-echo $USE_GIT
-echo $MY_EMAIL
-echo $I3VERSION
-echo $USE_RBENV
-echo $USE_NVM
+echo '======== Questions done ========'
 
 echo 'TODO: The ~/.zshrc file (which is not in this repo), loads plugins and sets ZSH theme. Link it with ln?'
-echo 'TODO: Install rbenv? scripts/rbenv.sh'
-echo 'TODO: Install nvm?'
 echo 'TODO: generate SSH key'
-
-#exit
 
 if [[ $USE_DEP = 'y' ]]; then
   echo "================== Install programs  ====================="
@@ -59,7 +49,7 @@ if [[ $USE_DEP = 'y' ]]; then
     python-pip virtualenv libnotify
   #gnome-icon-theme-full
 else
-  echo "=========== no install"
+  echo "==== no install dep"
 fi
 
 if [[ $USE_I3 = 'y' ]]; then
@@ -98,7 +88,7 @@ if [[ $USE_I3 = 'y' ]]; then
   ~/.i3/generatei3.sh
 
 else
-  echo "=========== no install i3"
+  echo "==== no install i3"
 fi
 
 if [[ $USE_GIT = 'y' ]]; then
@@ -108,10 +98,10 @@ if [[ $USE_GIT = 'y' ]]; then
   git config --global user.name $MY_USER
   git config --global user.email $MY_EMAIL
 
-  # Generate ssh key?
+  #TODO: Generate ssh key?
   # ssh-keygen -t rsa -b 4096
 else
-  echo "=========== no install git"
+  echo "==== no install git"
 fi
 
 if [[ $USE_VIM = 'y' ]]; then
@@ -131,7 +121,7 @@ if [[ $USE_VIM = 'y' ]]; then
   # Install plugins
   vim -c 'PluginInstall' -c 'qa!'
 else
-  echo "=========== no install vim"
+  echo "==== no install vim"
 fi
 
 
@@ -147,7 +137,7 @@ if [[ $USE_OHMZ = 'y' ]]; then
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 else
-  echo "=========== no install oh"
+  echo "==== no install oh my zsh"
 fi
 
 
@@ -171,7 +161,7 @@ if [[ $USE_NVM = 'y' ]]; then
   # This loads nvm bash_completion
   echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> .zshrc
 else
-  echo "=========== no install rbenv"
+  echo "==== no install rbenv"
 fi
 
 echo 'All done!'
