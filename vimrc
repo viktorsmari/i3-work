@@ -290,7 +290,7 @@ set listchars=tab:>-,trail:-
 set list
 
 "ctrl p search ignores folders
-let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|git\|bower_components'
+let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|git\|bower_components\|tmp'
 
 
 "use .jsx syntax also in .js files
