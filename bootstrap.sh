@@ -55,6 +55,8 @@ fi
 if [[ $USE_I3 = 'y' ]]; then
   echo "================== Clone my i3 repo and setup ====================="
   cd
+
+  #TODO: fails when repo exists
   git clone https://github.com/viktorsmari/i3-work.git ~/.i3
   if [[ $I3VERSION = 's' ]]; then
 
