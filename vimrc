@@ -20,6 +20,7 @@ Plugin 'airblade/vim-gitgutter'
 "" Search
 Plugin 'kien/ctrlp.vim'
 Plugin 'henrik/vim-indexed-search'
+Plugin 'mileszs/ack.vim'
 "" Git
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
@@ -312,3 +313,9 @@ let g:jsx_ext_required = 0
 " ds'           Deletes '
 " yss[          Wrap whole line in []
 
+"let g:ackprg = 'ag --nogroup --nocolor --column'
+nnoremap <Leader>a :Ack!<Space>
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
