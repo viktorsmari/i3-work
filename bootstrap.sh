@@ -99,6 +99,9 @@ if [[ $USE_GIT = 'y' ]]; then
   git config --global push.default matching
   git config --global user.name $MY_USER
   git config --global user.email $MY_EMAIL
+  git config merge.tool vimdiff
+  git config merge.conflictstyle diff3
+  git config mergetool.prompt false
 
   #TODO: Generate ssh key?
   # ssh-keygen -t rsa -b 4096
