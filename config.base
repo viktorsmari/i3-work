@@ -28,6 +28,7 @@ bindsym shift+Print --release exec notify-send 'screenshot' 'please select area'
 
 # Open apps
 bindsym $mod+Shift+c exec chromium-browser
+bindsym $mod+ctrl+8 exec spotify
 bindsym $mod+Shift+t exec thunar
 
 # start dmenu (a program launcher)
