@@ -24,8 +24,9 @@ bindsym $mod+p exec i3lock -i ~/.i3/penguin.png -c 212121
 bindsym $mod+Shift+g move workspace to output left
 
 # Screenshots
-bindsym $mod+s --release exec notify-send -t 1000 Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
-bindsym shift+Print --release exec notify-send 'screenshot' 'please select area' && scrot '%Y%m%d_%H%M%S.png' -s -e 'mv $f Pictures/screenshots' && notify-send 'screnshot' 'taken. in ~/Pictures/screenshots'
+#bindsym $mod+s --release exec notify-send -t 1000 Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
+bindsym $mod+s      --release exec notify-send -t 2000 'screenshot' 'please select area' && scrot '%Y%m%d_%H%M%S.png' -s -e 'mv $f Pictures/screenshots' && notify-send -t 1000 'screenshot' 'taken. in ~/Pictures/screenshots'
+bindsym shift+Print --release exec notify-send 'screenshot' 'please select area' && scrot '%Y%m%d_%H%M%S.png' -s -e 'mv $f Pictures/screenshots' && notify-send 'screenshot' 'taken. in ~/Pictures/screenshots'
 
 # Open apps
 bindsym $mod+Shift+c exec chromium-browser
