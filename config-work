@@ -30,3 +30,6 @@ bindsym XF86AudioPrev exec notify-send -t 1000 Prev
 bindsym XF86AudioNext exec notify-send -t 1000 Next
 # ====================== Display ===============================
 exec ~/.i3/scripts/disp-thinkpad2.sh
+
+# Video
+bindsym $mod+ctrl+F12          exec notify-send -t 1000 DUALHD,     exec ~/.i3/scripts/disp-fablab.sh
