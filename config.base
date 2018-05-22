@@ -25,8 +25,8 @@ bindsym $mod+Shift+g move workspace to output left
 
 # Screenshots
 #bindsym $mod+s --release exec notify-send -t 1000 Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
-bindsym $mod+s      --release exec flameshot gui || notify-send -t 1000 Screenshot && scrot '%Y%m%d_%H%M%S.png' -s -e 'mv $f Pictures/screenshots' && notify-send -t 1000 'screenshot' 'taken. in ~/Pictures/screenshots'
-bindsym shift+Print --release exec notify-send 'screenshot' 'please select area' && scrot '%Y%m%d_%H%M%S.png' -s -e 'mv $f Pictures/screenshots' && notify-send 'screenshot' 'taken. in ~/Pictures/screenshots'
+bindsym $mod+s      --release exec flameshot gui || notify-send -t 1000 Gnome-Screenshot && gnome-screenshot -a -f "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" && notify-send -t 1000 'screenshot' 'saved in ~/Pictures/'
+bindsym shift+Print --release exec notify-send 'screenshot' 'please select area' && gnome-screenshot -a && notify-send 'screenshot' 'taken. in ~/Pictures/'
 
 # Open apps
 bindsym $mod+Shift+c exec chromium-browser
