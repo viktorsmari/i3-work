@@ -291,7 +291,7 @@ set listchars=tab:>-,trail:-
 set list
 
 "ctrl p search ignores folders
-let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|git\|bower_components\|tmp'
+let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|bower_components\|tmp|(\.(swp|git))'
 
 let g:multi_cursor_exit_from_insert_mode = 0
 
