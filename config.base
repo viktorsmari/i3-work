@@ -57,6 +57,8 @@ for_window [class="gnome-calculator"] floating enable, border normal
 for_window [class="xfce4-appfinder"]  floating enable, border normal
 for_window [class="Xfce4-appfinder"]  floating enable, border normal
 for_window [class="Spotify"]  move to workspace 8:Spotify
+for_window [class="gpick"]    floating enable, border normal
+for_window [class="Gpick"]    floating enable, border normal
 for_window [title="^floatme$"] floating enable
 
 #unfloat
