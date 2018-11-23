@@ -70,7 +70,6 @@ assign [class="Ardour"]        3:Ansible
 assign [class="ardour_editor"] 3:Ansible
 assign [class="sublime-text"]  3:Ansible
 assign [class="atom"]          3:Ansible
-assign [class="Firefox"]       4:Firefox
 assign [class="Slack"]         4:Firefox
 assign [class="Empathy"]       4:Firefox
 assign [class="Pidgin"]        4:Firefox
@@ -145,6 +144,7 @@ bindsym $mod+Shift+f floating toggle
 # change focus between tiling / floating windows
 bindsym Mod1+Tab focus mode_toggle
 bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab exec rofi -show window
 
 bindsym $mod+Shift+m move scratchpad
 bindsym $mod+m scratchpad show
