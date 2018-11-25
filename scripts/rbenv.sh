@@ -17,9 +17,9 @@ sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline
 ruby -v
 rbenv install --list
 
-echo '==== Installing ruby 2.4.1, ctrl+c to cancel'
-rbenv install 2.4.1
-rbenv global 2.4.1
+echo '==== Installing ruby 2.5.3, ctrl+c to cancel'
+rbenv install 2.5.3
+rbenv global 2.5.3
 
 
 echo '==== Installing  Postgres, sqlite dependency'

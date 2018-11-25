@@ -34,7 +34,8 @@ bindsym $mod+ctrl+8 workspace 8:Spotify; exec spotify
 bindsym $mod+Shift+t exec thunar
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
 bindsym $mod+shift+d exec xfce4-appfinder
 #bindsym $mod+space exec sleep 2 && notify-send -t 3000 'Open slack'
 

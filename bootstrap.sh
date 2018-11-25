@@ -46,7 +46,7 @@ if [[ $USE_DEP = 'y' ]]; then
   sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
     chromium-browser tree scrot gnome-screenshot bc traceroute htop whois xclip thunar bmon glipper \
     vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal \
-    python-pip virtualenv libnotify silversearcher-ag flameshot
+    python-pip virtualenv libnotify silversearcher-ag flameshot rofi
   #gnome-icon-theme-full
 else
   echo "==== no install dep"
@@ -96,12 +96,14 @@ fi
 if [[ $USE_GIT = 'y' ]]; then
   echo "================== Setup git ====================="
   git config --global core.editor "vim"
+  git config --global merge.conflictstyle diff3
+  git config --global merge.tool vimdiff
+  git config --global mergetool.prompt false
+  git config --global pull.rebase=true
   git config --global push.default matching
-  git config merge.tool vimdiff
-  git config merge.conflictstyle diff3
-  git config mergetool.prompt false
-  git config --global user.name $MY_USER
+  git config --global push.followTags true
   git config --global user.email $MY_EMAIL
+  git config --global user.name $MY_USER
 
   #TODO: Generate ssh key?
   # ssh-keygen -t rsa -b 4096
