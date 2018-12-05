@@ -26,9 +26,11 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 "" Syntax
 Plugin 'tpope/vim-rails'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+"Plugin 'chase/vim-ansible-yaml'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'mxw/vim-jsx'
 "Plugin 'leafgarland/typescript-vim'
 "Plugin 'elixir-lang/vim-elixir'
 Plugin 'terryma/vim-multiple-cursors'
@@ -289,6 +291,9 @@ hi Search cterm=NONE ctermfg=black ctermbg=blue
 " Show trailing whitespace:
 set listchars=tab:>-,trail:-
 set list
+
+" use Tab to complete snippets
+let g:UltiSnipsExpandTrigger="<tab>"
 
 "ctrl p search ignores folders
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|bower_components\|tmp|(\.(swp|git))'
