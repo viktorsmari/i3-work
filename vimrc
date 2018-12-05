@@ -294,6 +294,11 @@ set list
 
 " use Tab to complete snippets
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 "ctrl p search ignores folders
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|bower_components\|tmp|(\.(swp|git))'
