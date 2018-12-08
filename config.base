@@ -164,8 +164,8 @@ set $ws5 "5:Slack"
 set $ws6 "6:666"
 set $ws7 "7:777"
 set $ws8 "8:Spotify"
-set $ws9 "9"
-set $ws10 "10"
+set $ws9 "9:Settings"
+set $ws10 "10:Gimp"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
