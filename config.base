@@ -1,9 +1,17 @@
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font pango:monospace 9
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:monospace 9
+
+set $up k
+set $down j
+set $left h
+set $right l
 
 set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
 
 # ========  Keyboard and language ============
 # Caps / Esc switch.
@@ -29,18 +37,19 @@ bindsym $mod+s      --release exec flameshot gui || notify-send -t 1000 Gnome-Sc
 bindsym shift+Print --release exec notify-send 'screenshot' 'please select area' && gnome-screenshot -a && notify-send 'screenshot' 'taken. in ~/Pictures/'
 
 # Open apps
-bindsym $mod+Shift+c exec chromium-browser
-bindsym $mod+ctrl+8 workspace 8:Spotify; exec spotify
-bindsym $mod+Shift+t exec thunar
+bindsym $mod+ctrl+c exec chromium-browser
+bindsym $mod+ctrl+f exec firefox
+bindsym $mod+ctrl+8 workspace $ws8; exec spotify
+bindsym $mod+ctrl+5 workspace $ws5; exec Thunar
+bindsym $mod+ctrl+t exec thunar
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
+bindsym $mod+ctrl+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec rofi -show run
 bindsym $mod+shift+d exec xfce4-appfinder
 #bindsym $mod+space exec sleep 2 && notify-send -t 3000 'Open slack'
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
@@ -57,7 +66,7 @@ for_window [class="pavucontrol"]      floating enable, border normal
 for_window [class="gnome-calculator"] floating enable, border normal
 for_window [class="xfce4-appfinder"]  floating enable, border normal
 for_window [class="Xfce4-appfinder"]  floating enable, border normal
-for_window [class="Spotify"]  move to workspace 8:Spotify
+for_window [class="Spotify"]  move to workspace $ws8
 for_window [class="gpick"]    floating enable, border normal
 for_window [class="Gpick"]    floating enable, border normal
 for_window [title="^floatme$"] floating enable
@@ -65,26 +74,20 @@ for_window [title="^floatme$"] floating enable
 #unfloat
 for_window [class="Nautilus"] border normal
 
-#assign [class="Chromium"]      1:Chrome
-assign [class="ardour_mixer"]  2:Term
-assign [class="Ardour"]        3:Ansible
-assign [class="ardour_editor"] 3:Ansible
-assign [class="sublime-text"]  3:Ansible
-assign [class="atom"]          3:Ansible
-assign [class="Slack"]         4:Firefox
-assign [class="Empathy"]       4:Firefox
-assign [class="Pidgin"]        4:Firefox
-assign [class="Thunar"]        5:Thunar
-assign [class="Filezilla"]     6:
-assign [class="TeamViewer"]    6:
-assign [class="teamviewer"]    6:
-assign [class="Spotify"]       8:Spotify
-assign [class="spotify"]       8:Spotify
-assign [class="VirtualBox"]    9:Settings
-assign [class="pavucontrol"]   9:Settings
-assign [class="qjackctl"]      9:Settings
-assign [class="Gimp"]          10:Gimp
-assign [class="Nautilus"]      10:Gimp
+assign [class="Chromium"]      $ws1
+assign [class="ardour_mixer"]  $ws4
+assign [class="Ardour"]        $ws4
+assign [class="ardour_editor"] $ws4
+assign [class="Slack"]         $ws5
+assign [class="Spotify"]       $ws8
+assign [class="spotify"]       $ws8
+assign [class="pavucontrol"]   $ws8
+assign [class="qjackctl"]      $ws9
+assign [class="TeamViewer"]    $ws10
+assign [class="teamviewer"]    $ws10
+assign [class="VirtualBox"]    $ws10
+assign [class="Gimp"]          $ws10
+assign [class="Nautilus"]      $ws10
 
 
 # kill focused window
@@ -94,11 +97,6 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-set $up k
-set $down j
-set $left h
-set $right l
 
 # change focus
 bindsym $mod+$down  focus down
@@ -156,29 +154,42 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+c focus child
 
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1:Chrome"
+set $ws2 "2:Term"
+set $ws3 "3:Ansible"
+set $ws4 "4:Term"
+set $ws5 "5:Slack"
+set $ws6 "6:666"
+set $ws7 "7:777"
+set $ws8 "8:Spotify"
+set $ws9 "9"
+set $ws10 "10"
+
 # switch to workspace
-bindsym $mod+1 workspace 1:Chrome
-bindsym $mod+2 workspace 2:Term
-bindsym $mod+3 workspace 3:Ansible
-bindsym $mod+4 workspace 4:Firefox
-bindsym $mod+5 workspace 5:Thunar
-bindsym $mod+6 workspace 6:
-bindsym $mod+7 workspace 7:
-bindsym $mod+8 workspace 8:Spotify
-bindsym $mod+9 workspace 9:Settings
-bindsym $mod+0 workspace 10:Gimp
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:Chrome
-bindsym $mod+Shift+2 move container to workspace 2:Term
-bindsym $mod+Shift+3 move container to workspace 3:Ansible
-bindsym $mod+Shift+4 move container to workspace 4:Firefox
-bindsym $mod+Shift+5 move container to workspace 5:Thunar
-bindsym $mod+Shift+6 move container to workspace 6:
-bindsym $mod+Shift+7 move container to workspace 7:
-bindsym $mod+Shift+8 move container to workspace 8:Spotify
-bindsym $mod+Shift+9 move container to workspace 9:Settings
-bindsym $mod+Shift+0 move container to workspace 10:Gimp
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Start workspaces on specified monitors
 workspace 3 output DP2
