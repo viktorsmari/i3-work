@@ -82,6 +82,7 @@ autocmd BufRead,BufNewFile   *.pl syntax on
 " nr of spaces for each FileType
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType java setlocal shiftwidth=4 tabstop=4
+autocmd FileType cpp setlocal shiftwidth=4 tabstop=4
 
 "use zsh for unknown filetypes
 autocmd BufEnter * if &filetype == "" | setlocal ft=zsh | endif
@@ -303,7 +304,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 "ctrl p search ignores folders
-let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|bower_components\|tmp|(\.(swp|git))'
+let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|bower_components\|tmp\|(\.(swp|git))'
 
 let g:multi_cursor_exit_from_insert_mode = 0
 
