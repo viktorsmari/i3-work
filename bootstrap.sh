@@ -46,7 +46,7 @@ if [[ $USE_DEP = 'y' ]]; then
   sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
     chromium-browser tree scrot gnome-screenshot bc traceroute htop whois xclip thunar bmon glipper \
     vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal \
-    python-pip virtualenv libnotify silversearcher-ag flameshot rofi
+    python-pip virtualenv libnotify silversearcher-ag flameshot rofi gromit-mpx
   #gnome-icon-theme-full
 else
   echo "==== no install dep"
