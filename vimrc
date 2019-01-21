@@ -18,7 +18,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 "" Search
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'mileszs/ack.vim'
 "" Git
