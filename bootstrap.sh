@@ -40,7 +40,7 @@ echo 'TODO: The ~/.zshrc file (which is not in this repo), loads plugins and set
 echo 'TODO: generate SSH key'
 
 if [[ $USE_DEP = 'y' ]]; then
-  echo "================== Install programs  ====================="
+  echo "======== Install programs ========"
   sudo apt-get update
   read -p 'Press enter to continue.'
   sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
@@ -49,11 +49,11 @@ if [[ $USE_DEP = 'y' ]]; then
     python-pip virtualenv libnotify silversearcher-ag flameshot rofi gromit-mpx inotify-tools
   #gnome-icon-theme-full
 else
-  echo "==== no install dep"
+  echo "======== no install dep"
 fi
 
 if [[ $USE_I3 = 'y' ]]; then
-  echo "================== Clone my i3 repo and setup ====================="
+  echo "======== Clone my i3 repo and setup ========"
   cd
 
   #TODO: fails when repo exists
@@ -90,11 +90,11 @@ if [[ $USE_I3 = 'y' ]]; then
   ~/.i3/generatei3.sh
 
 else
-  echo "==== no install i3"
+  echo "======== no install i3"
 fi
 
 if [[ $USE_GIT = 'y' ]]; then
-  echo "================== Setup git ====================="
+  echo "======== Setup git ========"
   git config --global core.editor "vim"
   git config --global merge.conflictstyle diff3
   git config --global merge.tool vimdiff
@@ -108,11 +108,11 @@ if [[ $USE_GIT = 'y' ]]; then
   #TODO: Generate ssh key?
   # ssh-keygen -t rsa -b 4096
 else
-  echo "==== no install git"
+  echo "======== no install git"
 fi
 
 if [[ $USE_VIM = 'y' ]]; then
-  echo "================== Setup vim ====================="
+  echo "======== Setup vim ========"
 
   # Get Vundle, Vim plugin manager
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -128,12 +128,12 @@ if [[ $USE_VIM = 'y' ]]; then
   # Install plugins
   vim -c 'PluginInstall' -c 'qa!'
 else
-  echo "==== no install vim"
+  echo "======== no install vim"
 fi
 
 
 if [[ $USE_OHMZ = 'y' ]]; then
-  echo "================== Setup oh-my-zsh ====================="
+  echo "======== Setup oh-my-zsh ========"
 
   #TODO (fails): Change default shell to ZSH
   chsh -s /bin/zsh
@@ -144,12 +144,12 @@ if [[ $USE_OHMZ = 'y' ]]; then
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 else
-  echo "==== no install oh my zsh"
+  echo "======== no install oh my zsh"
 fi
 
 
 if [[ $USE_RBENV = 'y' ]]; then
-  echo "================== Setup rbenv ====================="
+  echo "======== Setup rbenv ========"
   #TODO: untested
   cd
   ~/.i3/scripts/rbenv.sh
@@ -157,7 +157,7 @@ fi
 
 if [[ $USE_NVM = 'y' ]]; then
   #TODO: untested
-  echo "================== Setup nvm in ~/.nvm ====================="
+  echo "======== Setup nvm in ~/.nvm ========"
   cd
   git clone https://github.com/creationix/nvm.git .nvm
   cd ~/.nvm
@@ -168,7 +168,7 @@ if [[ $USE_NVM = 'y' ]]; then
   # This loads nvm bash_completion
   echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> .zshrc
 else
-  echo "==== no install rbenv"
+  echo "======== no install rbenv"
 fi
 
 echo 'All done!'
