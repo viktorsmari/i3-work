@@ -36,7 +36,7 @@ read -p 'y / n : ' USE_NVM
 
 echo '======== Questions done ========'
 
-echo 'TODO: The ~/.zshrc file (which is not in this repo), loads plugins and sets ZSH theme. Link it with ln?'
+echo 'TODO: The ~/.zshrc file (which is not in this repo), loads plugins. Create it here and link it with ln?'
 echo 'TODO: generate SSH key'
 
 if [[ $USE_DEP = 'y' ]]; then
@@ -50,7 +50,7 @@ if [[ $USE_DEP = 'y' ]]; then
     vim gnome-terminal python-pip virtualenv
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
-    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq
+    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman
 
 else
   echo "======== no install dep"
@@ -154,8 +154,6 @@ fi
 
 if [[ $USE_RBENV = 'y' ]]; then
   echo "======== Setup rbenv ========"
-  #TODO: untested
-  cd
   ~/.i3/scripts/rbenv.sh
 fi
 
