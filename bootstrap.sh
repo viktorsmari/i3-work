@@ -41,13 +41,17 @@ echo 'TODO: generate SSH key'
 
 if [[ $USE_DEP = 'y' ]]; then
   echo "======== Install programs ========"
+  echo "This is aimed at Ubuntu 18, if you have a different version and a package installation fails, it could cancel the rest of the operations"
   sudo apt-get update
-  read -p 'Press enter to continue.'
-  sudo apt-get install -y pwgen curl nmap zsh git git-core arandr g++ automake make \
-    chromium-browser tree scrot gnome-screenshot bc traceroute htop whois xclip thunar bmon glipper \
-    vim vim-gnome vim-snippets vim-snipmate xbacklight gpicview powerline gnome-terminal \
-    python-pip virtualenv libnotify silversearcher-ag flameshot rofi gromit-mpx inotify-tools
-  #gnome-icon-theme-full
+  read -p 'Update complete, now installing packages - Press enter to continue.'
+  # VIP packages
+  sudo apt-get install -y curl nmap zsh git g++ automake make \
+    chromium-browser tree gnome-screenshot htop whois thunar bmon \
+    vim gnome-terminal python-pip virtualenv
+  # Packages likely to fail:
+  sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
+    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq
+
 else
   echo "======== no install dep"
 fi
@@ -139,7 +143,7 @@ if [[ $USE_OHMZ = 'y' ]]; then
   chsh -s /bin/zsh
 
   # install oh my zsh
-  wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+  sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
