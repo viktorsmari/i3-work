@@ -3,8 +3,10 @@ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
 cd ~/.rbenv && src/configure && make -C src
 
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc >> ~/.zshrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc >> ~/.zshrc
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 
 source ~/.zshrc
 
@@ -15,12 +17,12 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
 
 ruby -v
-rbenv install --list
+#rbenv install --list
 
-echo '==== Installing ruby 2.5.3, ctrl+c to cancel'
-rbenv install 2.5.3
-rbenv global 2.5.3
+#echo '==== Installing ruby 2.5.3, ctrl+c to cancel'
+#rbenv install 2.5.3
+#rbenv global 2.5.3
 
 
-echo '==== Installing  Postgres, sqlite dependency'
-sudo apt-get install libsqlite3-dev libpq-dev
+#echo '==== Installing  Postgres, sqlite dependency'
+#sudo apt-get install libsqlite3-dev libpq-dev

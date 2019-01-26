@@ -174,5 +174,3 @@ else
 fi
 
 echo 'All done!'
-
-
