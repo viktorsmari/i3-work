@@ -49,6 +49,11 @@ alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
 
 # Programs etc
 alias ap='ansible-playbook'
+alias aps='apt search'
+alias acs='apt-cache search'
+alias app='apt policy'
+alias api='sudo apt install'
+alias apu='sudo apt update -y'
 alias b='bundle'
 alias be='bundle exec'
 alias bu='bundle update'
@@ -78,8 +83,8 @@ alias rgrep='rgrep --color'
 alias sshc='vi ~/.ssh/config'
 alias rb='rbenv'
 alias vag='vagrant'
-alias vi='vim -p'
-alias vim='vim -p'
+alias vi='nvim -p'
+alias vim='nvim -p'
 alias vimrc='vim ~/.vimrc'
 alias vio='vim -O'
 alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"

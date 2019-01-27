@@ -76,6 +76,7 @@ if [[ $USE_I3 = 'y' ]]; then
     echo "unstable"
     read -p 'Press enter to continue.'
     # unstable dev
+    # TODO: FAILS
     sudo echo 'deb http://build.i3wm.org/ubuntu/trusty trusty main' >> /etc/apt/sources.list
     sudo apt-get update
     sudo apt-get --allow-unauthenticated install i3-autobuild-keyring
