@@ -3,19 +3,24 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+"Syntax
+Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips' 
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
+"Plug 'terryma/vim-multiple-cursors'
 
+"Search
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'henrik/vim-indexed-search'
-Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
-"Plug 'terryma/vim-multiple-cursors'
+Plug 'scrooloose/nerdtree'
 
 "Git
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
 
+Plug 'kshenoy/vim-signature'   " display marks in gutter
 " On-demand loading
 " Initialize plugin system
 call plug#end()
