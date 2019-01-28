@@ -30,6 +30,7 @@ colorscheme monokai
 set number
 set wrap!
 set mouse=a
+set list
 
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
