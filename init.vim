@@ -25,12 +25,34 @@ Plug 'kshenoy/vim-signature'   " display marks in gutter
 " Initialize plugin system
 call plug#end()
 
+syntax enable
 colorscheme monokai
 
-set number
-set wrap!
-set mouse=a
+set cursorline               " highlight current line
+set hidden
+set laststatus=2             " window will always have a status line
 set list
+set mouse=a
+set nobackup
+set noswapfile
+set number                   " show line number
+set showcmd                  " show command in bottom bar
+set showmatch                " highlight matching brace
+set wildmenu                 " visual autocomplete for command menu
+set wrap!
+" Spaces & Tabs
+set tabstop=2       " number of visual spaces per TAB
+set softtabstop=2   " number of spaces in tab when editing
+set shiftwidth=2    " number of spaces to use for autoindent
+set expandtab       " tabs are space
+set autoindent
+set copyindent      " copy indent from the previous line
+
+"search
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matche
+set ignorecase      " ignore case when searching
+set smartcase       " ignore case if search pattern is lower case
 
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
