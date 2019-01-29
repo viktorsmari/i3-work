@@ -45,6 +45,7 @@ webcamgrab: outputs to /tmp
 #i3 config
 alias config="vi ~/.i3/config.base"
 alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
+alias zshrc='vi ~/.zshrc'
 
 
 # Programs etc
@@ -52,7 +53,8 @@ alias ap='ansible-playbook'
 alias aps='apt search'
 alias acs='apt-cache search'
 alias app='apt policy'
-alias api='sudo apt install'
+alias acp='apt-cache policy'
+alias agi='sudo apt-get install'
 alias apu='sudo apt update -y'
 alias b='bundle'
 alias be='bundle exec'
