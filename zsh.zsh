@@ -74,6 +74,7 @@ alias gap='git add -p'
 alias gop='git-open'
 alias gs='git status'
 alias getprocid='xprop | grep WM_CLASS'
+alias hgrep='history|grep'
 alias htop='htop -d 30'
 alias img=gpicview
 alias cast='python ~/dev/mkchromecast/bin/mkchromecast'
