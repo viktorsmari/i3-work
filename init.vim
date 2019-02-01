@@ -21,12 +21,18 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 
 Plug 'kshenoy/vim-signature'   " display marks in gutter
+
+"Colorscheme
+Plug 'crusoexia/vim-monokai'
+Plug 'phanviet/vim-monokai-pro'
+
 " On-demand loading
 " Initialize plugin system
 call plug#end()
 
 syntax enable
 colorscheme monokai
+"colorscheme monokai_pro
 
 set cursorline               " highlight current line
 set hidden

@@ -25,6 +25,9 @@ read -p 'y / n : ' USE_DEP
 echo "4. Do you want oh my zsh installed?"
 read -p 'y / n : ' USE_OHMZ
 
+echo "5. Do you want neovim and plugins installed?"
+read -p 'y / n : ' USE_NEOVIM
+
 echo "6. Do you want vim plugins installed?"
 read -p 'y / n : ' USE_VIM
 
@@ -43,7 +46,7 @@ if [[ $USE_DEP = 'y' ]]; then
   echo "======== Install programs ========"
   echo "This is aimed at Ubuntu 18, if you have a different version and a package installation fails, it could cancel the rest of the operations"
   sudo apt-get update
-  read -p 'Update complete, now installing packages - Press enter to continue.'
+  read 'Update complete, now installing packages...'
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
     chromium-browser tree gnome-screenshot htop whois thunar bmon \
@@ -69,7 +72,7 @@ if [[ $USE_I3 = 'y' ]]; then
     # Install i3 stable newest
     sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
     sudo apt-get update
-    sudo apt-get --allow-unauthenticated install sur5r-keyring
+    sudo apt-get --allow-unauthenticated install sur5r-keyring -y
     sudo apt-get update
     sudo apt-get install i3 -y
   else
@@ -79,9 +82,9 @@ if [[ $USE_I3 = 'y' ]]; then
     # TODO: FAILS
     sudo echo 'deb http://build.i3wm.org/ubuntu/trusty trusty main' >> /etc/apt/sources.list
     sudo apt-get update
-    sudo apt-get --allow-unauthenticated install i3-autobuild-keyring
+    sudo apt-get --allow-unauthenticated install i3-autobuild-keyring -y
     sudo apt-get update
-    sudo apt-get install i3
+    sudo apt-get install i3 -y
   fi
 
   # Link i3 status bar
@@ -116,6 +119,18 @@ else
   echo "======== no install git"
 fi
 
+if [[ $USE_NEOVIM = 'y' ]]; then
+  echo "======== Setup neovim ========"
+  sudo add-apt-repository ppa:neovim-ppa/stable
+  sudo apt-get update
+  sudo apt-get install -y neovim
+  mkdir ~/.config/nvim
+  ln -s ~/.i3/init.vim ~/.config/nvim/init.vim
+
+  # Install plugins
+  nvim -c 'PlugInstall' -c 'qa!'
+fi
+
 if [[ $USE_VIM = 'y' ]]; then
   echo "======== Setup vim ========"
 
@@ -139,6 +154,7 @@ fi
 
 if [[ $USE_OHMZ = 'y' ]]; then
   echo "======== Setup oh-my-zsh ========"
+  echo "Remember to check if there is a newer way of installing oh-my-zsh?"
 
   #TODO (fails): Change default shell to ZSH
   chsh -s /bin/zsh
