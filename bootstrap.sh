@@ -53,7 +53,7 @@ if [[ $USE_DEP = 'y' ]]; then
     vim gnome-terminal python-pip virtualenv
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
-    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman
+    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv
 
 else
   echo "======== no install dep"
