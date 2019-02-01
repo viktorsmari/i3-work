@@ -179,13 +179,8 @@ if [[ $USE_NVM = 'y' ]]; then
   echo "======== Setup nvm in ~/.nvm ========"
   cd
   git clone https://github.com/creationix/nvm.git .nvm
-  cd ~/.nvm
 
-  echo 'export NVM_DIR="$HOME/.nvm"' >> .zshrc
-  # This loads nvm
-  echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> .zshrc
-  # This loads nvm bash_completion
-  echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> .zshrc
+  echo 'source ~/.i3/scripts/lazy_nvm.sh' >> .zshrc
 else
   echo "======== no install rbenv"
 fi
