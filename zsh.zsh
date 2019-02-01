@@ -77,6 +77,7 @@ alias getprocid='xprop | grep WM_CLASS'
 alias htop='htop -d 30'
 alias img=gpicview
 alias cast='python ~/dev/mkchromecast/bin/mkchromecast'
+alias p3=python3
 alias open=xdg-open
 alias pi='ping 8.8.8.8'
 alias r='./bin/rails'
