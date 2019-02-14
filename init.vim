@@ -60,6 +60,10 @@ set hlsearch        " highlight matche
 set ignorecase      " ignore case when searching
 set smartcase       " ignore case if search pattern is lower case
 
+" folding
+set foldmethod=indent
+set foldlevel=20
+
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|bower_components\|tmp\|(\.(swp|git))'
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
