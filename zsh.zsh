@@ -106,11 +106,6 @@ alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias KOB="timedatectl set-timezone Europe/Copenhagen"
 
 # Scripts
-alias workdual="sh ~/.i3/scripts/disp-dtu-dual-2560.sh"
-alias homedual="sh ~/.i3/scripts/disp-home-dualHD.sh"
-alias single="sh ~/.i3/scripts/disp-home-single.sh"
-alias home2="sh ~/.i3/scripts/disp-home2.sh"
-alias fablab="sh ~/.i3/scripts/fablab.sh"
 alias wer='curl wttr.in/bcn'
 
 cheat() {

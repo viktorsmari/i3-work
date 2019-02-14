@@ -29,8 +29,7 @@ bindsym XF86AudioStop exec notify-send -t 1000 Stop
 bindsym XF86AudioPrev exec notify-send -t 1000 Prev
 bindsym XF86AudioNext exec notify-send -t 1000 Next
 # ====================== Display ===============================
-#exec ~/.i3/scripts/disp-thinkpad2.sh
 exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-fablab.sh
-exec sleep 2 && slack && notify-send -t 3000 'Open slack...'
+exec sleep 2 && slack && notify-send -t 3000 'Opening slack...'
 # Video
-bindsym $mod+ctrl+F12          exec notify-send -t 1000 DUALHD,     exec ~/.i3/scripts/disp-fablab.sh
+bindsym $mod+ctrl+F12 exec notify-send -t 1000 '2 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab.sh
