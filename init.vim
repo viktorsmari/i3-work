@@ -8,7 +8,10 @@ Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips' 
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx' "indents js
 "Plug 'terryma/vim-multiple-cursors'
+Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 
 "Search
 Plug 'ctrlpvim/ctrlp.vim'

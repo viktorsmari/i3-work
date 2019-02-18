@@ -90,6 +90,7 @@ alias vag='vagrant'
 alias vi='nvim -p'
 alias vim='nvim -p'
 alias vimrc='vim ~/.vimrc'
+alias nvimrc='vim ~/.i3/init.vim'
 alias vio='vim -O'
 alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"
 alias wn='watch -n'
