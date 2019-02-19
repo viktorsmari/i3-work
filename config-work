@@ -33,3 +33,4 @@ exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-fablab.sh
 exec sleep 2 && slack && notify-send -t 3000 'Opening slack...'
 # Video
 bindsym $mod+ctrl+F12 exec notify-send -t 1000 '2 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab.sh
+bindsym $mod+ctrl+shift+F12 exec notify-send -t 1000 '1 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab1.sh
