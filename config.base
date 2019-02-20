@@ -235,7 +235,9 @@ exec --no-startup-id xsetroot -solid "#333333"
 exec chromium-browser
 exec gnome-sound-applet
 exec nm-applet
-exec glipper #clipboard history
+##clipboard history
+#exec glipper
+exec xfce4-clipman
 
 # =================== End base ============================
 
