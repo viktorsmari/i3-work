@@ -74,15 +74,16 @@ map <Leader>m :NERDTreeFind<CR>
 "Save with ctrl s
 imap <C-s> <Esc>:w<CR>
 nmap <C-s> :w<CR>
+
 "nerdTree
 nnoremap <C-t> :NERDTreeToggle<CR>
 inoremap <C-t> :NERDTreeToggle<CR>
+
 "navigate splits
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 
 "tab
 nnoremap <F7> :tabp<CR>
@@ -92,10 +93,14 @@ inoremap <F8> <ESC>:tabn<CR>
 "move tab
 nnoremap <F19> :-tabm<CR>
 nnoremap <F20> :+tabm<CR>
+
 " Ctrl C will copy
 nnoremap <C-c> "+yy
 vnoremap <C-c> "+y
 
+" Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
+" which is the default
+map Y y$
 
 "open nerdtree in empty vim
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
