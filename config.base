@@ -54,7 +54,7 @@ bindsym $mod+shift+d exec xfce4-appfinder
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 bindsym $mod+shift+Return exec notify-send -t 1000 terminator, exec terminator
-bindsym $mod+ctrl+Return  exec notify-send -t 1000 GnomeTerm,  exec gnome-terminal
+bindsym $mod+ctrl+Return  exec notify-send -t 1000 xfce4,  exec xfce4-terminal
 
 # Don't focus on popup
 no_focus [class="Xfce4-notifyd"]
