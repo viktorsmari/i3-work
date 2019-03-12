@@ -239,6 +239,6 @@ exec gnome-sound-applet
 exec nm-applet
 ##clipboard history
 #exec glipper
-exec xfce4-clipman
+exec Xfce4-clipman
 exec pasystray
 # =================== End base ============================
