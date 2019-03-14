@@ -127,6 +127,10 @@ if [[ $USE_NEOVIM = 'y' ]]; then
   mkdir ~/.config/nvim
   ln -s ~/.i3/init.vim ~/.config/nvim/init.vim
 
+  echo "installing plug for nvim..."
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
   # Install plugins
   nvim -c 'PlugInstall' -c 'qa!'
 fi
