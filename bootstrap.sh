@@ -54,7 +54,7 @@ if [[ $USE_DEP = 'y' ]]; then
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
     gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
-    zlib1g-dev
+    libpq-dev zlib1g-dev
 
   mkdir ~/Pictures/screenshots
 
