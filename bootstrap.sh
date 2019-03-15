@@ -44,7 +44,7 @@ echo 'TODO: generate SSH key'
 
 if [[ $USE_DEP = 'y' ]]; then
   echo "======== Install programs ========"
-  echo "This is aimed at Ubuntu 18, if you have a different version and a package installation fails, it could cancel the rest of the operations"
+  echo "This is aimed at Ubuntu 19, if you have a different version and a package installation fails, it could cancel the rest of the operations"
   sudo apt-get update
   read 'Update complete, now installing packages...'
   # VIP packages
@@ -53,7 +53,10 @@ if [[ $USE_DEP = 'y' ]]; then
     vim gnome-terminal python-pip virtualenv
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
-    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu
+    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
+    zlib1g-dev
+
+  mkdir ~/Pictures/screenshots
 
 else
   echo "======== no install dep"
@@ -67,7 +70,7 @@ if [[ $USE_I3 = 'y' ]]; then
   git clone https://github.com/viktorsmari/i3-work.git ~/.i3
   if [[ $I3VERSION = 's' ]]; then
 
-    echo "stable"
+    echo "Installing i3-stable"
     read -p 'Press enter to continue.'
     # Install i3 stable newest
     sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
@@ -76,7 +79,7 @@ if [[ $USE_I3 = 'y' ]]; then
     sudo apt-get update
     sudo apt-get install i3 -y
   else
-    echo "unstable"
+    echo "Installing i3-unstable"
     read -p 'Press enter to continue.'
     # unstable dev
     # TODO: FAILS
