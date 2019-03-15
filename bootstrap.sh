@@ -168,6 +168,11 @@ if [[ $USE_OHMZ = 'y' ]]; then
 
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
+
+  echo "cloning zsh-autosuggestions"
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  echo "You must add it to .zshrc plugins()"
+
 else
   echo "======== no install oh my zsh"
 fi
