@@ -1,0 +1,18 @@
+#########################  Tower
+bindsym $mod+Shift+p exec systemctl suspend #no password locking
+
+# ======================= Speaker lenovo ========================
+bindsym $mod+shift+F10 exec pactl -- set-sink-mute   5 toggle
+bindsym $mod+shift+F11 exec pactl -- set-sink-volume 5 -5%
+bindsym $mod+shift+F12 exec pactl -- set-sink-volume 5 +5%
+bindsym $mod+F10 exec pactl -- set-sink-mute   3 toggle
+bindsym $mod+F11 exec pactl -- set-sink-volume 3 -5%
+bindsym $mod+F12 exec pactl -- set-sink-volume 3 +5%
+
+# ================== Power button ? ================
+bindsym XF86Sleep    exec notify-send -t 1000 Sleeping,    exec systemctl suspend
+bindsym XF86PowerOff exec notify-send -t 1000 PowerButton, exec systemctl halt
+
+# ================== Video config ===============================
+bindsym $mod+shift+ctrl+F12    exec notify-send -t 1000 2screens,   exec ~/.i3/scripts/disp-2mon_tower.sh
+#########################  Tower
