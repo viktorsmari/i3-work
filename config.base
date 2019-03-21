@@ -52,7 +52,7 @@ bindsym $mod+shift+d exec xfce4-appfinder
 
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec tilix
 bindsym $mod+shift+Return exec notify-send -t 1000 terminator, exec terminator
 bindsym $mod+ctrl+Return  exec notify-send -t 1000 xfce4,  exec xfce4-terminal
 

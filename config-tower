@@ -2,9 +2,9 @@
 bindsym $mod+Shift+p exec systemctl suspend #no password locking
 
 # ======================= Speaker lenovo ========================
-bindsym $mod+shift+F10 exec pactl -- set-sink-mute   5 toggle
-bindsym $mod+shift+F11 exec pactl -- set-sink-volume 5 -5%
-bindsym $mod+shift+F12 exec pactl -- set-sink-volume 5 +5%
+bindsym $mod+shift+F10 exec pactl -- set-sink-mute   4 toggle
+bindsym $mod+shift+F11 exec pactl -- set-sink-volume 4 -5%
+bindsym $mod+shift+F12 exec pactl -- set-sink-volume 4 +5%
 bindsym $mod+F10 exec pactl -- set-sink-mute   3 toggle
 bindsym $mod+F11 exec pactl -- set-sink-volume 3 -5%
 bindsym $mod+F12 exec pactl -- set-sink-volume 3 +5%
