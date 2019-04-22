@@ -102,6 +102,10 @@ vnoremap <C-c> "+y
 " which is the default
 map Y y$
 
+"disable Ex mode
+:nnoremap Q <Nop>
+
+
 "open nerdtree in empty vim
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
