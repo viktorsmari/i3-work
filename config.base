@@ -48,7 +48,6 @@ bindsym $mod+ctrl+t exec thunar
 bindsym $mod+ctrl+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec rofi -show run
 bindsym $mod+shift+d exec xfce4-appfinder
-#bindsym $mod+space exec sleep 2 && notify-send -t 3000 'Open slack'
 
 
 # start a terminal
@@ -80,6 +79,8 @@ assign [class="Chromium"]      $ws1
 assign [class="ardour_mixer"]  $ws4
 assign [class="Ardour"]        $ws4
 assign [class="ardour_editor"] $ws4
+assign [class="signal-desktop"] $ws5
+assign [class="Signal"]        $ws5
 assign [class="Slack"]         $ws5
 assign [class="Spotify"]       $ws8
 assign [class="spotify"]       $ws8
@@ -162,7 +163,7 @@ set $ws1 "1:Chrome"
 set $ws2 "2:Term"
 set $ws3 "3:Ansible"
 set $ws4 "4:Term"
-set $ws5 "5:Slack"
+set $ws5 "5:Chats"
 set $ws6 "6:666"
 set $ws7 "7:777"
 set $ws8 "8:Spotify"
