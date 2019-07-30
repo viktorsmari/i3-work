@@ -94,6 +94,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Enable syntax highlighting
 syntax on
 
+" Hide .pyc files in NERDTree
+let NERDTreeIgnore = ['\.pyc$']
 
 "------------------------------------------------------------
 " Must have options {{{1
