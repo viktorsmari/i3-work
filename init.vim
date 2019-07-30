@@ -29,6 +29,8 @@ Plug 'kshenoy/vim-signature'   " display marks in gutter
 Plug 'crusoexia/vim-monokai'
 Plug 'phanviet/vim-monokai-pro'
 
+Plug 'editorconfig/editorconfig-vim'
+
 " On-demand loading
 " Initialize plugin system
 call plug#end()
