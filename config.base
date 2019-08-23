@@ -241,5 +241,6 @@ exec nm-applet
 ##clipboard history
 #exec glipper
 exec Xfce4-clipman
+exec xfce4-clipman
 exec pasystray
 # =================== End base ============================
