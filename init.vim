@@ -30,6 +30,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'phanviet/vim-monokai-pro'
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-surround'
 
 " On-demand loading
 " Initialize plugin system
