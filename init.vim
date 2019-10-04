@@ -119,6 +119,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 nnoremap <Leader>a :Ack!<Space>
+noremap <Leader>A :Ack <cword><cr>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'

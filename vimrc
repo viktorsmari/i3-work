@@ -331,6 +331,7 @@ let g:jsx_ext_required = 0
 
 "let g:ackprg = 'ag --nogroup --nocolor --column'
 nnoremap <Leader>a :Ack!<Space>
+noremap <Leader>A :Ack <cword><cr>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
