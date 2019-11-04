@@ -1,4 +1,4 @@
-######################### work computer settings
+######################### BEGIN work computer settings
 bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 
 # ======================= Speaker lenovo ========================
@@ -28,10 +28,14 @@ bindsym XF86AudioPlay exec notify-send -t 1000 Play
 bindsym XF86AudioStop exec notify-send -t 1000 Stop
 bindsym XF86AudioPrev exec notify-send -t 1000 Prev
 bindsym XF86AudioNext exec notify-send -t 1000 Next
+
 # ====================== Display ===============================
-exec notify-send -t 1000 DUALHD, exec ~/.i3/scripts/disp-fablab.sh
-exec sleep 2 && slack && notify-send -t 3000 'Opening slack...'
-# Video
 bindsym $mod+ctrl+F12 exec notify-send -t 2000 '2 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab.sh
 bindsym $mod+ctrl+shift+F12 exec notify-send -t 2000 '1 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab1.sh
-######################### work computer settings
+
+exec_always notify-send -t 10000 'Before opening'
+exec sleep 1 && slack && notify-send -t 3000 'Opening slack...'
+
+exec_always notify-send -t 5000 DUALHD && exec ~/.i3/scripts/disp-fablab.sh
+
+######################### END work computer settings
