@@ -14,6 +14,10 @@ Plug 'mxw/vim-jsx' "indents js
 Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 Plug 'slim-template/vim-slim'
 
+"Linter
+Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
+
 "Search
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'henrik/vim-indexed-search'
