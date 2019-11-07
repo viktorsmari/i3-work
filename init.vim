@@ -79,6 +79,8 @@ let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|bower_componen
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
 
+let g:ale_fixers = {'ruby': ['rubocop']}
+
 "Save with ctrl s
 imap <C-s> <Esc>:w<CR>
 nmap <C-s> :w<CR>
