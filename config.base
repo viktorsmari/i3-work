@@ -237,13 +237,14 @@ exec --no-startup-id xsetroot -solid "#333333"
 
 # End with opening up programs
 exec chromium-browser
+exec_always --no-startup-id xfce4-clipman
+exec_always --no-startup-id Xfce4-clipman
 exec gnome-sound-applet
 exec nm-applet
-##clipboard history
-#exec glipper
-exec Xfce4-clipman
-exec xfce4-clipman
 exec pasystray
+exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
+exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal'
+
 # =================== End base ============================
 #
 #
