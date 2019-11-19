@@ -47,7 +47,6 @@ alias config="vi ~/.i3/config.base"
 alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
 alias zshrc='vi ~/.zshrc'
 
-
 # Programs etc
 alias ap='ansible-playbook'
 alias aps='apt search'
@@ -91,6 +90,8 @@ alias rs='./bin/rails server -b 0.0.0.0'
 alias rgrep='rgrep --color'
 alias sshc='vi ~/.ssh/config'
 alias rb='rbenv'
+alias vpiano='fluidsynth -a alsa -s -g 3 /usr/share/sounds/sf2/FluidR3_GM.sf2'
+alias vmidi='aconnect 20:0 128:0'
 alias vi='nvim -p'
 alias vim='nvim -p'
 alias vimrc='vim ~/.vimrc'
