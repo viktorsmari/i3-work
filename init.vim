@@ -76,7 +76,7 @@ set smartcase       " ignore case if search pattern is lower case
 set foldmethod=indent
 set foldlevel=20
 
-let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|bower_components\|tmp\|(\.(swp|git))'
+let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|coverage\|bower_components\|tmp\|(\.(swp|git))'
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
 
