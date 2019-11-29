@@ -95,6 +95,7 @@ if [[ $USE_I3 = 'y' ]]; then
     ln -s ~/.i3/i3status_thinkpad.conf ~/.i3status.conf
   else
     ln -s ~/.i3/i3status.conf ~/.i3status.conf
+    ln -s ~/.i3/i3blocks.conf ~/.i3blocks.conf
   fi
 
   # Create the first config
