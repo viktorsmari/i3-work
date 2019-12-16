@@ -10,6 +10,7 @@ Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx' "indents js
+Plug 'posva/vim-vue'
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 Plug 'slim-template/vim-slim'
