@@ -230,12 +230,14 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
         output HDMI-1
+        output VGA-1
         tray_output primary
 }
 
 bar {
         status_command i3status
         output HDMI-2
+        output DP-1
 }
 
 # wallpaper solid color:
