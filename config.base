@@ -238,6 +238,7 @@ bar {
         status_command i3status
         output HDMI-2
         output DP-1
+        output LVDS-1
 }
 
 # wallpaper solid color:
