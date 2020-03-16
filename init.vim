@@ -81,7 +81,8 @@ let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|coverage\|bowe
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
 
-let g:ale_fixers = {'ruby': ['rubocop']}
+let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black']}
+let b:ale_linters = ['pylint']
 
 "Save with ctrl s
 imap <C-s> <Esc>:w<CR>
