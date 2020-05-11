@@ -46,7 +46,7 @@ if [[ $USE_DEP = 'y' ]]; then
   echo "======== Install programs ========"
   echo "This is aimed at Ubuntu 19, if you have a different version and a package installation fails, it could cancel the rest of the operations"
   sudo apt-get update
-  read 'Update complete, now installing packages...'
+  read 'Updating complete, now installing packages...'
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
     chromium-browser tree gnome-screenshot htop whois thunar bmon \
@@ -74,7 +74,6 @@ if [[ $USE_I3 = 'y' ]]; then
     read -p 'Press enter to continue.'
     # Install i3 stable newest
     sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
-    sudo apt-get update
     sudo apt-get --allow-unauthenticated install sur5r-keyring -y
     sudo apt-get update
     sudo apt-get install i3 -y
@@ -84,7 +83,6 @@ if [[ $USE_I3 = 'y' ]]; then
     # unstable dev
     # TODO: FAILS
     sudo echo 'deb http://build.i3wm.org/ubuntu/trusty trusty main' >> /etc/apt/sources.list
-    sudo apt-get update
     sudo apt-get --allow-unauthenticated install i3-autobuild-keyring -y
     sudo apt-get update
     sudo apt-get install i3 -y
@@ -125,8 +123,6 @@ fi
 
 if [[ $USE_NEOVIM = 'y' ]]; then
   echo "======== Setup neovim ========"
-  sudo add-apt-repository ppa:neovim-ppa/stable
-  sudo apt-get update
   sudo apt-get install -y neovim
   mkdir ~/.config/nvim
   ln -s ~/.i3/init.vim ~/.config/nvim/init.vim
@@ -174,7 +170,7 @@ if [[ $USE_OHMZ = 'y' ]]; then
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
   echo "cloning zsh-autosuggestions"
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   echo "You must add it to .zshrc plugins()"
 
 else

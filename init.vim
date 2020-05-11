@@ -11,6 +11,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx' "indents js
 Plug 'posva/vim-vue'
+" typescript https://github.com/peitalin/vim-jsx-typescript
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim'
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 Plug 'slim-template/vim-slim'
@@ -82,7 +85,8 @@ let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
 
 let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black']}
-let b:ale_linters = ['pylint']
+let g:ale_linters = { 'zsh':['shell'], 'python':['pylint'], 'ruby':['rubocop','ruby']}
+
 
 "Save with ctrl s
 imap <C-s> <Esc>:w<CR>
