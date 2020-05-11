@@ -76,7 +76,7 @@ for_window [title="^floatme$"] floating enable
 #unfloat
 for_window [class="Nautilus"] border normal
 
-assign [class="Chromium"]      $ws1
+#assign [class="Chromium"]      $ws1
 assign [class="ardour_mixer"]  $ws4
 assign [class="Ardour"]        $ws4
 assign [class="ardour_editor"] $ws4
