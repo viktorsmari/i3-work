@@ -239,6 +239,7 @@ bar {
         output HDMI-2
         output DP-1
         output LVDS-1
+        output LVDS1
 }
 
 # wallpaper solid color:
