@@ -88,6 +88,12 @@ let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black']}
 let g:ale_linters = { 'zsh':['shell'], 'python':['pylint'], 'ruby':['rubocop','ruby']}
 
 
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
 "Save with ctrl s
 imap <C-s> <Esc>:w<CR>
 nmap <C-s> :w<CR>
