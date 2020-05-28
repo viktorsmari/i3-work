@@ -50,7 +50,7 @@ if [[ $USE_DEP = 'y' ]]; then
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
     chromium-browser tree gnome-screenshot htop whois thunar bmon \
-    vim gnome-terminal python-pip virtualenv
+    vim gnome-terminal
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
     gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
