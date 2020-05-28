@@ -230,6 +230,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks
         output HDMI-1
+        output HDMI1
         output VGA-1
         tray_output primary
 }
