@@ -44,7 +44,7 @@ echo 'TODO: generate SSH key'
 
 if [[ $USE_DEP = 'y' ]]; then
   echo "======== Install programs ========"
-  echo "This is aimed at Ubuntu 19, if you have a different version and a package installation fails, it could cancel the rest of the operations"
+  echo "This is aimed at Ubuntu 20, if you have a different version and a package installation fails, it could cancel the rest of the operations"
   sudo apt-get update
   read 'Updating complete, now installing packages...'
   # VIP packages
@@ -69,14 +69,11 @@ if [[ $USE_I3 = 'y' ]]; then
   #TODO: fails when repo exists
   git clone https://github.com/viktorsmari/i3-work.git ~/.i3
   if [[ $I3VERSION = 's' ]]; then
-
     echo "Installing i3-stable"
     read -p 'Press enter to continue.'
     # Install i3 stable newest
     sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
     sudo apt-get --allow-unauthenticated install sur5r-keyring -y
-    sudo apt-get update
-    sudo apt-get install i3 -y
   else
     echo "Installing i3-unstable"
     read -p 'Press enter to continue.'
@@ -84,9 +81,10 @@ if [[ $USE_I3 = 'y' ]]; then
     # TODO: FAILS
     sudo echo 'deb http://build.i3wm.org/ubuntu/trusty trusty main' >> /etc/apt/sources.list
     sudo apt-get --allow-unauthenticated install i3-autobuild-keyring -y
-    sudo apt-get update
-    sudo apt-get install i3 -y
   fi
+
+  sudo apt-get update
+  sudo apt-get install i3 i3blocks -y
 
   # Link i3 status bar
   if [[ $(hostname -s) = "tpad" ]]; then
@@ -161,7 +159,7 @@ if [[ $USE_OHMZ = 'y' ]]; then
   echo "Remember to check if there is a newer way of installing oh-my-zsh?"
 
   #TODO (fails): Change default shell to ZSH
-  chsh -s /bin/zsh
+  sudo chsh -s /bin/zsh
 
   # install oh my zsh
   sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -169,10 +167,9 @@ if [[ $USE_OHMZ = 'y' ]]; then
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
-  echo "cloning zsh-autosuggestions"
+  echo "cloning zsh-autosuggestions... did not work the last time!"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   echo "You must add it to .zshrc plugins()"
-
 else
   echo "======== no install oh my zsh"
 fi
@@ -180,7 +177,7 @@ fi
 
 if [[ $USE_RBENV = 'y' ]]; then
   echo "======== Setup rbenv ========"
-  ~/.i3/scripts/rbenv.sh
+  sh ~/.i3/scripts/rbenv.sh
 fi
 
 if [[ $USE_NVM = 'y' ]]; then
