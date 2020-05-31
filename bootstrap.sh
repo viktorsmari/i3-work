@@ -57,6 +57,8 @@ if [[ $USE_DEP = 'y' ]]; then
     libpq-dev zlib1g-dev
 
   mkdir ~/Pictures/screenshots
+  mkdir -p ~/.config/xfce4/terminal
+  cp terminalrc ~/.config/xfce4/terminal/
 
 else
   echo "======== no install dep"
