@@ -68,4 +68,20 @@ Capture from Camera and send it to `/dev/video9`
 `gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video9`
 
 Use this to check camera abilities
+
 `gphoto2 --abilities`
+
+
+#### OBS sink plugin to output everything to a new /dev/video device
+
+Follow the plugin setup instructions
+
+https://github.com/umlaeute/v4l2loopback
+
+In my case the plugin ended up in the wrong place, so I had to copy it to the correct OBS plugin folder.
+
+`sudo cp /usr/lib/obs-plugins/v4l2sink.so /usr/lib/x86_64-linux-gnu/obs-plugins`
+
+Start OBS with the terminal `obs` if you need to debug where the correct plugin folder is.
+
+Start OBS, click *Tools* and select *v4l2sink*
