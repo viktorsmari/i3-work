@@ -232,6 +232,7 @@ bar {
         output HDMI-1
         output HDMI1
         output VGA-1
+        output VGA1
         tray_output primary
 }
 
