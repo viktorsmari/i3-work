@@ -1,0 +1,20 @@
+######################### IdeaPad
+bindsym $mod+Shift+p exec systemctl suspend #no password locking
+
+# ======================= Speaker lenovo ========================
+bindsym $mod+shift+F10 exec pactl -- set-sink-mute   4 toggle, exec notify-send -t 1000 'Audio card 2 mute'
+bindsym $mod+shift+F11 exec pactl -- set-sink-volume 4 -5%,    exec notify-send -t 1000 'Audio card 2 DOWN'
+bindsym $mod+shift+F12 exec pactl -- set-sink-volume 4 +5%,    exec notify-send -t 1000 'Audio card 2 UP'
+bindsym $mod+F10 exec amixer -D pulse sset Master toggle, exec notify-send -t 1000 'Audio mute'
+bindsym $mod+F11 exec amixer -D pulse sset Master 5%-,    exec notify-send -t 1000 'Audio DOWN'
+bindsym $mod+F12 exec amixer -D pulse sset Master 5%+,    exec notify-send -t 1000 'Audio UP'
+
+# ================== Power button ? ================
+bindsym XF86Sleep    exec notify-send -t 1000 Sleeping,    exec systemctl suspend
+bindsym XF86PowerOff exec notify-send -t 1000 PowerButton, exec systemctl halt
+
+# ====================== Display ===============================
+bindsym $mod+ctrl+F12 exec ~/.i3/scripts/disp-2-idea.sh,  exec notify-send -t 1000 'Screen + Laptop'
+exec ~/.i3/scripts/disp-2-idea.sh
+
+######################### IdeaPad

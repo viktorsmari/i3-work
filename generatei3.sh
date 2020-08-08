@@ -7,6 +7,9 @@ if [ "$HOST" = leno ]; then
 elif [ "$HOST" = vtower ]; then
     printf " using tower i3 config"
     cat ~/.i3/config.base ~/.i3/config-tower > ~/.i3/config
+elif [ "$HOST" = idea ]; then
+    printf " using ideapad i3 config"
+    cat ~/.i3/config.base ~/.i3/config-idea > ~/.i3/config
 else
     printf " using WORK i3 config..."
     cat ~/.i3/config.base ~/.i3/config-work > ~/.i3/config
