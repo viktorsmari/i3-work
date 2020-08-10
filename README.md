@@ -26,6 +26,16 @@ Don't run this unless you trust me and have verified the files contents:
 The reason for this is I used this repo on 2 different computers, work and home, and they had different XF86 and audio settings.
 
 
+### TODO:
+
+Firefox: switch between tabs when using scroll wheel.
+
+In URL bar enter: `about:config`
+
+Change:
+
+`toolkit.tabbox.switchByScrolling = true`
+
 
 ## Computing
 
