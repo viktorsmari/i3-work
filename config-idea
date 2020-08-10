@@ -1,6 +1,10 @@
 ######################### IdeaPad
 bindsym $mod+Shift+p exec systemctl suspend #no password locking
 
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute, exec notify-send 2dB+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute, exec notify-send 2dB-
+bindsym XF86AudioMute exec amixer -D pulse sset Master toggle, exec notify-send -t 1000 'Audio mute'
+
 # ======================= Speaker lenovo ========================
 bindsym $mod+shift+F10 exec pactl -- set-sink-mute   4 toggle, exec notify-send -t 1000 'Audio card 2 mute'
 bindsym $mod+shift+F11 exec pactl -- set-sink-volume 4 -5%,    exec notify-send -t 1000 'Audio card 2 DOWN'
