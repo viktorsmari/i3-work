@@ -1,4 +1,8 @@
-### TODO:
+# Computing / setup
+
+Documenting custom setup
+
+## Browsing
 
 Firefox: switch between tabs when using scroll wheel.
 
@@ -8,10 +12,6 @@ Change:
 
 `toolkit.tabbox.switchByScrolling = true`
 
-
-## Computing
-
-Starting to document setting up.
 
 ### Audio
 
