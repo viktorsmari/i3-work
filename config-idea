@@ -25,4 +25,8 @@ bindsym XF86PowerOff exec notify-send -t 1000 PowerButton, exec systemctl halt
 bindsym $mod+ctrl+F12 exec ~/.i3/scripts/disp-2-idea.sh,  exec notify-send -t 1000 'Screen + Laptop'
 exec ~/.i3/scripts/disp-2-idea.sh
 
+# Enable touchpad 1 Tapping
+# xinput list
+# xinput list-props 11
+exec xinput set-prop 11 319 1
 ######################### IdeaPad
