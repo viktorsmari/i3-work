@@ -36,6 +36,7 @@ Programs: \tgetprocid, exo-preferred-applications,
 Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
 Airplay: \tmkchromecast
+Touchpad: \txinput
 dd progress: \tsudo kill -USR1 $(pgrep ^dd)
 debug: \t dmesg, vmstat 1, mpstat -P ALL, iostat -xz 1,
 debug: \t sar -n DEV 1, sar -n TCP, ETCP 1
