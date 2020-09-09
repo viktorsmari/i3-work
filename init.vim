@@ -10,7 +10,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-let g:deoplete#enable_at_startup = 1
 
 "Syntax
 Plug 'ervandew/supertab'
@@ -104,6 +103,10 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+let g:deoplete#enable_at_startup = 1
+
+"Without this, tab will cycle backwards
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 "Save with ctrl s
 imap <C-s> <Esc>:w<CR>
