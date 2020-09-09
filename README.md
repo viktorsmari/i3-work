@@ -24,3 +24,6 @@ Don't run this unless you trust me and have verified the files contents:
 * The 'Meta + Shift + r' will run the generatei3.sh, and restarting i3wm.
 
 The reason for this is I used this repo on 2 different computers, work and home, and they had different XF86 and audio settings.
+
+
+Read more about my [computing.md](computing.md)

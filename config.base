@@ -232,6 +232,7 @@ bar {
         output HDMI-1
         output HDMI1
         output VGA-1
+        output VGA1
         tray_output primary
 }
 
@@ -239,6 +240,8 @@ bar {
         status_command i3status
         output HDMI-2
         output DP-1
+        output eDP-1
+        output eDP1
         output LVDS-1
         output LVDS1
 }
