@@ -13,6 +13,47 @@ Change:
 `toolkit.tabbox.switchByScrolling = true`
 
 
+## Multi computer setup with [Barrier](https://github.com/debauchee/barrier)
+
+I sometimes have an extra computer next to my main computer, and I use the same mouse and keyboard to control both of them.
+To move the mouse over to the other computer, I move the mouse out of the screen and it shows up on the other computer's screen.
+
+1. Install Barrier on both client and server.
+
+It will install 3 programs:
+ - barrier (GUI)
+ - barriers (server)
+ - barrierc (client)
+
+2. On server / host computer
+
+It's nice to start the GUI first to configure everything, and then copy the config file to the correct location.
+
+
+If barrier (GUI) was started, it will create a temporary config in /tmp/Barrer.<random letters>
+
+To see where barrier created the config do:
+  `barriers --debug DEBUG`
+
+Then we can copy it to the default location, which will be used by `barriers`
+  `cp /tmp/Barrier.<random> ~/.local/share/barrier/.barrier.conf`
+
+Start via terminal:
+`barriers --enable-crypto --debug DEBUG --log ./barrier.log`
+
+3. On client computer
+
+`barrierc --enable-crypto <SERVERIP>`
+
+4. Debugging Barrier
+
+- Check if it's running, or running multiple processes. I have had issues when I ran the process 2 times.
+  `ps aux| grep barrier`
+- Open barrier GUI and view the log files
+- Check which config file is used
+- See more: https://github.com/debauchee/barrier/wiki/Troubleshooting
+
+
 ### Audio
 
 TODO: Ardour setup + Jack
