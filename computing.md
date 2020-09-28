@@ -33,12 +33,15 @@ It's nice to start the GUI first to configure everything, and then copy the conf
 If barrier (GUI) was started, it will create a temporary config in /tmp/Barrer.<random letters>
 
 To see where barrier created the config do:
+
   `barriers --debug DEBUG`
 
 Then we can copy it to the default location, which will be used by `barriers`
+
   `cp /tmp/Barrier.<random> ~/.local/share/barrier/.barrier.conf`
 
 Start via terminal:
+
 `barriers --enable-crypto --debug DEBUG --log ./barrier.log`
 
 3. On client computer
