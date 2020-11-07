@@ -90,12 +90,20 @@ set smartcase       " ignore case if search pattern is lower case
 set foldmethod=indent
 set foldlevel=20
 
+" Do not search ctrlp in these folders
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|coverage\|bower_components\|tmp\|(\.(swp|git))'
+let g:ctrlp_show_hidden = 1
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
 
 let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black']}
-let g:ale_linters = { 'zsh':['shell'], 'python':['pylint'], 'ruby':['rubocop','ruby']}
+let g:ale_linters = {
+ \ 'zsh':['shell'],
+ \ 'python':['pylint'],
+ \ 'ruby':['rubocop'],
+ \ 'javascript':['eslint'],
+ \ 'scss':['stylelint'],
+ \ 'css':['stylelint']}
 
 
 " If you want :UltiSnipsEdit to split your window.
@@ -155,5 +163,11 @@ nnoremap <Leader>a :Ack!<Space>
 noremap <Leader>A :Ack <cword><cr>
 
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --vimgrep --hidden'
 endif
+
+" Use <F2> to toggle between 'paste' and 'nopaste'
+set pastetoggle=<F2>
+
+" use F3 to disable highlight search, until next search
+nnoremap <F3> :noh<CR>
