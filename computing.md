@@ -18,14 +18,14 @@ Change:
 I sometimes have an extra computer next to my main computer, and I use the same mouse and keyboard to control both of them.
 To move the mouse over to the other computer, I move the mouse out of the screen and it shows up on the other computer's screen.
 
-1. Install Barrier on both client and server.
+### 1. Install Barrier on both client and server.
 
 It will install 3 programs:
  - barrier (GUI)
  - barriers (server)
  - barrierc (client)
 
-2. On server / host computer
+### 2. On server / host computer
 
 It's nice to start the GUI first to configure everything, and then copy the config file to the correct location.
 
@@ -33,15 +33,18 @@ It's nice to start the GUI first to configure everything, and then copy the conf
 If barrier (GUI) was started, it will create a temporary config in /tmp/Barrer.<random letters>
 
 To see where barrier created the config do:
+
   `barriers --debug DEBUG`
 
 Then we can copy it to the default location, which will be used by `barriers`
+
   `cp /tmp/Barrier.<random> ~/.local/share/barrier/.barrier.conf`
 
 Start via terminal:
+
 `barriers --enable-crypto --debug DEBUG --log ./barrier.log`
 
-3. On client computer
+### 3. On client computer
 
 `barrierc --enable-crypto <SERVERIP>`
 
@@ -54,15 +57,15 @@ Start via terminal:
 - See more: https://github.com/debauchee/barrier/wiki/Troubleshooting
 
 
-### Audio
+## Audio
 
 TODO: Ardour setup + Jack
 
 LMMS?
 
-### Video
+## Video
 
-#### OBS with a DSLR camera and Jitsi
+### OBS with a DSLR camera and Jitsi
 
 Goal: Connect a Canon 550d camera via USB to a computer, send the signal to OBS and send OBS output to Jitsi.
 
@@ -95,7 +98,7 @@ Use this to check camera abilities
 `gphoto2 --abilities`
 
 
-#### OBS sink plugin to output everything to a new /dev/video device
+### OBS sink plugin to output everything to a new /dev/video device
 
 Follow the plugin setup instructions
 
@@ -109,8 +112,8 @@ Start OBS with the terminal `obs` if you need to debug where the correct plugin 
 
 Start OBS, click *Tools* and select *v4l2sink*
 
-### Imaging
+## Imaging
 
-#### Scanning
+### Scanning
 
 scanimage -x102 -y155 --mode=color --format=tiff  > image --resolution 200 --progress | convert - -quality 50 qual50.jpg

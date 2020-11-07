@@ -22,7 +22,8 @@ bindsym XF86Sleep    exec notify-send -t 1000 Sleeping,    exec systemctl suspen
 bindsym XF86PowerOff exec notify-send -t 1000 PowerButton, exec systemctl halt
 
 # ====================== Display ===============================
-bindsym $mod+ctrl+F12 exec ~/.i3/scripts/disp-2-idea.sh,  exec notify-send -t 1000 'Screen + Laptop'
+bindsym $mod+ctrl+2 exec ~/.i3/scripts/disp-2-idea.sh,  exec notify-send -t 1000 'Screen + Laptop'
+bindsym $mod+ctrl+1 exec ~/.i3/scripts/disp-1-idea.sh,  exec notify-send -t 1000 'Laptop only'
 exec ~/.i3/scripts/disp-2-idea.sh
 
 # Enable touchpad 1 Tapping

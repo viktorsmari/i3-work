@@ -30,8 +30,8 @@ bindsym XF86AudioPrev exec notify-send -t 1000 Prev
 bindsym XF86AudioNext exec notify-send -t 1000 Next
 
 # ====================== Display ===============================
-bindsym $mod+ctrl+F12 exec notify-send -t 2000 '2 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab.sh
-bindsym $mod+ctrl+shift+F12 exec notify-send -t 2000 '1 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab1.sh
+bindsym $mod+ctrl+2 exec notify-send -t 2000 '2 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab.sh
+bindsym $mod+ctrl+1 exec notify-send -t 2000 '1 HD monitors Fablab', exec ~/.i3/scripts/disp-fablab1.sh
 
 exec_always notify-send -t 10000 'Before opening'
 exec sleep 1 && slack && notify-send -t 3000 'Opening slack...'

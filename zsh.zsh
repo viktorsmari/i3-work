@@ -110,6 +110,7 @@ alias la='ls -lAhp --group-directories-first'
 alias ll='ls -lhp --group-directories-first'
 
 # Switch timezones
+alias CAN="timedatectl set-timezone Atlantic/Canary"
 alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias BCN="timedatectl set-timezone Europe/Madrid"
 
