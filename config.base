@@ -41,7 +41,7 @@ bindsym $mod+shift+s --release exec flameshot gui || notify-send -t 5000 'Flames
 bindsym $mod+ctrl+c exec chromium-browser
 bindsym $mod+ctrl+f exec firefox
 bindsym $mod+ctrl+8 workspace $ws8; exec spotify
-bindsym $mod+ctrl+5 workspace $ws5; exec Thunar
+bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
 bindsym $mod+ctrl+t exec thunar
 
 # start dmenu (a program launcher)
@@ -166,7 +166,7 @@ set $ws3 "3:Ansible"
 set $ws4 "4:Term"
 set $ws5 "5:Chats"
 set $ws6 "6:Signal"
-set $ws7 "7:777"
+set $ws7 "7:Thunar"
 set $ws8 "8:Spotify"
 set $ws9 "9:Settings"
 set $ws10 "10:Gimp"
