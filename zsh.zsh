@@ -115,7 +115,9 @@ alias IS="timedatectl  set-timezone Atlantic/Reykjavik"
 alias BCN="timedatectl set-timezone Europe/Madrid"
 
 # Scripts
-alias wer='curl wttr.in/bcn'
+wer() {
+  curl wttr.in/${1:-bcn}
+}
 
 cheat() {
   curl cheat.sh/$1
