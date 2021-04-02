@@ -1,6 +1,6 @@
 #########################  Lenovo
 exec barrierc --enable-crypto 192.168.0.12
-bindsym $mod+Shift+p exec systemctl suspend #no password locking
+bindsym $mod+ctrl+l exec systemctl suspend #no password locking
 
 # ======================= Speaker lenovo ========================
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute

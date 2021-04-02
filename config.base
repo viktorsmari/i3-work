@@ -25,7 +25,6 @@ bindsym $mod+shift+o exec "setxkbmap -option ''", exec notify-send 'reset kb'
 bindsym --release $mod+button2 kill
 
 # Lock screen
-bindsym $mod+p exec sleep 2 && exec i3lock -i ~/.i3/penguin.png -c 212121
 bindsym $mod+ctrl+l exec i3lock -i ~/.i3/penguin.png -c 212121
 #computerspecific bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 

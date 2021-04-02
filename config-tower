@@ -1,5 +1,5 @@
 #########################  Tower
-bindsym $mod+Shift+p exec systemctl suspend #no password locking
+bindsym $mod+ctrl+shift+l exec systemctl suspend #no password locking
 
 # ======================= Speaker lenovo ========================
 bindsym $mod+shift+F10 exec pactl -- set-sink-mute   4 toggle

@@ -1,5 +1,5 @@
 ######################### BEGIN work computer settings
-bindsym $mod+Shift+p exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
+bindsym $mod+shift+ctrl+l exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 
 # ======================= Speaker lenovo ========================
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute, exec notify-send 2dB+

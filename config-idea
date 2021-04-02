@@ -1,5 +1,5 @@
 ######################### IdeaPad
-bindsym $mod+Shift+p exec systemctl suspend #no password locking
+bindsym $mod+shift+ctrl+l exec i3lock -i ~/.i3/penguin.png -c 212121, exec systemctl suspend
 
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute, exec notify-send 2dB+
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute, exec notify-send 2dB-
