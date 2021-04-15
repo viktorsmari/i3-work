@@ -81,6 +81,7 @@ alias fm='free -m'
 alias gap='git add -p'
 alias getprocid='xprop | grep WM_CLASS'
 alias gop="open \`git remote -v | grep 'git@github.com\|git@gitlab.' | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
+alias h=xfce4-terminal --working-directory=/pwd
 alias hgrep='history|grep'
 alias htop='htop -d 30'
 alias img=gpicview
