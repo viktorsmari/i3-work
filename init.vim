@@ -19,6 +19,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx' "indents js
 Plug 'posva/vim-vue'
+"Plug 'elixir-editors/vim-elixir'
 " typescript https://github.com/peitalin/vim-jsx-typescript
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'leafgarland/typescript-vim'

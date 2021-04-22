@@ -33,8 +33,8 @@ bindsym $mod+Shift+g move workspace to output left
 
 # Screenshots
 #bindsym $mod+s --release exec notify-send -t 1000 Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
-bindsym $mod+s       --release exec notify-send 'screenshot' 'please select area' && gnome-screenshot -a -f "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" && notify-send 'screenshot' 'saved in ~/Pictures/screenshots'
-bindsym $mod+shift+s --release exec flameshot gui || notify-send -t 5000 'Flameshot not found' 'install flameshot to use this!'
+bindsym $mod+shift+s      --release exec notify-send 'screenshot' 'please select area' && gnome-screenshot -a -f "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" && notify-send 'screenshot' 'saved in ~/Pictures/screenshots'
+bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'Flameshot not found' 'install flameshot to use this!'
 
 # Open apps
 bindsym $mod+ctrl+c exec chromium-browser
@@ -136,7 +136,7 @@ bindsym $mod+shift+v split h
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+ctrl+s layout stacking
+bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -249,12 +249,12 @@ bar {
 exec --no-startup-id xsetroot -solid "#333333"
 
 # End with opening up programs
-exec chromium-browser
 exec_always --no-startup-id xfce4-clipman
 exec_always --no-startup-id Xfce4-clipman
 exec gnome-sound-applet
-exec nm-applet
+exec nm-tray
 exec pasystray
+exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser' 
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
 exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal'
 
