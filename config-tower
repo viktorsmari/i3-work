@@ -8,6 +8,9 @@ bindsym $mod+shift+F12 exec pactl -- set-sink-volume 4 +5%
 bindsym $mod+F10 exec amixer -D pulse sset Master toggle
 bindsym $mod+F11 exec amixer -D pulse sset Master 5%-
 bindsym $mod+F12 exec amixer -D pulse sset Master 5%+
+bindsym XF86AudioMute        exec amixer -D pulse sset Master toggle
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 
 # ================== Power button ? ================
 bindsym XF86Sleep    exec notify-send -t 1000 Sleeping,    exec systemctl suspend
