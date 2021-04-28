@@ -17,12 +17,11 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx' "indents js
-Plug 'posva/vim-vue'
+"Plug 'posva/vim-vue'
 "Plug 'elixir-editors/vim-elixir'
-" typescript https://github.com/peitalin/vim-jsx-typescript
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript' "React JSX syntax highlighting for vim and Typescript
+Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
+
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 Plug 'slim-template/vim-slim'
