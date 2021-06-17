@@ -256,6 +256,7 @@ exec nm-tray
 exec pasystray
 exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser' 
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
+exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
 exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal'
 
 # =================== End base ============================
