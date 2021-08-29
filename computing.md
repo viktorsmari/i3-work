@@ -69,6 +69,12 @@ MIDI Driver: Raw
 
 ![jack-mbox.png](jack-mbox.png)
 
+### Ardour MIDI setup WITHOUT Jack
+
+![ardour.png](ardour.png)
+
+![midiin.png](midiin.png)
+
 LMMS?
 
 ## Video
