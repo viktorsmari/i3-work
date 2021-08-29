@@ -60,11 +60,14 @@ Start via terminal:
 ## Audio
 
 ### Ardour setup + Jack
-![jack-mbox.png](jack-mbox.png)
 
 Interface: Select Mbox 2
+
 Sample Rate: 48000
+
 MIDI Driver: Raw
+
+![jack-mbox.png](jack-mbox.png)
 
 LMMS?
 
