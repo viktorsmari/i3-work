@@ -120,6 +120,9 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 imap <C-s> <Esc>:w<CR>
 nmap <C-s> :w<CR>
 
+" Remap :W to :w
+command W w
+
 "nerdTree
 nnoremap <C-t> :NERDTreeToggle<CR>
 inoremap <C-t> :NERDTreeToggle<CR>
@@ -129,6 +132,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+nnoremap <F6> :Git blame<CR>
+inoremap <F6> <ESC>:Git blame<CR>
 
 "tab
 nnoremap <F7> :tabp<CR>

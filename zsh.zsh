@@ -109,6 +109,7 @@ alias f="cd ~/fablab/"
 alias l=ll
 alias la='ls -lAhp --group-directories-first'
 alias ll='ls -lhp --group-directories-first'
+alias lt='ll -atr'
 
 # Switch timezones
 alias CAN="timedatectl set-timezone Atlantic/Canary"
