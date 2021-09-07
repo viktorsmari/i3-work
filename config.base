@@ -46,7 +46,7 @@ bindsym $mod+ctrl+t exec thunar
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+ctrl+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show combi -theme solarized -font "hack 10" -icon-theme "Papirus" -show-icons
 bindsym $mod+shift+d exec xfce4-appfinder
 
 
