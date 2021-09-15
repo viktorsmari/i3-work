@@ -42,6 +42,7 @@ bindsym $mod+ctrl+f exec firefox
 bindsym $mod+ctrl+8 workspace $ws8; exec spotify
 bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
 bindsym $mod+ctrl+t exec thunar
+bindsym $mod+ctrl+p exec pavucontrol
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
