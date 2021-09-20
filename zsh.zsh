@@ -106,6 +106,7 @@ alias xclip='xclip -selection c'
 
 # Folders
 alias f="cd ~/fablab/"
+alias y="cd ~/dev/youwind/"
 alias l=ll
 alias la='ls -lAhp --group-directories-first'
 alias ll='ls -lhp --group-directories-first'
