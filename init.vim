@@ -122,6 +122,7 @@ nmap <C-s> :w<CR>
 
 " Remap :W to :w
 command W w
+command Qa qa
 
 "nerdTree
 nnoremap <C-t> :NERDTreeToggle<CR>
