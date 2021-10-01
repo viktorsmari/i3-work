@@ -164,7 +164,7 @@ if [[ $USE_OHMZ = 'y' ]]; then
   sudo chsh -s /bin/zsh
 
   # install oh my zsh
-  sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+  sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
