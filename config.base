@@ -116,6 +116,11 @@ bindsym $mod+Left  focus left
 bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
+# Spotify next / prev
+bindsym $mod+ctrl+Down  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym $mod+ctrl+Left  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym $mod+ctrl+Right exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
 # move focused window
 bindsym $mod+Shift+$left  move left
 bindsym $mod+Shift+$down  move down

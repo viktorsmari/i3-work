@@ -22,8 +22,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript' "React JSX syntax highlighting for vim and Typescript
 Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
 
-"Plug 'terryma/vim-multiple-cursors'
-Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
+Plug 'terryma/vim-multiple-cursors'
+"Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
 
@@ -93,8 +93,6 @@ set foldlevel=20
 " Do not search ctrlp in these folders
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|coverage\|bower_components\|tmp\|(\.(swp|git))'
 let g:ctrlp_show_hidden = 1
-let mapleader = ","
-map <Leader>m :NERDTreeFind<CR>
 
 let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black']}
 let g:ale_linters = {
@@ -166,8 +164,19 @@ let NERDTreeIgnore = ['\.pyc$']
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let mapleader = ","
 nnoremap <Leader>a :Ack!<Space>
 noremap <Leader>A :Ack <cword><cr>
+map <Leader>m :NERDTreeFind<CR>
+"Clear search
+"map <silent> <leader>qs <Esc>:noh<CR>
+
+" Search and replace word under cursor (,*)
+nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
+
+" pasting from clipboard and mouse selection
+map <Leader>p :set paste<CR>o<esc>"+p:set nopaste<cr>
+map <Leader>P :set paste<CR>o<esc>"*]p:set nopaste<cr>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --hidden'

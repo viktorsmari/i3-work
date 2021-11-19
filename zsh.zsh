@@ -90,6 +90,7 @@ alias p3=python3
 alias pi='ping 8.8.8.8'
 alias r='./bin/rails'
 alias rs='./bin/rails server -b 0.0.0.0'
+alias rc='rails console'
 alias rgrep='rgrep --color'
 alias sshc='vi ~/.ssh/config'
 alias rb='rbenv'
