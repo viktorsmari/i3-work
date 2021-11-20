@@ -103,11 +103,12 @@ let g:ale_linters = {
  \ 'scss':['stylelint'],
  \ 'css':['stylelint']}
 
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:deoplete#enable_at_startup = 1
 
