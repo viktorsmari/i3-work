@@ -60,8 +60,7 @@ bindsym $mod+ctrl+Return  exec notify-send -t 1000 xfce4,  exec xfce4-terminal
 no_focus [class="Xfce4-notifyd"]
 
 # Make these program start floated
-for_window [class="ardour_mixer"]     floating enable, border normal
-for_window [class="ardour_editor"]    floating enable, border normal
+#for_window [class="Ardour"]    floating enable, border normal
 for_window [class="pavucontrol"]      floating enable, border normal
 for_window [class="gnome-calculator"] floating enable, border normal
 for_window [class="Gnome-calculator"] floating enable, border normal
