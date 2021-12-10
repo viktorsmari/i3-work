@@ -37,6 +37,10 @@ Plug 'henrik/vim-indexed-search'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 
+
+"open and close brackets
+Plug 'jiangmiao/auto-pairs'
+
 "Git
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
@@ -46,7 +50,8 @@ Plug 'kshenoy/vim-signature'   " display marks in gutter
 "Colorscheme
 Plug 'crusoexia/vim-monokai'
 Plug 'phanviet/vim-monokai-pro'
-"Plug 'joshdick/onedark.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'projekt0n/github-nvim-theme'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
@@ -58,7 +63,7 @@ call plug#end()
 syntax enable
 set background=light
 "colorscheme onedark
-colorscheme monokai
+colorscheme github_dark
 
 set cursorline               " highlight current line
 set hidden
