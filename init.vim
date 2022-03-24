@@ -17,6 +17,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
+Plug 'ap/vim-css-color'
 "Plug 'posva/vim-vue'
 "Plug 'elixir-editors/vim-elixir'
 Plug 'peitalin/vim-jsx-typescript' "React JSX syntax highlighting for vim and Typescript
@@ -95,6 +96,10 @@ set smartcase       " ignore case if search pattern is lower case
 set foldmethod=indent
 set foldlevel=20
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 " Do not search ctrlp in these folders
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|coverage\|bower_components\|tmp\|(\.(swp|git))'
 let g:ctrlp_show_hidden = 1
@@ -149,6 +154,10 @@ inoremap <F8> <ESC>:tabn<CR>
 "move tab
 nnoremap <F19> :-tabm<CR>
 nnoremap <F20> :+tabm<CR>
+
+" Move between linting errors
+nnoremap ]a :ALENextWrap<CR>
+nnoremap [a :ALEPreviousWrap<CR>]
 
 " Ctrl C will copy
 nnoremap <C-c> "+yy
