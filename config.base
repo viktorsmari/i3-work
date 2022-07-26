@@ -38,9 +38,10 @@ bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'F
 
 # Open apps
 bindsym $mod+ctrl+c exec chromium-browser
-bindsym $mod+ctrl+f exec firefox
-bindsym $mod+ctrl+8 workspace $ws8; exec spotify
+bindsym $mod+ctrl+4 workspace $ws6; exec firefox
+bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop-beta
 bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
+bindsym $mod+ctrl+8 workspace $ws8; exec spotify
 bindsym $mod+ctrl+t exec thunar
 bindsym $mod+ctrl+p exec pavucontrol
 
