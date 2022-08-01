@@ -143,9 +143,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-nnoremap <F6> :Git blame<CR>
-inoremap <F6> <ESC>:Git blame<CR>
-
 "tab
 nnoremap <F7> :tabp<CR>
 nnoremap <F8> :tabn<CR>
@@ -182,6 +179,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let mapleader = ","
+nnoremap <Leader>b :Git blame<CR>
 nnoremap <Leader>a :Ack!<Space>
 noremap <Leader>A :Ack <cword><cr>
 map <Leader>m :NERDTreeFind<CR>
