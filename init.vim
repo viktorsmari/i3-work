@@ -151,13 +151,15 @@ nnoremap <F7> :tabp<CR>
 nnoremap <F8> :tabn<CR>
 inoremap <F7> <ESC>:tabp<CR>
 inoremap <F8> <ESC>:tabn<CR>
+nnoremap <A-Left> :tabp<CR>
+nnoremap <A-Right> :tabn<CR>
 "move tab
-nnoremap <F19> :-tabm<CR>
-nnoremap <F20> :+tabm<CR>
+nnoremap <S-A-Left> :-tabm<CR>
+nnoremap <S-A-Right> :+tabm<CR>
 
 " Move between linting errors
 nnoremap ]a :ALENextWrap<CR>
-nnoremap [a :ALEPreviousWrap<CR>]
+nnoremap [a :ALEPreviousWrap<CR>
 
 " Ctrl C will copy
 nnoremap <C-c> "+yy
