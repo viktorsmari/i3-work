@@ -29,5 +29,5 @@ exec ~/.i3/scripts/disp-2-idea.sh
 # Enable touchpad 1 Tapping
 # xinput list
 # xinput list-props 11
-exec_always ~/.i3/scripts/ideaTouchpad.sh
+#exec_always ~/.i3/scripts/ideaTouchpad.sh
 ######################### IdeaPad
