@@ -179,9 +179,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let mapleader = ","
-nnoremap <Leader>b :Git blame<CR>
-nnoremap <Leader>a :Ack!<Space>
-noremap <Leader>A :Ack <cword><cr>
+map <Leader>l :Git blame<CR>
+map <Leader>a :Ack!<Space>
+map <Leader>A :Ack <cword><cr>
 map <Leader>m :NERDTreeFind<CR>
 "Clear search
 "map <silent> <leader>qs <Esc>:noh<CR>
