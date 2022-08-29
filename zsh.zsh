@@ -106,7 +106,6 @@ alias wn='watch -n'
 alias xclip='xclip -selection c'
 
 # Folders
-alias f="cd ~/fablab/"
 alias y="cd ~/dev/youwind/"
 alias re="cd ~/dev/repero/"
 alias l=ll
