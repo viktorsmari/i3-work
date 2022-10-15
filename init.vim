@@ -191,7 +191,7 @@ nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 
 " pasting from clipboard and mouse selection
 map <Leader>p :set paste<CR>o<esc>"+p:set nopaste<cr>
-map <Leader>P :set paste<CR>o<esc>"*]p:set nopaste<cr>
+map <Leader>P :set noai<CR>o<esc>"*]p:set ai<cr>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --hidden'
