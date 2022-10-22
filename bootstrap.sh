@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "======== Answer (y/n) - default: no ========"
+echo -e "\n======== Answer (y/n) - default: no ======== \n"
 
 echo "1. Do you want git setup?"
 read -p 'y / n :' USE_GIT
@@ -37,16 +37,17 @@ read -p 'y / n : ' USE_RBENV
 echo "8. Do you want nvm installed?"
 read -p 'y / n : ' USE_NVM
 
-echo '======== Questions done ========'
+echo -e '======== Questions done ========\n'
 
 echo 'TODO: The ~/.zshrc file (which is not in this repo), loads plugins. Create it here and link it with ln?'
 echo 'TODO: generate SSH key'
 
 if [[ $USE_DEP = 'y' ]]; then
-  echo "======== Install programs ========"
-  echo "This is aimed at Ubuntu 20, if you have a different version and a package installation fails, it could cancel the rest of the operations"
+  echo -e "======== Install programs ========\n"
+  echo -e "This is aimed at Ubuntu 20, if you have a different version and a package installation fails, it could cancel the rest of the operations\n"
+
   sudo apt-get update
-  read 'Updating complete, now installing packages...'
+
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
     chromium-browser tree gnome-screenshot htop whois thunar bmon \
@@ -56,7 +57,7 @@ if [[ $USE_DEP = 'y' ]]; then
     gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
     libpq-dev zlib1g-dev
 
-  mkdir ~/Pictures/screenshots
+  mkdir -p ~/Pictures/screenshots
   mkdir -p ~/.config/xfce4/terminal
   cp terminalrc ~/.config/xfce4/terminal/
 
@@ -100,7 +101,7 @@ if [[ $USE_I3 = 'y' ]]; then
   ~/.i3/generatei3.sh
 
 else
-  echo "======== no install i3"
+  echo -e "======== no install i3\n"
 fi
 
 if [[ $USE_GIT = 'y' ]]; then
@@ -118,7 +119,7 @@ if [[ $USE_GIT = 'y' ]]; then
   #TODO: Generate ssh key?
   # ssh-keygen -t rsa -b 4096
 else
-  echo "======== no install git"
+  echo -e "======== no install git\n"
 fi
 
 if [[ $USE_NEOVIM = 'y' ]]; then
@@ -157,8 +158,8 @@ fi
 
 
 if [[ $USE_OHMZ = 'y' ]]; then
-  echo "======== Setup oh-my-zsh ========"
-  echo "Remember to check if there is a newer way of installing oh-my-zsh?"
+  echo -e "======== Setup oh-my-zsh ========\n"
+  echo -e "Remember to check if there is a newer way of installing oh-my-zsh?\n"
 
   #TODO (fails): Change default shell to ZSH
   sudo chsh -s /bin/zsh
@@ -169,28 +170,28 @@ if [[ $USE_OHMZ = 'y' ]]; then
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
-  echo "cloning zsh-autosuggestions... did not work the last time!"
+  echo -e "\ncloning zsh-autosuggestions... did not work the last time!"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  echo "You must add it to .zshrc plugins()"
+  echo -e "\nYou must add it to .zshrc plugins()"
 else
-  echo "======== no install oh my zsh"
+  echo -e "======== no install oh my zsh\n"
 fi
 
 
 if [[ $USE_RBENV = 'y' ]]; then
-  echo "======== Setup rbenv ========"
+  echo -e "======== Setup rbenv ========\n"
   sh ~/.i3/scripts/rbenv.sh
 fi
 
 if [[ $USE_NVM = 'y' ]]; then
   #TODO: untested
-  echo "======== Setup nvm in ~/.nvm ========"
+  echo -e "======== Setup nvm in ~/.nvm ========\n"
   cd
   git clone https://github.com/creationix/nvm.git .nvm
 
   echo 'source ~/.i3/scripts/lazy_nvm.sh' >> .zshrc
 else
-  echo "======== no install rbenv"
+  echo -e "======== no install rbenv\n"
 fi
 
-echo 'All done!'
+echo -e 'All done!\n'
