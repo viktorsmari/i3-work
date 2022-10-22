@@ -12,11 +12,11 @@ This will change our git username to me, so change it afterwards with:
 
 Don't run this unless you trust me and have verified the files contents:
 
-`wget https://raw.githubusercontent.com/viktorsmari/i3-work/master/bootstrap.sh`
+`wget https://raw.githubusercontent.com/viktorsmari/i3-work/master/setup.sh`
 
-`chmod +x bootstrap.sh`
+`chmod +x setup.sh`
 
-`./bootstrap.sh`
+`./setup.sh`
 
 ### Notes
 

@@ -62,23 +62,23 @@ if [[ $USE_DEP = 'y' ]]; then
   cp terminalrc ~/.config/xfce4/terminal/
 
 else
-  echo "======== no install dep"
+  echo -e "\n======== no install dep"
 fi
 
 if [[ $USE_I3 = 'y' ]]; then
-  echo "======== Clone my i3 repo and setup ========"
+  echo -e "\n======== Clone my i3 repo and setup ========\n"
   cd
 
   #TODO: fails when repo exists
   git clone https://github.com/viktorsmari/i3-work.git ~/.i3
   if [[ $I3VERSION = 's' ]]; then
-    echo "Installing i3-stable"
+    echo -e "\nInstalling i3-stable...\n"
     read -p 'Press enter to continue.'
     # Install i3 stable newest
     sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
     sudo apt-get --allow-unauthenticated install sur5r-keyring -y
   else
-    echo "Installing i3-unstable"
+    echo -e "\nInstalling i3-unstable...\n"
     read -p 'Press enter to continue.'
     # unstable dev
     # TODO: FAILS
@@ -105,7 +105,7 @@ else
 fi
 
 if [[ $USE_GIT = 'y' ]]; then
-  echo "======== Setup git ========"
+  echo -e "\n======== Setup git ========\n"
   git config --global core.editor "vim"
   git config --global merge.conflictstyle diff3
   git config --global merge.tool vimdiff
@@ -123,12 +123,12 @@ else
 fi
 
 if [[ $USE_NEOVIM = 'y' ]]; then
-  echo "======== Setup neovim ========"
+  echo -e "======== Setup neovim ========\n"
   sudo apt-get install -y neovim
   mkdir ~/.config/nvim
   ln -s ~/.i3/init.vim ~/.config/nvim/init.vim
 
-  echo "installing plug for nvim..."
+  echo -e "installing plug for nvim...\n"
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -137,7 +137,7 @@ if [[ $USE_NEOVIM = 'y' ]]; then
 fi
 
 if [[ $USE_VIM = 'y' ]]; then
-  echo "======== Setup vim ========"
+  echo -e "======== Setup vim ========\n"
 
   # Get Vundle, Vim plugin manager
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -153,7 +153,7 @@ if [[ $USE_VIM = 'y' ]]; then
   # Install plugins
   vim -c 'PluginInstall' -c 'qa!'
 else
-  echo "======== no install vim"
+  echo -e "======== no install vim\n"
 fi
 
 
@@ -179,17 +179,17 @@ fi
 
 
 if [[ $USE_RBENV = 'y' ]]; then
-  echo -e "======== Setup rbenv ========\n"
+  echo -e "\n======== Setup rbenv ========\n"
   sh ~/.i3/scripts/rbenv.sh
 fi
 
 if [[ $USE_NVM = 'y' ]]; then
   #TODO: untested
-  echo -e "======== Setup nvm in ~/.nvm ========\n"
+  echo -e "\n======== Setup nvm in ~/.nvm ========\n"
   cd
   git clone https://github.com/creationix/nvm.git .nvm
 
-  echo 'source ~/.i3/scripts/lazy_nvm.sh' >> .zshrc
+  echo 'source ~/.i3/scripts/lazy_nvm.sh' >> ~/.zshrc
 else
   echo -e "======== no install rbenv\n"
 fi
