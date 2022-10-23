@@ -165,13 +165,14 @@ if [[ $USE_OHMZ = 'y' ]]; then
   sudo chsh -s /bin/zsh
 
   # install oh my zsh
-  sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+  sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
   echo -e "\ncloning zsh-autosuggestions... did not work the last time!\n"
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  #git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  source ~/.i3/scripts/install_zsh-autosuggestions.sh
 
   echo -e "\nYou must add it to .zshrc plugins()"
 else
