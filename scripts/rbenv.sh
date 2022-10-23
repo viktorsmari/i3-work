@@ -1,5 +1,8 @@
 cd
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
 
 cd ~/.rbenv && src/configure && make -C src
 
@@ -11,10 +14,6 @@ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 
 type rbenv
-
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-
-sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
 
 ruby -v
 #rbenv install --list

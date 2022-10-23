@@ -51,7 +51,7 @@ if [[ $USE_DEP = 'y' ]]; then
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
     chromium-browser tree gnome-screenshot htop whois thunar bmon \
-    vim gnome-terminal
+    vim gnome-terminal xfce4-terminal
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
     gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
@@ -137,7 +137,7 @@ if [[ $USE_NEOVIM = 'y' ]]; then
 fi
 
 if [[ $USE_VIM = 'y' ]]; then
-  echo -e "======== Setup vim ========\n"
+  echo -e "\n======== Setup vim ========\n"
 
   # Get Vundle, Vim plugin manager
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -153,12 +153,12 @@ if [[ $USE_VIM = 'y' ]]; then
   # Install plugins
   vim -c 'PluginInstall' -c 'qa!'
 else
-  echo -e "======== no install vim\n"
+  echo -e "\n======== no install vim\n"
 fi
 
 
 if [[ $USE_OHMZ = 'y' ]]; then
-  echo -e "======== Setup oh-my-zsh ========\n"
+  echo -e "\n======== Setup oh-my-zsh ========\n"
   echo -e "Remember to check if there is a newer way of installing oh-my-zsh?\n"
 
   #TODO (fails): Change default shell to ZSH
@@ -170,11 +170,12 @@ if [[ $USE_OHMZ = 'y' ]]; then
   # link my zsh config
   ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
 
-  echo -e "\ncloning zsh-autosuggestions... did not work the last time!"
+  echo -e "\ncloning zsh-autosuggestions... did not work the last time!\n"
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
   echo -e "\nYou must add it to .zshrc plugins()"
 else
-  echo -e "======== no install oh my zsh\n"
+  echo -e "\n======== no install oh my zsh\n"
 fi
 
 
