@@ -37,7 +37,7 @@ bindsym $mod+shift+s      --release exec notify-send 'screenshot' 'please select
 bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'Flameshot not found' 'install flameshot to use this!'
 
 # Open apps
-bindsym $mod+ctrl+c exec chromium-browser
+bindsym $mod+ctrl+c exec google-chrome
 bindsym $mod+ctrl+4 workspace $ws4; exec firefox
 bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop-beta
 bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
@@ -55,7 +55,7 @@ bindsym $mod+shift+d exec xfce4-appfinder
 # start a terminal
 bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+shift+Return exec xfce4-terminal --working-directory="`xcwd`", exec notify-send -t 2000 "`xcwd`"
-bindsym $mod+ctrl+Return  exec notify-send -t 1000 xfce4,  exec xfce4-terminal
+bindsym $mod+ctrl+Return  exec notify-send -t 1000 gnome-terminal, exec gnome-terminal
 
 # Don't focus on popup
 no_focus [class="Xfce4-notifyd"]
@@ -261,7 +261,9 @@ exec --no-startup-id xfce4-clipman
 exec gnome-sound-applet
 exec nm-tray
 exec pasystray
-exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser' 
+exec_always autorandr --change
+#exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser'
+exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
 exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal'

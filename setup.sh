@@ -53,7 +53,7 @@ if [[ $USE_DEP = 'y' ]]; then
     chromium-browser tree gnome-screenshot htop whois thunar bmon \
     vim gnome-terminal xfce4-terminal
   # Packages likely to fail:
-  sudo apt-get install -y scrot silversearcher-ag pwgen vim-snippets vim-snipmate gpicview powerline \
+  sudo apt-get install -y scrot silversearcher-ag pwgen gpicview powerline \
     gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
     libpq-dev zlib1g-dev
 
@@ -110,7 +110,7 @@ if [[ $USE_GIT = 'y' ]]; then
   git config --global merge.conflictstyle diff3
   git config --global merge.tool vimdiff
   git config --global mergetool.prompt false
-  git config --global pull.rebase=true
+  git config --global pull.rebase true
   git config --global push.default matching
   git config --global push.followTags true
   git config --global user.email $MY_EMAIL
