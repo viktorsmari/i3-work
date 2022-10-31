@@ -20,12 +20,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'ap/vim-css-color'
 "Plug 'posva/vim-vue'
 "Plug 'elixir-editors/vim-elixir'
-Plug 'peitalin/vim-jsx-typescript' "React JSX syntax highlighting for vim and Typescript
-Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
+"Plug 'peitalin/vim-jsx-typescript' "React JSX syntax highlighting for vim and Typescript
+"Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
 
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
-Plug 'slim-template/vim-slim'
+"Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
 
 "Linter
@@ -38,7 +38,6 @@ Plug 'henrik/vim-indexed-search'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 
-
 "open and close brackets
 Plug 'jiangmiao/auto-pairs'
 
@@ -49,13 +48,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'kshenoy/vim-signature'   " display marks in gutter
 
 "Colorscheme
-Plug 'crusoexia/vim-monokai'
-Plug 'phanviet/vim-monokai-pro'
-Plug 'joshdick/onedark.vim'
+"Plug 'crusoexia/vim-monokai'
+"Plug 'phanviet/vim-monokai-pro'
+"Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/MatchTagAlways' " match divs
 
 " On-demand loading
 " Initialize plugin system
@@ -202,3 +202,6 @@ set pastetoggle=<F2>
 
 " use F3 to disable highlight search, until next search
 nnoremap <F3> :noh<CR>
+
+" to prevent neovim errors inside python3 virtualenv
+let g:python3_host_prog='/usr/bin/python'
