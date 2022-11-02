@@ -64,7 +64,7 @@ call plug#end()
 syntax enable
 set background=light
 "colorscheme onedark
-colorscheme github_dark
+colorscheme github_dark_default
 
 set cursorline               " highlight current line
 set hidden

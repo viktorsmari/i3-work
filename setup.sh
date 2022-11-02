@@ -14,11 +14,6 @@ fi
 echo "2b. Do you want to install i3 (y / n)"
 read -p 'y / n : ' USE_I3
 
-if [[ $USE_I3 = 'y' ]]; then
-  echo "3. Which i3 version, stable or dev (s / d)"
-  read -p 'i3 version: ' I3VERSION
-fi
-
 echo "3. Do you want all dependencies installed?"
 read -p 'y / n : ' USE_DEP
 
@@ -71,31 +66,12 @@ if [[ $USE_I3 = 'y' ]]; then
 
   #TODO: fails when repo exists
   git clone https://github.com/viktorsmari/i3-work.git ~/.i3
-  if [[ $I3VERSION = 's' ]]; then
-    echo -e "\nInstalling i3-stable...\n"
-    read -p 'Press enter to continue.'
-    # Install i3 stable newest
-    sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
-    sudo apt-get --allow-unauthenticated install sur5r-keyring -y
-  else
-    echo -e "\nInstalling i3-unstable...\n"
-    read -p 'Press enter to continue.'
-    # unstable dev
-    # TODO: FAILS
-    sudo echo 'deb http://build.i3wm.org/ubuntu/trusty trusty main' >> /etc/apt/sources.list
-    sudo apt-get --allow-unauthenticated install i3-autobuild-keyring -y
-  fi
 
-  sudo apt-get update
-  sudo apt-get install i3 i3blocks -y
+  sudo apt-get install -y i3
 
   # Link i3 status bar
-  if [[ $(hostname -s) = "tpad" ]]; then
-    ln -s ~/.i3/i3status_thinkpad.conf ~/.i3status.conf
-  else
-    ln -s ~/.i3/i3status.conf ~/.i3status.conf
-    ln -s ~/.i3/i3blocks.conf ~/.i3blocks.conf
-  fi
+  ln -s ~/.i3/i3status.conf ~/.i3status.conf
+  ln -s ~/.i3/i3blocks.conf ~/.i3blocks.conf
 
   # Create the first config
   ~/.i3/generatei3.sh
