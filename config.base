@@ -267,9 +267,10 @@ exec pasystray
 exec_always autorandr --change
 #exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser'
 exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome'
-exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
-exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal'
-exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal'
+exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
+exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
+exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal --working-directory=/home/viktor/dev/repero'
+exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal --working-directory=/home/viktor/dev/repero'
 
 # =================== End base ============================
 #
