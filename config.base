@@ -19,9 +19,9 @@ floating_modifier $mod
 
 bindsym $mod+i exec sh ~/.i3/scripts/kb-is.sh
 bindsym $mod+o exec sh ~/.i3/scripts/kb-en.sh
-bindsym $mod+u exec sh ~/.i3/scripts/kb-es.sh
-bindsym $mod+y exec sh ~/.i3/scripts/kb-dk.sh
-bindsym $mod+shift+o exec "setxkbmap -option ''", exec notify-send 'reset kb'
+#bindsym $mod+u exec sh ~/.i3/scripts/kb-es.sh
+#bindsym $mod+y exec sh ~/.i3/scripts/kb-dk.sh
+#bindsym $mod+shift+o exec "setxkbmap -option ''", exec notify-send 'reset kb'
 
 bindsym --release $mod+button2 kill
 
