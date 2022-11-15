@@ -2,6 +2,7 @@
 # is used in the bar {} block below. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:monospace 9
+#font pango:DejaVu Sands Mono 12
 
 set $up k
 set $down j
@@ -33,7 +34,7 @@ bindsym $mod+Shift+g move workspace to output left
 
 # Screenshots
 #bindsym $mod+s --release exec notify-send -t 1000 Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
-bindsym $mod+shift+s      --release exec notify-send 'screenshot' 'please select area' && gnome-screenshot -a -f "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" && notify-send 'screenshot' 'saved in ~/Pictures/screenshots'
+bindsym $mod+shift+s      --release exec notify-send 'screenshot' 'please select area' && gnome-screenshot -ac -f "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" && notify-send 'screenshot' 'saved in ~/Pictures/screenshots'
 bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'Flameshot not found' 'install flameshot to use this!'
 
 # Open apps
@@ -178,8 +179,9 @@ set $ws8 "8:Spotify"
 set $ws9 "9:Settings"
 set $ws10 "10:Gimp"
 
-workspace "2:Term" output HDMI-2
-workspace "3:Ansible" output HDMI-1
+workspace $ws1 output HDMI-1
+workspace $ws2 output HDMI-2
+workspace $ws3 output HDMI-2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
