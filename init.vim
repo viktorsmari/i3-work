@@ -12,7 +12,7 @@ else
 endif
 
 "Syntax
-Plug 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips' 
 Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
@@ -23,7 +23,7 @@ Plug 'ap/vim-css-color'
 "Plug 'peitalin/vim-jsx-typescript' "React JSX syntax highlighting for vim and Typescript
 "Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
 
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 "Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 "Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
