@@ -24,7 +24,6 @@ Plug 'ap/vim-css-color'
 "Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
 
 Plug 'mg979/vim-visual-multi'
-"Plug 'cristianoliveira/vim-react-html-snippets' "allows div + tab
 "Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
 
@@ -53,7 +52,6 @@ Plug 'kshenoy/vim-signature'   " display marks in gutter
 "Plug 'joshdick/onedark.vim'
 Plug 'projekt0n/github-nvim-theme'
 
-Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/MatchTagAlways' " match divs
 

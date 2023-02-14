@@ -40,7 +40,7 @@ bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'F
 # Open apps
 bindsym $mod+ctrl+c exec google-chrome
 bindsym $mod+ctrl+4 workspace $ws4; exec firefox
-bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop-beta
+bindsym $mod+ctrl+5 workspace $ws5; exec signal-desktop
 bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
 bindsym $mod+ctrl+8 workspace $ws8; exec spotify
 bindsym $mod+ctrl+t exec thunar
@@ -83,8 +83,8 @@ assign [class="ardour_mixer"]  $ws4
 assign [class="Ardour"]        $ws4
 assign [class="ardour_editor"] $ws4
 assign [class="Slack"]         $ws5
-assign [class="Signal"]        $ws6
-assign [class="signal-desktop"] $ws6
+assign [class="Signal"]        $ws5
+assign [class="signal-desktop"] $ws5
 assign [class="Spotify"]       $ws8
 assign [class="spotify"]       $ws8
 assign [class="pavucontrol"]   $ws8
