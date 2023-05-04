@@ -62,7 +62,7 @@ call plug#end()
 syntax enable
 set background=light
 "colorscheme onedark
-colorscheme github_dark_default
+colorscheme github_dark_colorblind
 
 set cursorline               " highlight current line
 set hidden
@@ -155,6 +155,10 @@ nnoremap <S-A-Right> :+tabm<CR>
 " Move between linting errors
 nnoremap ]a :ALENextWrap<CR>
 nnoremap [a :ALEPreviousWrap<CR>
+
+" Copilot suggestions with Ctrl + Space
+inoremap <C-Space> <Plug>(copilot-next)
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 
 " Ctrl C will copy
 nnoremap <C-c> "+yy
