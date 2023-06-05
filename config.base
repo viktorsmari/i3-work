@@ -38,7 +38,8 @@ bindsym $mod+shift+s      --release exec notify-send 'screenshot' 'please select
 bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'Flameshot not found' 'install flameshot to use this!'
 
 # Open apps
-bindsym $mod+ctrl+c exec google-chrome
+# So chrome can share the passsword between Ubuntu Studio Desktop manager and i3
+bindsym $mod+ctrl+c exec google-chrome --pasword-store=gnome-keyring
 bindsym $mod+ctrl+4 workspace $ws4; exec firefox
 bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop
 bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
@@ -268,7 +269,7 @@ exec nm-tray
 exec pasystray
 exec_always autorandr --change
 #exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser'
-exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome'
+exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome --pasword-store=gnome-keyring'
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
 exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal --working-directory=/home/viktor/dev/repero'
