@@ -65,6 +65,7 @@ set background=light
 colorscheme github_dark_colorblind
 
 set cursorline               " highlight current line
+set cursorcolumn             " highlight current line
 set hidden
 set laststatus=2             " window will always have a status line
 set list
@@ -102,7 +103,7 @@ set splitright
 let g:ctrlp_custom_ignore = '_site\|node_modules\|DS_Store\|venv\|coverage\|bower_components\|tmp\|(\.(swp|git))'
 let g:ctrlp_show_hidden = 1
 
-let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black']}
+let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black'], 'javascript': ['eslint']}
 let g:ale_linters = {
  \ 'zsh':['shell'],
  \ 'python':['pylint'],

@@ -287,7 +287,7 @@ inoremap <C-t> :NERDTreeToggle<CR>
 "close abbrev with C-Space
 inoremap <NUL> </<C-X><C-O>
 
-colorscheme monokai
+"colorscheme monokai
 hi Search cterm=NONE ctermfg=black ctermbg=blue
 "let g:airline#extensions#tabline#enabled = 1
 
