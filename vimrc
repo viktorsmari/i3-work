@@ -9,6 +9,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'github/copilot.vim'
 
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
@@ -287,7 +288,7 @@ inoremap <C-t> :NERDTreeToggle<CR>
 "close abbrev with C-Space
 inoremap <NUL> </<C-X><C-O>
 
-"colorscheme monokai
+colorscheme slate
 hi Search cterm=NONE ctermfg=black ctermbg=blue
 "let g:airline#extensions#tabline#enabled = 1
 

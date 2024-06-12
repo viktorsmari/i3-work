@@ -55,9 +55,9 @@ bindsym $mod+shift+d exec xfce4-appfinder
 
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty
 bindsym $mod+shift+Return exec xfce4-terminal --working-directory="`xcwd`", exec notify-send -t 2000 "`xcwd`"
-bindsym $mod+ctrl+Return  exec notify-send -t 1000 gnome-terminal, exec gnome-terminal
+bindsym $mod+ctrl+Return  exec exec gnome-terminal
 
 # Don't focus on popup
 no_focus [class="Xfce4-notifyd"]
