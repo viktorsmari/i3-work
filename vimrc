@@ -277,9 +277,11 @@ vnoremap <F9> zf
 " Ctrl C will copy
 nnoremap <C-c> "+yy
 vnoremap <C-c> "+y
+vmap <C-c> "+yy
 
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
+map <Leader>l :Gblame<CR>
 
 nnoremap <C-t> :NERDTreeToggle<CR>
 inoremap <C-t> :NERDTreeToggle<CR>
