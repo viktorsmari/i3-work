@@ -281,7 +281,7 @@ vmap <C-c> "+yy
 
 let mapleader = ","
 map <Leader>m :NERDTreeFind<CR>
-map <Leader>l :Gblame<CR>
+map <Leader>l :Git blame<CR>
 
 nnoremap <C-t> :NERDTreeToggle<CR>
 inoremap <C-t> :NERDTreeToggle<CR>
