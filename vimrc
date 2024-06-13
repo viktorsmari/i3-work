@@ -29,6 +29,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'w0rp/ale'
 "Plugin 'chase/vim-ansible-yaml'
 "Plugin 'pangloss/vim-javascript'
 "Plugin 'mxw/vim-jsx'
@@ -317,6 +318,16 @@ let g:multi_cursor_exit_from_insert_mode = 0
 
 "use .jsx syntax also in .js files
 let g:jsx_ext_required = 0
+
+let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black'], 'javascript': ['eslint']}
+let g:ale_linters = {
+ \ 'zsh':['shell'],
+ \ 'python':['pylint'],
+ \ 'ruby':['rubocop', 'ruby'],
+ \ 'javascript':['eslint'],
+ \ 'scss':['stylelint'],
+ \ 'css':['stylelint']}
+
 
 "notes
 " Copy to clipboard:        "+y
