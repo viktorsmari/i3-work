@@ -171,6 +171,8 @@ set ruler
 
 " Higlight current line
 set cursorline
+" Highlight current column
+set cursorcolumn
 
 " Always display the status line, even if only one window is displayed
 set laststatus=2
