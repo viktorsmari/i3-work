@@ -1,8 +1,8 @@
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:monospace 9
-#font pango:DejaVu Sands Mono 12
+font pango:DejaVu Sans Mono 9
 
 set $up k
 set $down j
@@ -212,7 +212,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 workspace 3 output DP2
 
 # reload the configuration file
-#bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r exec ~/.i3/generatei3.sh, restart
 # exit i3 (logs you out of your X session)
@@ -278,3 +278,12 @@ exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal --working-direc
 # =================== End base ============================
 #
 #
+
+# Sway
+#output HDMI-A-2 pos 0 0 res 1920x1080
+#output HDMI-A-1 pos 1920 0 res 2560x1440
+
+#input "type:keyboard" {
+    #xkb_options "caps:escape,grp:alt_shift_toggle"
+    #xkb_layout "us,is"
+#}
