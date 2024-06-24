@@ -328,6 +328,9 @@ let g:ale_linters = {
  \ 'scss':['stylelint'],
  \ 'css':['stylelint']}
 
+" Move between linting errors
+nnoremap ]a :ALENextWrap<CR>
+nnoremap [a :ALEPreviousWrap<CR>
 
 "notes
 " Copy to clipboard:        "+y
