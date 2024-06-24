@@ -208,6 +208,7 @@ bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    status_command i3status
 
     colors {
         statusline #ffffff
@@ -219,7 +220,7 @@ bar {
 include /etc/sway/config.d/*
 
 #### Viktor ####
-bindsym $mod+shift+s exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
+bindsym $mod+shift+s exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
 
 
 input "type:keyboard" {
