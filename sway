@@ -25,7 +25,7 @@ include /etc/sway/config-vars.d/*
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -237,7 +237,7 @@ bar {
   colors {
     statusline #ffffff
     background #323232
-    inactive_workspace #32323200 #32323200 #5c5c5c
+    inactive_workspace #000000 #222222 #cccccc
   }
 }
 
@@ -247,6 +247,8 @@ include /etc/sway/config.d/*
 
 bindsym $mod+button2 kill
 #bindsym $mod+shift+s exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
+# If we only want to copy the screenshot to the clipboard:
+#bindsym $mod+shift+s exec grim -g "$(slurp)" | wl-copy
 bindsym $mod+shift+s exec grim -g "$(slurp)" /tmp/screenshot.png && cp /tmp/screenshot.png ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png && wl-copy < /tmp/screenshot.png
 bindsym $mod+tab workspace back_and_forth
 bindsym $mod+ctrl+shift+l exec systemctl suspend #no password locking
