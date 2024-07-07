@@ -39,7 +39,7 @@ bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'F
 
 # Open apps
 # So chrome can share the passsword between Ubuntu Studio Desktop manager and i3
-bindsym $mod+ctrl+c exec google-chrome --pasword-store=gnome-keyring
+bindsym $mod+ctrl+c exec google-chrome --password-store=gnome-keyring
 bindsym $mod+ctrl+4 workspace $ws4; exec firefox
 bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop
 bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
@@ -57,7 +57,7 @@ bindsym $mod+shift+d exec xfce4-appfinder
 # start a terminal
 bindsym $mod+Return exec alacritty
 bindsym $mod+shift+Return exec xfce4-terminal --working-directory="`xcwd`", exec notify-send -t 2000 "`xcwd`"
-bindsym $mod+ctrl+Return  exec exec gnome-terminal
+bindsym $mod+ctrl+Return  exec gnome-terminal
 
 # Don't focus on popup
 no_focus [class="Xfce4-notifyd"]
@@ -269,7 +269,7 @@ exec nm-tray
 exec pasystray
 exec_always autorandr --change
 #exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser'
-exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome --pasword-store=gnome-keyring'
+exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome --password-store=gnome-keyring'
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
 exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
 exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal --working-directory=/home/viktor/dev/repero'
