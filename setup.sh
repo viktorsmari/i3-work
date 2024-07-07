@@ -39,14 +39,14 @@ echo 'TODO: generate SSH key'
 
 if [[ $USE_DEP = 'y' ]]; then
   echo -e "======== Install programs ========\n"
-  echo -e "This is aimed at Ubuntu 20, if you have a different version and a package installation fails, it could cancel the rest of the operations\n"
 
   sudo apt-get update
 
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
     chromium-browser tree gnome-screenshot htop whois thunar bmon \
-    alaccritty \
+    alacritty \
+    vim-gtk3 \
     vim gnome-terminal xfce4-terminal nm-tray
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen gpicview powerline \

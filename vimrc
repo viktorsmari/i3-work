@@ -18,6 +18,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
+set updatetime=100
 "" Search
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'henrik/vim-indexed-search'
