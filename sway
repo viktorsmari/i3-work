@@ -4,6 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+font pango:monospace 9
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -14,7 +15,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -66,7 +67,7 @@ include /etc/sway/config-vars.d/*
 #
 # Start a terminal
 bindsym $mod+Return exec $term
-bindsym $mod+Shift+Return exec alacritty
+bindsym $mod+Shift+Return exec foot
 # Kill focused window
 bindsym $mod+Shift+q kill
 
@@ -113,7 +114,18 @@ bindsym $mod+Shift+Right move right
 #
 # Workspaces:
 #
-for_window [class="Spotify"]  move to workspace "8:Spotify"
+set $ws1 "1:Chrome"
+set $ws2 "2:Term"
+set $ws3 "3:Ansible"
+set $ws4 "4:Term"
+set $ws5 "5:Chats"
+set $ws6 "6:Signal"
+set $ws7 "7:Thunar"
+set $ws8 "8:Spotify"
+set $ws9 "9:Settings"
+set $ws10 "10:Gimp"
+
+for_window [class="Spotify"]  move to workspace $ws8
 assign [class="ardour_mixer"]  $ws4
 assign [class="Ardour"]        $ws4
 assign [class="ardour_editor"] $ws4
@@ -125,16 +137,10 @@ assign [class="spotify"]       $ws8
 assign [class="Gimp"]          $ws10
 assign [class="Nautilus"]      $ws10
 
-set $ws1 "1:Chrome"
-set $ws2 "2:Term"
-set $ws3 "3:Ansible"
-set $ws4 "4:Term"
-set $ws5 "5:Chats"
-set $ws6 "6:Signal"
-set $ws7 "7:Thunar"
-set $ws8 "8:Spotify"
-set $ws9 "9:Settings"
-set $ws10 "10:Gimp"
+bindsym $mod+ctrl+4 workspace $ws4; exec firefox
+bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop
+bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
+bindsym $mod+ctrl+8 workspace $ws8; exec spotify
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -250,22 +256,37 @@ bindsym $mod+button2 kill
 # If we only want to copy the screenshot to the clipboard:
 #bindsym $mod+shift+s exec grim -g "$(slurp)" | wl-copy
 bindsym $mod+shift+s exec grim -g "$(slurp)" /tmp/screenshot.png && cp /tmp/screenshot.png ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png && wl-copy < /tmp/screenshot.png
+bindsym $mod+shift+ctrl+s exec grimshot --wait 4 --notify copy area
 bindsym $mod+tab workspace back_and_forth
 bindsym $mod+ctrl+shift+l exec systemctl suspend #no password locking
 bindsym $mod+O exec notify-send -t 2000 "hi"
+bindsym $mod+Shift+g move workspace to output left
+
+# Spotify next / prev
+bindsym $mod+ctrl+Down  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym $mod+ctrl+Left  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym $mod+ctrl+Right exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 input "type:keyboard" {
   xkb_options "caps:escape,grp:alt_shift_toggle"
   xkb_layout "us,is"
   repeat_rate 30
   repeat_delay 250
+  xkb_numlock enabled
 }
 
 # Tower
 output HDMI-A-2 pos 0 0 res 1920x1080
 output HDMI-A-1 pos 1920 0 res 2560x1440
 
+exec swaymsg 'workspace $ws1; exec google-chrome'
 exec blueman-applet
-exec nm-tray
-exec pasystray
+#exec nm-tray
+#exec pasystray
 exec_always copyq # does not work with only exec copyq
+#exec_always mako
+#exec_always dunst
+exec swaymsg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/dev/youwind'
+exec swaymsg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/dev/youwind'
+exec swaymsg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'
+exec swaymsg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'

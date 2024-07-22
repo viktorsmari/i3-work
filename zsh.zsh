@@ -81,6 +81,7 @@ alias h=xfce4-terminal --working-directory=/pwd
 alias hgrep='history|grep'
 alias htop='htop -d 30'
 alias img=gpicview
+#alias img=feh
 alias open=xdg-open
 alias p3=python3
 alias pi='ping 8.8.8.8'

@@ -44,12 +44,17 @@ if [[ $USE_DEP = 'y' ]]; then
 
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
-    chromium-browser tree gnome-screenshot htop whois thunar bmon \
+    tree gnome-screenshot htop whois thunar bmon \
     alacritty \
     vim-gtk3 \
-    vim gnome-terminal xfce4-terminal nm-tray
+    grim grimshot \
+    mako \
+    vim gnome-terminal nm-tray
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen gpicview powerline \
+    redis-server \
+    wl-clipboard \
+    postgresql postgresql-contrib libpq-dev \
     gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
     libpq-dev zlib1g-dev
 
