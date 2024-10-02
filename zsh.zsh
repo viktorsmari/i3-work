@@ -115,7 +115,7 @@ alias BCN="timedatectl set-timezone Europe/Madrid"
 
 # Scripts
 wer() {
-  curl wttr.in/${1:-bcn}
+  curl wttr.in/${1:-Torrevieja}
 }
 
 cheat() {

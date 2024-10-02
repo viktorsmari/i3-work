@@ -34,7 +34,7 @@ bindsym $mod+Shift+g move workspace to output left
 
 # Screenshots
 #bindsym $mod+s --release exec notify-send -t 1000 Screenshot, exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f Pictures'
-bindsym $mod+shift+s      --release exec notify-send 'screenshot' 'please select area' && gnome-screenshot -ac -f "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" && notify-send 'screenshot' 'saved in ~/Pictures/screenshots'
+bindsym $mod+shift+s      --release exec gnome-screenshot -ac -f "$HOME/Pictures/screenshots/$(date +%F_%H-%M-%S).png" && notify-send 'screenshot' 'saved in ~/Pictures/screenshots'
 bindsym $mod+shift+ctrl+s --release exec flameshot gui || notify-send -t 5000 'Flameshot not found' 'install flameshot to use this!'
 
 # Open apps
@@ -227,10 +227,10 @@ mode "resize" {
         bindsym $right resize grow width 15 px or 15 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left  resize shrink width 15 px or 15 ppt
-        bindsym Down  resize grow height 15 px or 15 ppt
-        bindsym Up    resize shrink height 15 px or 15 ppt
-        bindsym Right resize grow width 15 px or 15 ppt
+        bindsym Left  resize shrink width 5 px or 5 ppt
+        bindsym Down  resize grow height 5 px or 5 ppt
+        bindsym Up    resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"

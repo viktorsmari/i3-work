@@ -320,7 +320,14 @@ let g:multi_cursor_exit_from_insert_mode = 0
 "use .jsx syntax also in .js files
 let g:jsx_ext_required = 0
 
-let g:ale_fixers = {'ruby': ['rubocop'], 'python': ['trim_whitespace','black'], 'javascript': ['eslint']}
+let g:ale_fixers = {
+ \ 'ruby': ['rubocop', 'trim_whitespace', 'remove_trailing_lines'],
+ \ 'python': ['trim_whitespace','black'],
+ \ 'javascript': ['eslint'],
+ \ 'eruby': ['trim_whitespace', 'remove_trailing_lines']
+ \}
+
+"let g:ale_fix_on_save = 1
 let g:ale_linters = {
  \ 'zsh':['shell'],
  \ 'python':['pylint'],
