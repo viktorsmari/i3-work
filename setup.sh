@@ -29,8 +29,8 @@ read -p 'y / n : ' USE_VIM
 echo "7. Do you want rbenv installed?"
 read -p 'y / n : ' USE_RBENV
 
-echo "8. Do you want nvm installed?"
-read -p 'y / n : ' USE_NVM
+echo "8. Do you want MISE installed?"
+read -p 'y / n : ' USE_MISE
 
 echo -e '======== Questions done ========\n'
 
@@ -47,15 +47,18 @@ if [[ $USE_DEP = 'y' ]]; then
     tree gnome-screenshot htop whois thunar bmon \
     alacritty \
     vim-gtk3 \
-    grim grimshot \
-    mako \
-    vim gnome-terminal nm-tray
+    vim \
+    libyaml-dev \
+    nm-tray
+
   # Packages likely to fail:
   sudo apt-get install -y scrot silversearcher-ag pwgen gpicview powerline \
     redis-server \
     wl-clipboard \
+    mako-notifier \
+    grim grimshot \
     postgresql postgresql-contrib libpq-dev \
-    gromit-mpx inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
+    inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
     libpq-dev zlib1g-dev
 
   mkdir -p ~/Pictures/screenshots
@@ -78,6 +81,7 @@ if [[ $USE_I3 = 'y' ]]; then
   # Link i3 status bar
   ln -s ~/.i3/i3status.conf ~/.i3status.conf
   ln -s ~/.i3/i3blocks.conf ~/.i3blocks.conf
+  ln -s ~/.i3/alacritty.toml ~/.alacritty.yml
 
   # Create the first config
   ~/.i3/generatei3.sh
@@ -161,21 +165,15 @@ else
   echo -e "\n======== no install oh my zsh\n"
 fi
 
+if [[ $USE_MISE = 'y' ]]; then
+  echo -e "\n======== Setup mise ========\n"
+  curl https://mise.run | sh
+  echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
+fi
 
 if [[ $USE_RBENV = 'y' ]]; then
   echo -e "\n======== Setup rbenv ========\n"
   sh ~/.i3/scripts/rbenv.sh
-fi
-
-if [[ $USE_NVM = 'y' ]]; then
-  #TODO: untested
-  echo -e "\n======== Setup nvm in ~/.nvm ========\n"
-  cd
-  git clone https://github.com/creationix/nvm.git .nvm
-
-  echo 'source ~/.i3/scripts/lazy_nvm.sh' >> ~/.zshrc
-else
-  echo -e "======== no install rbenv\n"
 fi
 
 echo -e 'All done!\n'

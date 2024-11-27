@@ -180,9 +180,9 @@ set $ws8 "8:Spotify"
 set $ws9 "9:Settings"
 set $ws10 "10:Gimp"
 
-workspace $ws1 output HDMI-1
-workspace $ws2 output HDMI-2
-workspace $ws3 output HDMI-2
+workspace $ws1 output DisplayPort-2
+workspace $ws2 output DisplayPort-1
+workspace $ws3 output DisplayPort-2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -242,6 +242,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        output DisplayPort-1
         output HDMI-1
         output HDMI1
         output VGA-1
@@ -251,12 +252,14 @@ bar {
 
 bar {
         status_command i3status
+        output DisplayPort-2
         output HDMI-2
         output DP-1
         output eDP-1
         output eDP1
         output LVDS-1
         output LVDS1
+        font pango:DejaVu Sans Mono 14
 }
 
 # wallpaper solid color:
@@ -264,16 +267,17 @@ exec --no-startup-id xsetroot -solid "#333333"
 
 # End with opening up programs
 exec --no-startup-id xfce4-clipman
-exec gnome-sound-applet
+#exec gnome-sound-applet
 exec nm-tray
-exec pasystray
-exec_always autorandr --change
+#exec pasystray
+#xrandr --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --primary --output DisplayPort-2 --mode 3840x2160 --scale 0.6667x0.6667 --pos 1920x0
+#exec_always autorandr --change
 #exec --no-startup-id i3-msg 'workspace $ws1; exec chromium-browser'
 exec --no-startup-id i3-msg 'workspace $ws1; exec google-chrome --password-store=gnome-keyring'
-exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
-exec --no-startup-id i3-msg 'workspace $ws2; exec xfce4-terminal --working-directory=/home/viktor/dev/youwind'
-exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal --working-directory=/home/viktor/dev/repero'
-exec --no-startup-id i3-msg 'workspace $ws3; exec xfce4-terminal --working-directory=/home/viktor/dev/repero'
+exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/dev/youwind'
+exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/dev/youwind'
+exec --no-startup-id i3-msg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'
+exec --no-startup-id i3-msg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'
 
 # =================== End base ============================
 #

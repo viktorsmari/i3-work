@@ -259,7 +259,6 @@ bindsym $mod+shift+s exec grim -g "$(slurp)" /tmp/screenshot.png && cp /tmp/scre
 bindsym $mod+shift+ctrl+s exec grimshot --wait 4 --notify copy area
 bindsym $mod+tab workspace back_and_forth
 bindsym $mod+ctrl+shift+l exec systemctl suspend #no password locking
-bindsym $mod+O exec notify-send -t 2000 "hi"
 bindsym $mod+Shift+g move workspace to output left
 
 # Spotify next / prev
@@ -268,19 +267,25 @@ bindsym $mod+ctrl+Left  exec dbus-send --print-reply --dest=org.mpris.MediaPlaye
 bindsym $mod+ctrl+Right exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 input "type:keyboard" {
-  xkb_options "caps:escape,grp:alt_shift_toggle"
+  xkb_options "caps:escape"
   xkb_layout "us,is"
   repeat_rate 30
   repeat_delay 250
   xkb_numlock enabled
 }
 
-# Tower
-output HDMI-A-2 pos 0 0 res 1920x1080
-output HDMI-A-1 pos 1920 0 res 2560x1440
+# use meta + i to switch to icelandic layout
+bindsym $mod+i input "type:keyboard" xkb_layout "is"; exec notify-send "Icelandic" -t 1000
+# use meta + o to switch to english layout
+bindsym $mod+o input "type:keyboard" xkb_layout "us"; exec notify-send "English" -t 1000
 
-exec swaymsg 'workspace $ws1; exec google-chrome'
+# Tower
+output DP-2 pos 0 0 res 1920x1080
+#output DP-3 pos 1920 0 res 2560x1440
+output DP-3 pos 1920 0 res 3840x2160 scale 1.25
+
 exec blueman-applet
+exec swaymsg 'workspace $ws1; exec google-chrome'
 #exec nm-tray
 #exec pasystray
 exec_always copyq # does not work with only exec copyq
