@@ -22,6 +22,8 @@ set $term alacritty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
+titlebar_border_thickness 0
+titlebar_padding 1
 
 ### Output configuration
 #
@@ -140,7 +142,7 @@ assign [class="Nautilus"]      $ws10
 bindsym $mod+ctrl+4 workspace $ws4; exec firefox
 bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop
 bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
-bindsym $mod+ctrl+8 workspace $ws8; exec spotify
+bindsym $mod+ctrl+8 workspace $ws8; exec spotify --force-device-scale-factor=1.5 --enable-features=UseOzonePlatform --ozone-platform=wayland
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -281,11 +283,16 @@ bindsym $mod+o input "type:keyboard" xkb_layout "us"; exec notify-send "English"
 
 # Tower
 output DP-2 pos 0 0 res 1920x1080
+output DP-3 pos 1920 0 res 3840x2160 scale 1.5
 #output DP-3 pos 1920 0 res 2560x1440
-output DP-3 pos 1920 0 res 3840x2160 scale 1.25
+
+# Chrome opens on DP-3
+workspace $ws1 output DP-3
+workspace $ws2 output DP-2
 
 exec blueman-applet
-exec swaymsg 'workspace $ws1; exec google-chrome'
+# Open Chrome on workspace 1 with Wayland support
+exec swaymsg 'workspace $ws1; exec google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland'
 #exec nm-tray
 #exec pasystray
 exec_always copyq # does not work with only exec copyq

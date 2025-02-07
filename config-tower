@@ -17,6 +17,6 @@ bindsym XF86Sleep    exec notify-send -t 1000 Sleeping,    exec systemctl suspen
 bindsym XF86PowerOff exec notify-send -t 1000 PowerButton, exec systemctl halt
 
 # ================== Video config ===============================
-bindsym $mod+ctrl+2  exec notify-send -t 1000 '2 screens',   exec ~/.i3/scripts/disp-2mon_tower.sh
-exec --no-startup-id ~/.i3/scripts/disp-2mon_tower.sh
+#bindsym $mod+ctrl+2  exec notify-send -t 1000 '2 screens',   exec ~/.i3/scripts/disp-2mon_tower.sh
+#exec --no-startup-id ~/.i3/scripts/disp-2mon_tower.sh
 #########################  Tower END
