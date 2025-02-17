@@ -2,13 +2,14 @@
 # ZSH config is in ~/.zshrc
 export EDITOR=vim
 ZSH_THEME="agnoster"
-RPROMPT="%j %{$fg[red]%}$(ruby --version | awk '{print $2}')%{$reset_color%}%"
+#RPROMPT="%j %{$fg[red]%}$(ruby --version | awk '{print $2}')%{$reset_color%}%"
+RPROMPT="%j"
 
-LC_CTYPE=en_US.UTF-8
-LC_ALL=en_US.UTF-8
+#LC_CTYPE=en_US.UTF-8
+#LC_ALL=en_US.UTF-8
 
-stty stop undef
-xset r rate 255
+#stty stop undef
+#xset r rate 255
 
 ############ SSH tips
 # Access a servers website (behind a firewall) on ip:8080
@@ -77,17 +78,16 @@ alias fm='free -m'
 alias gap='git add -p'
 alias getprocid='xprop | grep WM_CLASS'
 alias gop="open \`git remote -v | grep 'git@github.com\|git@gitlab.' | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
-alias h=xfce4-terminal --working-directory=/pwd
 alias hgrep='history|grep'
 alias htop='htop -d 30'
-alias img=gpicview
-#alias img=feh
+#alias img=gpicview
+alias img=feh
 alias open=xdg-open
-alias p3=python3
 alias pi='ping 8.8.8.8'
 alias r='./bin/rails'
 alias rs='./bin/rails server -b 0.0.0.0'
 alias rc='./bin/rails console'
+alias rv='ruby --version'
 alias rgrep='rgrep --color'
 alias sshc='vi ~/.ssh/config'
 alias vpiano='fluidsynth -a alsa -s -g 3 /usr/share/sounds/sf2/FluidR3_GM.sf2'
