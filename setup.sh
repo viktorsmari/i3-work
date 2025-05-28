@@ -26,10 +26,7 @@ read -p 'y / n : ' USE_NEOVIM
 echo "6. Do you want vim plugins installed?"
 read -p 'y / n : ' USE_VIM
 
-echo "7. Do you want rbenv installed?"
-read -p 'y / n : ' USE_RBENV
-
-echo "8. Do you want MISE installed?"
+echo "7. Do you want MISE installed?"
 read -p 'y / n : ' USE_MISE
 
 echo -e '======== Questions done ========\n'
@@ -44,26 +41,29 @@ if [[ $USE_DEP = 'y' ]]; then
 
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
-    tree gnome-screenshot htop whois thunar bmon \
+    tree htop whois thunar bmon \
+    btop \
     alacritty \
     vim-gtk3 \
     vim \
     libyaml-dev \
     nm-tray
 
-  # Packages likely to fail:
-  sudo apt-get install -y scrot silversearcher-ag pwgen gpicview powerline \
-    redis-server \
-    wl-clipboard \
-    mako-notifier \
+  # Packages for Wayland
+  sudo apt-get install -y wl-clipboard \
     grim grimshot \
+    wf-recorder
+
+  sudo apt-get install -y silversearcher-ag pwgen powerline \
     postgresql postgresql-contrib libpq-dev \
-    inotify-tools flameshot rofi arandr xbacklight xclip jq xfce4-clipman python3-venv ncdu \
+    inotify-tools jq ncdu \
     libpq-dev zlib1g-dev
 
+  # Packages for X
+  sudo apt-get install -y xbacklight xclip \
+    xfce4-clipman rofi flameshot arandr
+
   mkdir -p ~/Pictures/screenshots
-  mkdir -p ~/.config/xfce4/terminal
-  cp terminalrc ~/.config/xfce4/terminal/
 
 else
   echo -e "\n======== no install dep"
@@ -169,11 +169,6 @@ if [[ $USE_MISE = 'y' ]]; then
   echo -e "\n======== Setup mise ========\n"
   curl https://mise.run | sh
   echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
-fi
-
-if [[ $USE_RBENV = 'y' ]]; then
-  echo -e "\n======== Setup rbenv ========\n"
-  sh ~/.i3/scripts/rbenv.sh
 fi
 
 echo -e 'All done!\n'

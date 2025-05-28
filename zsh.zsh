@@ -3,7 +3,7 @@
 export EDITOR=vim
 ZSH_THEME="agnoster"
 #RPROMPT="%j %{$fg[red]%}$(ruby --version | awk '{print $2}')%{$reset_color%}%"
-RPROMPT="%j"
+#RPROMPT="%j"
 
 #LC_CTYPE=en_US.UTF-8
 #LC_ALL=en_US.UTF-8
