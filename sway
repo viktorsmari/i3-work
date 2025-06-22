@@ -127,6 +127,9 @@ set $ws8 "8:Spotify"
 set $ws9 "9:Settings"
 set $ws10 "10:Gimp"
 
+for_window [title="^Calf .*\\(GUI\\)"] floating enable
+for_window [title="QjackCtl"] floating enable
+
 for_window [class="Spotify"]  move to workspace $ws8
 assign [class="ardour_mixer"]  $ws4
 assign [class="Ardour"]        $ws4
