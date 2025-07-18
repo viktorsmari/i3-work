@@ -284,6 +284,9 @@ bindsym $mod+i input "type:keyboard" xkb_layout "is"; exec notify-send "Icelandi
 # use meta + o to switch to english layout
 bindsym $mod+o input "type:keyboard" xkb_layout "us"; exec notify-send "English" -t 1000
 
+# Laptop
+output eDP-1 pos 0 0 res 1920x1080
+output HDMI-A-1 pos 1920 0 res 1920x1080
 # Tower
 output DP-2 pos 0 0 res 1920x1080
 output DP-3 pos 1920 0 res 3840x2160 scale 1.5
@@ -305,3 +308,25 @@ exec swaymsg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/de
 exec swaymsg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/dev/youwind'
 exec swaymsg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'
 exec swaymsg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'
+
+# Brightness control (requires brightnessctl)
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+# Volume control (requires pactl or pamixer)
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Media controls (optional, if you use playerctl)
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+input "type:touchpad" {
+    tap enabled
+    tap_button_map lrm  # Left = 1 finger, Right = 2 fingers, Middle = 3 fingers
+    natural_scroll enabled
+    scroll_method two_finger
+    dwt enabled  # Disable-while-typing
+}
