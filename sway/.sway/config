@@ -284,9 +284,6 @@ bindsym $mod+i input "type:keyboard" xkb_layout "is"; exec notify-send "Icelandi
 # use meta + o to switch to english layout
 bindsym $mod+o input "type:keyboard" xkb_layout "us"; exec notify-send "English" -t 1000
 
-# Laptop
-output eDP-1 pos 0 0 res 1920x1080
-output HDMI-A-1 pos 1920 0 res 1920x1080
 # Tower
 output DP-2 pos 0 0 res 1920x1080
 output DP-3 pos 1920 0 res 3840x2160 scale 1.5

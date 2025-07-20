@@ -3,42 +3,31 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 "Syntax
 "Plug 'ervandew/supertab'
-Plug 'SirVer/ultisnips' 
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
-Plug 'pangloss/vim-javascript'
-Plug 'ap/vim-css-color'
-"Plug 'posva/vim-vue'
-"Plug 'elixir-editors/vim-elixir'
-"Plug 'peitalin/vim-jsx-typescript' "React JSX syntax highlighting for vim and Typescript
-"Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
+"Plug 'pangloss/vim-javascript'
+"Plug 'ap/vim-css-color'
 
-Plug 'mg979/vim-visual-multi'
+"Plug 'mg979/vim-visual-multi'
 "Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-sensible'
 
 "Linter
-Plug 'w0rp/ale'
-Plug 'vim-airline/vim-airline'
+"Plug 'w0rp/ale'
+"Plug 'vim-airline/vim-airline'
 
 "Search
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'henrik/vim-indexed-search'
-Plug 'mileszs/ack.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+"Plug 'henrik/vim-indexed-search'
 Plug 'scrooloose/nerdtree'
 
 "open and close brackets
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 
 "Git
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -50,28 +39,28 @@ Plug 'kshenoy/vim-signature'   " display marks in gutter
 "Plug 'crusoexia/vim-monokai'
 "Plug 'phanviet/vim-monokai-pro'
 "Plug 'joshdick/onedark.vim'
-Plug 'projekt0n/github-nvim-theme'
+"Plug 'projekt0n/github-nvim-theme'
 
-Plug 'tpope/vim-surround'
-Plug 'Valloric/MatchTagAlways' " match divs
+"Plug 'tpope/vim-surround'
+"Plug 'Valloric/MatchTagAlways' " match divs
 
 " On-demand loading
 " Initialize plugin system
 call plug#end()
 
 syntax enable
-set background=light
+"set background=light
 "colorscheme onedark
-colorscheme github_dark_colorblind
+"colorscheme github_dark_colorblind
 
 set cursorline               " highlight current line
 set cursorcolumn             " highlight current line
-set hidden
-set laststatus=2             " window will always have a status line
+"set hidden
+"set laststatus=2             " window will always have a status line
 set list
-set mouse=a
-set nobackup
-set noswapfile
+"set mouse=a
+"set nobackup
+"set noswapfile
 set number                   " show line number
 set showcmd                  " show command in bottom bar
 set showmatch                " highlight matching brace
@@ -86,14 +75,12 @@ set autoindent
 set copyindent      " copy indent from the previous line
 
 "search
-set incsearch       " search as characters are entered
-set hlsearch        " highlight matche
 set ignorecase      " ignore case when searching
 set smartcase       " ignore case if search pattern is lower case
 
 " folding
-set foldmethod=indent
-set foldlevel=20
+"set foldmethod=indent
+"set foldlevel=20
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -119,10 +106,8 @@ let g:UltiSnipsListSnippets="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-let g:deoplete#enable_at_startup = 1
-
 "Without this, tab will cycle backwards
-let g:SuperTabDefaultCompletionType = "<c-n>"
+"let g:SuperTabDefaultCompletionType = "<c-n>"
 
 "Save with ctrl s
 imap <C-s> <Esc>:w<CR>
@@ -183,8 +168,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 let mapleader = ","
 map <Leader>l :Git blame<CR>
-map <Leader>a :Ack!<Space>
-map <Leader>A :Ack <cword><cr>
 map <Leader>m :NERDTreeFind<CR>
 "Clear search
 "map <silent> <leader>qs <Esc>:noh<CR>
@@ -196,15 +179,23 @@ nnoremap <leader>* :%s/\<<C-r><C-w>\>//<Left>
 map <Leader>p :set paste<CR>o<esc>"+p:set nopaste<cr>
 map <Leader>P :set noai<CR>o<esc>"*]p:set ai<cr>
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep --hidden'
-endif
+
+" Find files using Telescope command-line sugar.
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+"use this to search for the word under the cursor using Telescope
+nnoremap <Leader>a :lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>') })<CR>
+nnoremap <Leader>A :lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>') })<CR>
 
 " Use <F2> to toggle between 'paste' and 'nopaste'
-set pastetoggle=<F2>
+"set pastetoggle=<F2>
 
 " use F3 to disable highlight search, until next search
 nnoremap <F3> :noh<CR>
 
 " to prevent neovim errors inside python3 virtualenv
-let g:python3_host_prog='/usr/bin/python'
+"let g:python3_host_prog='/usr/bin/python'

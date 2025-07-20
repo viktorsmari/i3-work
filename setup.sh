@@ -1,5 +1,15 @@
 #!/bin/bash
 
+echo "Cloning repo and linking configs..."
+if [ -d ~/dotfiles ]; then
+  echo "Directory ~/dotfiles already exists. Not cloning repo again!"
+else
+  echo "Cloning i3 repo..."
+  git clone https://github.com/viktorsmari/i3-work.git ~/dotfiles
+fi
+
+mkdir -p ~/Pictures/screenshots
+
 echo -e "\n======== Answer (y/n) - default: no ======== \n"
 
 echo "1. Do you want git setup?"
@@ -31,9 +41,6 @@ read -p 'y / n : ' USE_MISE
 
 echo -e '======== Questions done ========\n'
 
-echo 'TODO: The ~/.zshrc file (which is not in this repo), loads plugins. Create it here and link it with ln?'
-echo 'TODO: generate SSH key'
-
 if [[ $USE_DEP = 'y' ]]; then
   echo -e "======== Install programs ========\n"
 
@@ -41,6 +48,7 @@ if [[ $USE_DEP = 'y' ]]; then
 
   # VIP packages
   sudo apt-get install -y curl nmap zsh git g++ automake make \
+    stow \
     tree htop whois thunar bmon \
     btop \
     alacritty \
@@ -62,30 +70,19 @@ if [[ $USE_DEP = 'y' ]]; then
   # Packages for X
   sudo apt-get install -y xbacklight xclip \
     xfce4-clipman rofi flameshot arandr
-
-  mkdir -p ~/Pictures/screenshots
-
 else
   echo -e "\n======== no install dep"
 fi
 
 if [[ $USE_I3 = 'y' ]]; then
-  echo -e "\n======== Clone my i3 repo and setup ========\n"
-  cd
-
-  #TODO: fails when repo exists
-  git clone https://github.com/viktorsmari/i3-work.git ~/.i3
-
   sudo apt-get install -y i3
 
   # Link i3 status bar
-  ln -s ~/.i3/i3status.conf ~/.i3status.conf
-  ln -s ~/.i3/i3blocks.conf ~/.i3blocks.conf
-  ln -s ~/.i3/alacritty.toml ~/.alacritty.yml
+  ln -s ~/dotfiles/i3status.conf ~/.i3status.conf
+  ln -s ~/dotfiles/i3blocks.conf ~/.i3blocks.conf
 
   # Create the first config
-  ~/.i3/generatei3.sh
-
+  ~/dotfiles/generatei3.sh
 else
   echo -e "======== no install i3\n"
 fi
@@ -112,7 +109,7 @@ if [[ $USE_NEOVIM = 'y' ]]; then
   echo -e "======== Setup neovim ========\n"
   sudo apt-get install -y neovim
   mkdir ~/.config/nvim
-  ln -s ~/.i3/init.vim ~/.config/nvim/init.vim
+  stow nvim
 
   echo -e "installing plug for nvim...\n"
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -128,8 +125,7 @@ if [[ $USE_VIM = 'y' ]]; then
   # Get Vundle, Vim plugin manager
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-  #link vimrc
-  ln -s ~/.i3/vimrc ~/.vimrc
+  stow vim
 
   # Get vim color scheme monokai
   mkdir -p ~/.vim/colors
@@ -139,7 +135,7 @@ if [[ $USE_VIM = 'y' ]]; then
   # Install plugins
   vim -c 'PluginInstall' -c 'qa!'
 else
-  echo -e "\n======== no install vim\n"
+  echo -e "======== no install vim\n"
 fi
 
 
@@ -154,15 +150,15 @@ if [[ $USE_OHMZ = 'y' ]]; then
   sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   # link my zsh config
-  ln -s ~/.i3/zsh.zsh ~/.oh-my-zsh/custom/zsh.zsh
+  stow zsh
 
   echo -e "\ncloning zsh-autosuggestions... did not work the last time!\n"
   #git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  source ~/.i3/scripts/install_zsh-autosuggestions.sh
+  source ~/dotfiles/scripts/install_zsh-autosuggestions.sh
 
   echo -e "\nYou must add it to .zshrc plugins()"
 else
-  echo -e "\n======== no install oh my zsh\n"
+  echo -e "======== no install oh my zsh\n"
 fi
 
 if [[ $USE_MISE = 'y' ]]; then

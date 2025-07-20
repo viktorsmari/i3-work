@@ -1,0 +1,330 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+font pango:monospace 9
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+set $term alacritty
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+include /etc/sway/config-vars.d/*
+titlebar_border_thickness 0
+titlebar_padding 1
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+#
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+### Key bindings
+#
+# Basics:
+#
+# Start a terminal
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec foot
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Start your launcher
+#bindsym $mod+d exec $menu
+bindsym $mod+d exec rofi -show combi -theme solarized -font "hack 10" -icon-theme "Papirus" -show-icons
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#
+# Moving around:
+#
+# Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+# Or use $mod+[up|down|left|right]
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+# Ditto, with arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+#
+# Workspaces:
+#
+set $ws1 "1:Chrome"
+set $ws2 "2:Term"
+set $ws3 "3:Ansible"
+set $ws4 "4:Term"
+set $ws5 "5:Chats"
+set $ws6 "6:Signal"
+set $ws7 "7:Thunar"
+set $ws8 "8:Spotify"
+set $ws9 "9:Settings"
+set $ws10 "10:Gimp"
+
+for_window [title="^Calf .*\\(GUI\\)"] floating enable
+for_window [title="QjackCtl"] floating enable
+
+for_window [class="Spotify"]  move to workspace $ws8
+assign [class="ardour_mixer"]  $ws4
+assign [class="Ardour"]        $ws4
+assign [class="ardour_editor"] $ws4
+assign [class="Slack"]         $ws5
+assign [class="Signal"]        $ws6
+assign [class="signal-desktop"] $ws6
+assign [class="Spotify"]       $ws8
+assign [class="spotify"]       $ws8
+assign [class="Gimp"]          $ws10
+assign [class="Nautilus"]      $ws10
+
+bindsym $mod+ctrl+4 workspace $ws4; exec firefox
+bindsym $mod+ctrl+6 workspace $ws6; exec signal-desktop
+bindsym $mod+ctrl+7 workspace $ws7; exec Thunar
+bindsym $mod+ctrl+8 workspace $ws8; exec spotify --force-device-scale-factor=1.5 --enable-features=UseOzonePlatform --ozone-platform=wayland
+
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+# Note: workspaces can have any name you want, not just numbers.
+# We just use 1-10 as the default.
+#
+# Layout stuff:
+#
+# You can "split" the current object of your focus with
+# $mod+b or $mod+v, for horizontal and vertical splits
+# respectively.
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+f floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym Mod1+tab focus mode_toggle
+
+# Move focus to the parent container
+bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+# Sway has a "scratchpad", which is a bag of holding for windows.
+# You can send windows there and get them back later.
+
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+# left will shrink the containers width
+# right will grow the containers width
+# up will shrink the containers height
+# down will grow the containers height
+  bindsym $left resize shrink width 20px
+  bindsym $down resize grow height 20px
+  bindsym $up resize shrink height 20px
+  bindsym $right resize grow width 20px
+
+# Ditto, with arrow keys
+  bindsym Left resize shrink width 10px
+  bindsym Down resize grow height 10px
+  bindsym Up resize shrink height 10px
+  bindsym Right resize grow width 10px
+
+# Return to default mode
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+#bar {
+  #position bottom
+
+# When the status_command prints a new line to stdout, swaybar updates.
+# The default just shows the current date and time.
+  #status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+  #status_command i3status
+  #status_command waybar
+
+  #colors {
+    #statusline #ffffff
+    #background #323232
+    #inactive_workspace #000000 #222222 #cccccc
+  #}
+#}
+
+include /etc/sway/config.d/*
+
+#### Viktor ####
+
+bindsym $mod+button2 kill
+#bindsym $mod+shift+s exec grim -g "$(slurp)" ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png
+# If we only want to copy the screenshot to the clipboard:
+#bindsym $mod+shift+s exec grim -g "$(slurp)" | wl-copy
+bindsym $mod+shift+s exec grim -g "$(slurp)" /tmp/screenshot.png && cp /tmp/screenshot.png ~/Pictures/screenshots/$(date +%Y-%m-%d-%H-%M-%S).png && wl-copy < /tmp/screenshot.png
+bindsym $mod+shift+ctrl+s exec grimshot --wait 4 --notify copy area
+bindsym $mod+tab workspace back_and_forth
+bindsym $mod+ctrl+shift+l exec systemctl suspend #no password locking
+bindsym $mod+Shift+g move workspace to output left
+
+# Spotify next / prev
+bindsym $mod+ctrl+Down  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+bindsym $mod+ctrl+Left  exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym $mod+ctrl+Right exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+
+input "type:keyboard" {
+  xkb_options "caps:escape"
+  xkb_layout "us,is"
+  repeat_rate 30
+  repeat_delay 250
+  xkb_numlock enabled
+}
+
+# use meta + i to switch to icelandic layout
+bindsym $mod+i input "type:keyboard" xkb_layout "is"; exec notify-send "Icelandic" -t 1000
+# use meta + o to switch to english layout
+bindsym $mod+o input "type:keyboard" xkb_layout "us"; exec notify-send "English" -t 1000
+
+# Laptop
+output eDP-1 pos 0 0 res 1920x1080
+output HDMI-A-1 pos 1920 0 res 1920x1080
+
+# Chrome opens on DP-3
+workspace $ws1 output HDMI-A-1
+workspace $ws2 output eDP-1
+
+exec blueman-applet
+# Open Chrome on workspace 1 with Wayland support
+exec swaymsg 'workspace $ws1; exec google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland  --password-store=gnome-keyring'
+#exec nm-tray
+#exec pasystray
+exec_always copyq # does not work with only exec copyq
+exec_always pkill waybar && waybar
+#exec_always mako
+#exec_always dunst
+exec swaymsg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/dev/youwind'
+exec swaymsg 'workspace $ws2; exec alacritty --working-directory=/home/viktor/dev/youwind'
+exec swaymsg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'
+exec swaymsg 'workspace $ws3; exec alacritty --working-directory=/home/viktor/dev/repero'
+
+# Brightness control (requires brightnessctl)
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+# Volume control (requires pactl or pamixer)
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Media controls (optional, if you use playerctl)
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+input "type:touchpad" {
+    tap enabled
+    tap_button_map lrm  # Left = 1 finger, Right = 2 fingers, Middle = 3 fingers
+    natural_scroll enabled
+    scroll_method two_finger
+    dwt enabled  # Disable-while-typing
+}

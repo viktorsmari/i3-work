@@ -36,7 +36,6 @@ alias handy="printf 'Keyboard: \txmodmap -pke, xev, showkey,
 Programs: \tgetprocid, exo-preferred-applications,
 Volume: \tpavucontrol, paprefs (RTP settings for network server)
 Color picker: \tgpick
-Airplay: \tmkchromecast
 Touchpad: \txinput
 dd progress: \tsudo kill -USR1 $(pgrep ^dd)
 debug: \t dmesg, vmstat 1, mpstat -P ALL, iostat -xz 1,
@@ -44,9 +43,7 @@ debug: \t sar -n DEV 1, sar -n TCP, ETCP 1
 webcamgrab: outputs to /tmp
 '"
 
-#i3 config
-alias config="vi ~/.i3/config.base"
-alias edit='vi ~/.i3/zsh.zsh'       # (edit this file)
+alias edit='vi ~/.oh-my-zsh/custom/zsh.zsh'       # (edit this file)
 alias zshrc='vi ~/.zshrc'
 
 # Programs etc
@@ -92,11 +89,12 @@ alias rgrep='rgrep --color'
 alias sshc='vi ~/.ssh/config'
 alias vpiano='fluidsynth -a alsa -s -g 3 /usr/share/sounds/sf2/FluidR3_GM.sf2'
 alias vmidi='aconnect 20:0 128:0'
-alias v='vim -p'
-alias vi='vim -p'
+alias v='n'
+alias vi='n'
+alias vim='vim -p'
 alias vimrc='vim ~/.vimrc'
-alias n='nvim'
-alias nvimrc='nvim ~/.i3/init.vim'
+alias n='nvim -p'
+alias nvimrc='nvim ~/.config/nvim/init.vim'
 alias webcamgrab="ffmpeg -f video4linux2 -i /dev/video0 -vframes 1 -strftime 1 /tmp/%Y-%m-%d_%H-%M-%S_webcamgrab.jpg"
 alias xclip='xclip -selection c'
 
@@ -105,7 +103,7 @@ alias y="cd ~/dev/youwind/"
 alias re="cd ~/dev/repero/"
 alias l=ll
 alias la='ls -lAhp --group-directories-first'
-alias ll='ls -lhp --group-directories-first'
+alias ll='ls -lahp --group-directories-first'
 alias lt='ll -atr'
 
 # Switch timezones
