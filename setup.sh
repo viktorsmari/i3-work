@@ -35,13 +35,11 @@ mkdir -p ~/Pictures/screenshots
 
 picked=$(
   printf '%s\n' \
-    "sway" "i3" "apt dependencies" "oh-my-zsh" "neovim + plugins" \
+    "apt dependencies" "sway" "i3" "oh-my-zsh" "neovim + plugins" \
     "vim + plugins" "mise" "git config" \
   | gum choose --no-limit --selected "sway" --selected "mise" \
   --header "Select what to install (SPACE to toggle):"
 ) || exit 1
-
-# defaults
 
 grep -Fxq "sway" <<<"$picked"             && USE_SWAY=y
 grep -Fxq "i3" <<<"$picked"               && USE_I3=y
@@ -53,17 +51,6 @@ grep -Fxq "mise" <<<"$picked"             && USE_MISE=y
 grep -Fxq "git config" <<<"$picked"       && USE_GIT=y
 
 #echo "i3=$USE_I3 deps=$USE_DEP ohmyzsh=$USE_OHMZ neovim=$USE_NEOVIM vim=$USE_VIM mise=$USE_MISE git=$USE_GIT"
-
-if [[ $USE_SWAY = 'y' ]]; then
-  #echo "installing sway"
-  sudo apt install -y sway
-fi
-
-if [[ $USE_GIT = 'y' ]]; then
-  echo "1b. What is your email? (For git config)"
-  read -p 'Email: ' MY_EMAIL
-  read -p 'User name: ' MY_USER
-fi
 
 if [[ $USE_DEP = 'y' ]]; then
   echo -e "======== Install programs ========\n"
@@ -95,6 +82,11 @@ if [[ $USE_DEP = 'y' ]]; then
     xfce4-clipman rofi flameshot arandr
 fi
 
+if [[ $USE_SWAY = 'y' ]]; then
+  #echo "installing sway"
+  sudo apt install -y sway
+fi
+
 if [[ $USE_I3 = 'y' ]]; then
   sudo apt-get install -y i3
 
@@ -107,6 +99,10 @@ if [[ $USE_I3 = 'y' ]]; then
 fi
 
 if [[ $USE_GIT = 'y' ]]; then
+  echo "1b. What is your email? (For git config)"
+  read -p 'Email: ' MY_EMAIL
+  read -p 'User name: ' MY_USER
+
   echo -e "\n======== Setup git ========\n"
   git config --global core.editor "vim"
   git config --global merge.conflictstyle diff3
@@ -117,9 +113,6 @@ if [[ $USE_GIT = 'y' ]]; then
   git config --global push.followTags true
   git config --global user.email $MY_EMAIL
   git config --global user.name $MY_USER
-
-  #TODO: Generate ssh key?
-  # ssh-keygen -t rsa -b 4096
 fi
 
 if [[ $USE_NEOVIM = 'y' ]]; then
@@ -152,7 +145,6 @@ if [[ $USE_VIM = 'y' ]]; then
   # Install plugins
   vim -c 'PluginInstall' -c 'qa!'
 fi
-
 
 if [[ $USE_OHMZ = 'y' ]]; then
   echo -e "\n======== Setup oh-my-zsh ========\n"

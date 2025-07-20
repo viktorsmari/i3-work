@@ -21,11 +21,7 @@ How to use this repo
 
 Don't run this unless you trust me and have verified the files contents:
 
-`wget https://raw.githubusercontent.com/viktorsmari/dotfiles/master/setup.sh`
-
-`chmod +x setup.sh`
-
-`./setup.sh`
+`wget -qO- https://raw.githubusercontent.com/viktorsmari/dotfiles/master/setup.sh | bash`
 
 ### Notes
 
