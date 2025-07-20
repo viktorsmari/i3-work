@@ -9,19 +9,17 @@ This repo contains dotfiles for:
 - i3 (used it from 2014 - 2024)
 - vim and nvim
 
-I started using `stow` to easily symlink more configs
+I started using `stow` to easily symlink multiple configs
 
-How to use this repo
-- Clone or download this repo to your home directory
-- `cd dotfiles`
-- Install `stow` and install the stuff you want:
-`stow sway waybar nvim`
-
-### Install EVERYTHING with one command
-
-Don't run this unless you trust me and have verified the files contents:
-
-`wget -qO- https://raw.githubusercontent.com/viktorsmari/dotfiles/master/setup.sh | bash`
+2 ways to install:
+1. Install EVERYTHING with one command:
+   Don't run this unless you trust me and have verified the files contents:
+   `wget -qO- https://raw.githubusercontent.com/viktorsmari/dotfiles/master/setup.sh | bash`
+2. Manual install:
+  - Clone or download this repo to your home directory
+  - `cd dotfiles`
+  - Install `stow` and symlink only the folders you want, example:
+  `stow sway waybar nvim`
 
 ### Notes
 
@@ -31,3 +29,6 @@ Don't run this unless you trust me and have verified the files contents:
 The reason for this is I used this repo on 2 different computers, work and home, and they had different XF86 and audio settings.
 
 Read more about my [computing.md](computing.md)
+
+Using Ubuntu means some programs are outdated.
+It might be better to check each programs website for the latest version and installation instructions.
