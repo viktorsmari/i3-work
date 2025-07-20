@@ -101,7 +101,7 @@ alias xclip='xclip -selection c'
 # Folders
 alias y="cd ~/dev/youwind/"
 alias re="cd ~/dev/repero/"
-alias l=ll
+alias l=la
 alias la='ls -lAhp --group-directories-first'
 alias ll='ls -lahp --group-directories-first'
 alias lt='ll -atr'
