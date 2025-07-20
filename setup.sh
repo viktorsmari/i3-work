@@ -5,8 +5,12 @@ if [ -d ~/dotfiles ]; then
   echo "Directory ~/dotfiles already exists. Not cloning repo again!"
 else
   echo "Cloning i3 repo..."
-  git clone https://github.com/viktorsmari/i3-work.git ~/dotfiles
+  git clone https://github.com/viktorsmari/dotfiles.git ~/dotfiles
 fi
+
+cd ~/dotfiles || exit
+# print out current directory
+echo "Current directory: $(pwd)"
 
 mkdir -p ~/Pictures/screenshots
 
