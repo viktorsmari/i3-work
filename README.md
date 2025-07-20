@@ -1,4 +1,4 @@
-dotfiles (formerly i3-work)
+dotfiles
 =======
 
 Goal: get up and running quickly with a clean install of Sway (or i3) on Ubuntu
@@ -12,14 +12,14 @@ This repo contains dotfiles for:
 I started using `stow` to easily symlink multiple configs
 
 2 ways to install:
-1. Install EVERYTHING with one command:
-   Don't run this unless you trust me and have verified the files contents:
-   `wget -qO- https://raw.githubusercontent.com/viktorsmari/dotfiles/master/setup.sh | bash`
+1. Install EVERYTHING with one command
+   - Don't run this unless you trust me and have verified the files contents
+   - `wget -qO- https://raw.githubusercontent.com/viktorsmari/dotfiles/master/setup.sh | bash`
 2. Manual install:
-  - Clone or download this repo to your home directory
-  - `cd dotfiles`
-  - Install `stow` and symlink only the folders you want, example:
-  `stow sway waybar nvim`
+   - Clone or download this repo to your home directory
+   - `cd dotfiles`
+   - Install `stow` and symlink only the folders you want, example:
+   - `stow sway waybar nvim`
 
 ### Notes
 
