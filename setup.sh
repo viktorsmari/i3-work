@@ -1,5 +1,24 @@
 #!/bin/bash
 
+ensure_installed() {
+  if ! command -v gum &> /dev/null; then
+    echo "gum could not be found, installing gum..."
+    sudo apt-get install -y gum
+  fi
+
+  if ! command -v git &> /dev/null; then
+    echo "git could not be found, installing git..."
+    sudo apt-get install -y git
+  fi
+
+  if ! command -v stow &> /dev/null; then
+    echo "stow could not be found, installing stow..."
+    sudo apt-get install -y stow
+  fi
+}
+
+ensure_installed
+
 echo "Cloning repo and linking configs..."
 if [ -d ~/dotfiles ]; then
   echo "Directory ~/dotfiles already exists. Not cloning repo again!"
@@ -14,10 +33,31 @@ echo "Current directory: $(pwd)"
 
 mkdir -p ~/Pictures/screenshots
 
-echo -e "\n======== Answer (y/n) - default: no ======== \n"
+picked=$(
+  printf '%s\n' \
+    "sway" "i3" "apt dependencies" "oh-my-zsh" "neovim + plugins" \
+    "vim + plugins" "mise" "git config" \
+  | gum choose --no-limit --selected "sway" --selected "mise" \
+  --header "Select what to install (SPACE to toggle):"
+) || exit 1
 
-echo "1. Do you want git setup?"
-read -p 'y / n :' USE_GIT
+# defaults
+
+grep -Fxq "sway" <<<"$picked"             && USE_SWAY=y
+grep -Fxq "i3" <<<"$picked"               && USE_I3=y
+grep -Fxq "apt dependencies" <<<"$picked" && USE_DEP=y
+grep -Fxq "oh-my-zsh" <<<"$picked"        && USE_OHMZ=y
+grep -Fxq "neovim + plugins" <<<"$picked" && USE_NEOVIM=y
+grep -Fxq "vim + plugins" <<<"$picked"    && USE_VIM=y
+grep -Fxq "mise" <<<"$picked"             && USE_MISE=y
+grep -Fxq "git config" <<<"$picked"       && USE_GIT=y
+
+#echo "i3=$USE_I3 deps=$USE_DEP ohmyzsh=$USE_OHMZ neovim=$USE_NEOVIM vim=$USE_VIM mise=$USE_MISE git=$USE_GIT"
+
+if [[ $USE_SWAY = 'y' ]]; then
+  #echo "installing sway"
+  sudo apt install -y sway
+fi
 
 if [[ $USE_GIT = 'y' ]]; then
   echo "1b. What is your email? (For git config)"
@@ -25,34 +65,13 @@ if [[ $USE_GIT = 'y' ]]; then
   read -p 'User name: ' MY_USER
 fi
 
-echo "2b. Do you want to install i3 (y / n)"
-read -p 'y / n : ' USE_I3
-
-echo "3. Do you want all dependencies installed?"
-read -p 'y / n : ' USE_DEP
-
-echo "4. Do you want oh my zsh installed?"
-read -p 'y / n : ' USE_OHMZ
-
-echo "5. Do you want neovim and plugins installed?"
-read -p 'y / n : ' USE_NEOVIM
-
-echo "6. Do you want vim plugins installed?"
-read -p 'y / n : ' USE_VIM
-
-echo "7. Do you want MISE installed?"
-read -p 'y / n : ' USE_MISE
-
-echo -e '======== Questions done ========\n'
-
 if [[ $USE_DEP = 'y' ]]; then
   echo -e "======== Install programs ========\n"
 
   sudo apt-get update
 
   # VIP packages
-  sudo apt-get install -y curl nmap zsh git g++ automake make \
-    stow \
+  sudo apt-get install -y curl nmap zsh g++ automake make \
     tree htop whois thunar bmon \
     btop \
     alacritty \
@@ -74,8 +93,6 @@ if [[ $USE_DEP = 'y' ]]; then
   # Packages for X
   sudo apt-get install -y xbacklight xclip \
     xfce4-clipman rofi flameshot arandr
-else
-  echo -e "\n======== no install dep"
 fi
 
 if [[ $USE_I3 = 'y' ]]; then
@@ -87,8 +104,6 @@ if [[ $USE_I3 = 'y' ]]; then
 
   # Create the first config
   ~/dotfiles/generatei3.sh
-else
-  echo -e "======== no install i3\n"
 fi
 
 if [[ $USE_GIT = 'y' ]]; then
@@ -105,8 +120,6 @@ if [[ $USE_GIT = 'y' ]]; then
 
   #TODO: Generate ssh key?
   # ssh-keygen -t rsa -b 4096
-else
-  echo -e "======== no install git\n"
 fi
 
 if [[ $USE_NEOVIM = 'y' ]]; then
@@ -138,8 +151,6 @@ if [[ $USE_VIM = 'y' ]]; then
 
   # Install plugins
   vim -c 'PluginInstall' -c 'qa!'
-else
-  echo -e "======== no install vim\n"
 fi
 
 
@@ -161,8 +172,6 @@ if [[ $USE_OHMZ = 'y' ]]; then
   source ~/dotfiles/scripts/install_zsh-autosuggestions.sh
 
   echo -e "\nYou must add it to .zshrc plugins()"
-else
-  echo -e "======== no install oh my zsh\n"
 fi
 
 if [[ $USE_MISE = 'y' ]]; then
