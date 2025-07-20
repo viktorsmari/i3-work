@@ -160,6 +160,7 @@ map Y y$
 
 " Hide .pyc in NERDTree
 let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowHidden=1
 
 
 "open nerdtree in empty vim
